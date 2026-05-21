@@ -1,0 +1,97 @@
+/* 护眼主题 — 柔和色调，降低视觉疲劳 */
+
+:root {
+  /* 主题色：柔绿 */
+  --vp-c-brand: #5b8c5a;
+  --vp-c-brand-light: #6fa86d;
+  --vp-c-brand-lighter: #84b882;
+  --vp-c-brand-dark: #4a7049;
+  --vp-c-brand-darker: #3a5a39;
+
+  /* 背景：暖白纸色，减少蓝光 */
+  --vp-c-bg: #fdf6ec;
+  --vp-c-bg-soft: #f5ede0;
+  --vp-c-bg-mute: #ede4d5;
+
+  /* 正文 */
+  --vp-c-text-1: #3d3a35;
+  --vp-c-text-2: #5c5750;
+  --vp-c-text-3: #7a756d;
+
+  /* 代码块 */
+  --vp-c-bg-alt: #f0e8d8;
+
+  /* 边框分割线 */
+  --vp-c-divider: #e0d6c5;
+  --vp-c-gutter: #e8dfd0;
+
+  /* 字体 */
+  --vp-font-family-base: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  --vp-font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* 暗色模式：暖暗底 */
+.dark {
+  --vp-c-bg: #2b2722;
+  --vp-c-bg-soft: #322e28;
+  --vp-c-bg-mute: #3a352e;
+  --vp-c-bg-alt: #352f28;
+
+  --vp-c-text-1: #e8ddcc;
+  --vp-c-text-2: #c4b9a5;
+  --vp-c-text-3: #a09582;
+
+  --vp-c-divider: #3e3830;
+  --vp-c-gutter: #353028;
+
+  --vp-c-brand: #7ab878;
+  --vp-c-brand-light: #8ec78c;
+  --vp-c-brand-dark: #5e945c;
+}
+
+/* 正文排版 */
+.vp-doc {
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.vp-doc p {
+  letter-spacing: 0.02em;
+}
+
+/* 链接柔和下划线 */
+.vp-doc a {
+  text-decoration-color: var(--vp-c-brand-light);
+  text-underline-offset: 3px;
+  transition: color 0.2s;
+}
+
+/* 代码块 */
+.vp-doc code {
+  color: #8b6b4a;
+}
+
+.vp-doc div[class*='language-'] {
+  border-radius: 8px;
+}
+
+/* 标题字重不过大 */
+.vp-doc h1 { font-weight: 600; }
+.vp-doc h2 { font-weight: 600; }
+.vp-doc h3 { font-weight: 500; }
+
+/* 侧边栏间距松动 */
+.VPSidebarItem .item {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+/* 滚动条变细 */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--vp-c-divider);
+  border-radius: 3px;
+}

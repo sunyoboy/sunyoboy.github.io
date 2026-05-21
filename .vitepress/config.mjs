@@ -1,0 +1,38 @@
+import { defineConfig } from 'vitepress'
+
+export default defineConfig({
+  title: 'Knowing & Doing',
+  description: '知行合一',
+  lang: 'zh-CN',
+  appearance: true,
+  themeConfig: {
+    nav: [
+      { text: '首页', link: '/' },
+      { text: '复盘', link: '/review/2026/2026' },
+      { text: '关于', link: '/about' }
+    ],
+    sidebar: {
+      '/review/': [
+        {
+          text: '2026年',
+          collapsed: false,
+          items: [
+            { text: '年度复盘', link: '/review/2026/2026' },
+            {
+              text: '5月',
+              collapsed: false,
+              items: [
+                { text: '月复盘', link: '/review/2026/05/2026-05' },
+                { text: 'W21 周复盘', link: '/review/2026/05/2026-W21' },
+                { text: '05-21', link: '/review/2026/05/2026-05-21' }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com' }
+    ]
+  }
+})
