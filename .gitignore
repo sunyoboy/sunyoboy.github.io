@@ -2,3 +2,6 @@ node_modules
 dist
 .vitepress/cache
 .vitepress/dist
+.env
+.wechat_token
+__pycache__

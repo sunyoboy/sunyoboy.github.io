@@ -9,6 +9,7 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '复盘', link: '/review/2026/2026' },
+      { text: '问题清单', link: '/questions/index' },
       { text: '关于', link: '/about' }
     ],
     sidebar: {
@@ -25,6 +26,23 @@ export default defineConfig({
                 { text: '月复盘', link: '/review/2026/05/2026-05' },
                 { text: 'W21 周复盘', link: '/review/2026/05/2026-W21' },
                 { text: '05-21', link: '/review/2026/05/2026-05-21' }
+              ]
+            }
+          ]
+        }
+      ],
+      '/questions/': [
+        {
+          text: '2026年',
+          collapsed: false,
+          items: [
+            { text: '问题汇总', link: '/questions/index' },
+            {
+              text: '5月',
+              collapsed: false,
+              items: [
+                { text: '05-22', link: '/questions/2026/05/2026-05-22' },
+                { text: '05-21', link: '/questions/2026/05/2026-05-21' }
               ]
             }
           ]
