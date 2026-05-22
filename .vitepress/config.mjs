@@ -10,6 +10,7 @@ export default defineConfig({
       { text: '首页', link: '/' },
       { text: '复盘', link: '/review/2026/2026' },
       { text: '问题清单', link: '/questions/index' },
+      { text: '知识库', link: '/docs/stock-tools' },
       { text: '关于', link: '/about' }
     ],
     sidebar: {
@@ -45,6 +46,17 @@ export default defineConfig({
                 { text: '05-21', link: '/questions/2026/05/2026-05-21' }
               ]
             }
+          ]
+        }
+      ],
+      '/docs/': [
+        {
+          text: '知识库',
+          collapsed: false,
+          items: [
+            { text: '股票工具与渠道', link: '/docs/stock-tools' },
+            { text: '决策记录', link: '/docs/decision-log' },
+            { text: '部署说明', link: '/docs/deploy' }
           ]
         }
       ]
