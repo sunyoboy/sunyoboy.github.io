@@ -42,6 +42,7 @@ export default defineConfig({
               text: '5月',
               collapsed: false,
               items: [
+                { text: '05-26', link: '/questions/2026/05/2026-05-26' },
                 { text: '05-22', link: '/questions/2026/05/2026-05-22' },
                 { text: '05-21', link: '/questions/2026/05/2026-05-21' }
               ]
@@ -56,7 +57,8 @@ export default defineConfig({
           items: [
             { text: '股票工具与渠道', link: '/docs/stock-tools' },
             { text: '决策记录', link: '/docs/decision-log' },
-            { text: '部署说明', link: '/docs/deploy' }
+            { text: '部署说明', link: '/docs/deploy' },
+            { text: 'A股行情 05-26', link: '/docs/a-share-2026-05-26' }
           ]
         }
       ]
