@@ -58,7 +58,8 @@ export default defineConfig({
             { text: '股票工具与渠道', link: '/docs/stock-tools' },
             { text: '决策记录', link: '/docs/decision-log' },
             { text: '部署说明', link: '/docs/deploy' },
-            { text: 'A股行情 05-26', link: '/docs/a-share-2026-05-26' }
+            { text: 'A股行情 05-26', link: '/docs/a-share-2026-05-26' },
+            { text: '十五五投资方向', link: '/docs/fifteen-five-investment' }
           ]
         }
       ]
