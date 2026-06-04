@@ -59,7 +59,9 @@ export default defineConfig({
             { text: '决策记录', link: '/docs/decision-log' },
             { text: '部署说明', link: '/docs/deploy' },
             { text: 'A股行情 05-26', link: '/docs/a-share-2026-05-26' },
-            { text: '十五五投资方向', link: '/docs/fifteen-five-investment' }
+            { text: '十五五投资方向', link: '/docs/fifteen-five-investment' },
+            { text: 'A股做T操作指南', link: '/docs/t-trading' },
+            { text: 'AI工具全景分析', link: '/docs/ai-tools-analysis' }
           ]
         }
       ]
