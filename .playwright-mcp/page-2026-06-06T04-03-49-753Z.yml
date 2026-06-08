@@ -1,0 +1,614 @@
+- generic [ref=e3]:
+  - link "Skip to content" [ref=e4] [cursor=pointer]:
+    - /url: "#VPContent"
+  - banner:
+    - generic:
+      - generic:
+        - generic:
+          - link "Knowing & Doing" [ref=e6] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e7]: Knowing & Doing
+          - generic [ref=e8]:
+            - navigation "Main Navigation" [ref=e9]:
+              - generic [ref=e10]: Main Navigation
+              - link "首页" [ref=e11] [cursor=pointer]:
+                - /url: /
+                - generic [ref=e12]: 首页
+              - link "复盘" [ref=e13] [cursor=pointer]:
+                - /url: /review/2026/2026.html
+                - generic [ref=e14]: 复盘
+              - link "问题清单" [ref=e15] [cursor=pointer]:
+                - /url: /questions/index.html
+                - generic [ref=e16]: 问题清单
+              - link "知识库" [ref=e17] [cursor=pointer]:
+                - /url: /docs/
+                - generic [ref=e18]: 知识库
+              - link "关于" [ref=e19] [cursor=pointer]:
+                - /url: /about.html
+                - generic [ref=e20]: 关于
+            - button "extra navigation" [ref=e22] [cursor=pointer]
+  - button "On this page" [ref=e27] [cursor=pointer]: On this page
+  - complementary [ref=e29]:
+    - navigation "Sidebar Navigation" [ref=e31]:
+      - generic [ref=e32]: Sidebar Navigation
+      - generic [ref=e34]:
+        - button "2026年 toggle section" [ref=e35] [cursor=pointer]:
+          - heading "2026年" [level=2] [ref=e37]
+          - button "toggle section" [ref=e38]
+        - generic [ref=e40]:
+          - link "年度复盘" [ref=e44] [cursor=pointer]:
+            - /url: /review/2026/2026.html
+            - paragraph [ref=e45]: 年度复盘
+          - generic [ref=e46]:
+            - button "5月 toggle section" [ref=e47] [cursor=pointer]:
+              - heading "5月" [level=3] [ref=e49]
+              - button "toggle section" [ref=e50]
+            - generic [ref=e52]:
+              - link "月复盘" [ref=e56] [cursor=pointer]:
+                - /url: /review/2026/05/2026-05.html
+                - paragraph [ref=e57]: 月复盘
+              - link "W21 周复盘" [ref=e61] [cursor=pointer]:
+                - /url: /review/2026/05/2026-W21.html
+                - paragraph [ref=e62]: W21 周复盘
+              - link "05-21" [ref=e66] [cursor=pointer]:
+                - /url: /review/2026/05/2026-05-21.html
+                - paragraph [ref=e67]: 05-21
+              - link "05-22" [ref=e71] [cursor=pointer]:
+                - /url: /review/2026/05/2026-05-22.html
+                - paragraph [ref=e72]: 05-22
+              - link "05-25" [ref=e76] [cursor=pointer]:
+                - /url: /review/2026/05/2026-05-25.html
+                - paragraph [ref=e77]: 05-25
+              - link "05-26" [ref=e81] [cursor=pointer]:
+                - /url: /review/2026/05/2026-05-26.html
+                - paragraph [ref=e82]: 05-26
+              - link "05-27" [ref=e86] [cursor=pointer]:
+                - /url: /review/2026/05/2026-05-27.html
+                - paragraph [ref=e87]: 05-27
+              - link "05-28" [ref=e91] [cursor=pointer]:
+                - /url: /review/2026/05/2026-05-28.html
+                - paragraph [ref=e92]: 05-28
+          - generic [ref=e93]:
+            - button "6月 toggle section" [ref=e94] [cursor=pointer]:
+              - heading "6月" [level=3] [ref=e96]
+              - button "toggle section" [ref=e97]
+            - link "06-05" [ref=e103] [cursor=pointer]:
+              - /url: /review/2026/06/2026-06-05.html
+              - paragraph [ref=e104]: 06-05
+  - generic [ref=e109]:
+    - main [ref=e110]:
+      - generic [ref=e112]:
+        - heading "2026-06-05 Permalink to \"2026-06-05\"" [level=1] [ref=e113]:
+          - text: 2026-06-05
+          - link "Permalink to \"2026-06-05\"" [ref=e114] [cursor=pointer]:
+            - /url: "#_2026-06-05"
+            - text: "#"
+        - heading "五股做T可行性分析与执行策略 Permalink to \"五股做T可行性分析与执行策略\"" [level=2] [ref=e115]:
+          - text: 五股做T可行性分析与执行策略
+          - link "Permalink to \"五股做T可行性分析与执行策略\"" [ref=e116] [cursor=pointer]:
+            - /url: "#五股做t可行性分析与执行策略"
+            - text: "#"
+        - blockquote [ref=e117]:
+          - paragraph [ref=e118]: 分析日期：2026年6月5日（周五）| 数据来源：东方财富、同花顺、新浪财经公开数据
+        - separator [ref=e119]
+        - heading "一、综合概览 Permalink to \"一、综合概览\"" [level=3] [ref=e120]:
+          - text: 一、综合概览
+          - link "Permalink to \"一、综合概览\"" [ref=e121] [cursor=pointer]:
+            - /url: "#一、综合概览"
+            - text: "#"
+        - table [ref=e122]:
+          - rowgroup [ref=e123]:
+            - row "股票 代码 6/5收盘 涨跌幅 振幅 主力资金 做T可行性 推荐方向" [ref=e124]:
+              - columnheader "股票" [ref=e125]
+              - columnheader "代码" [ref=e126]
+              - columnheader "6/5收盘" [ref=e127]
+              - columnheader "涨跌幅" [ref=e128]
+              - columnheader "振幅" [ref=e129]
+              - columnheader "主力资金" [ref=e130]
+              - columnheader "做T可行性" [ref=e131]
+              - columnheader "推荐方向" [ref=e132]
+          - rowgroup [ref=e133]:
+            - row "科大讯飞 002230 46.03 +0.41% 3.10% 近10日净流出6.34亿 ⚠️ 谨慎 倒T（先卖后买）" [ref=e134]:
+              - cell "科大讯飞" [ref=e135]
+              - cell "002230" [ref=e136]
+              - cell "46.03" [ref=e137]
+              - cell "+0.41%" [ref=e138]
+              - cell "3.10%" [ref=e139]
+              - cell "近10日净流出6.34亿" [ref=e140]
+              - cell "⚠️ 谨慎" [ref=e141]
+              - cell "倒T（先卖后买）" [ref=e142]
+            - row "紫金矿业 601899 ~30.27 -0.23% 2.70% 6/4净流出11.13亿 ✅ 可行 倒T为主，正T为辅" [ref=e143]:
+              - cell "紫金矿业" [ref=e144]
+              - cell "601899" [ref=e145]
+              - cell "~30.27" [ref=e146]
+              - cell "-0.23%" [ref=e147]
+              - cell "2.70%" [ref=e148]
+              - cell "6/4净流出11.13亿" [ref=e149]
+              - cell "✅ 可行" [ref=e150]
+              - cell "倒T为主，正T为辅" [ref=e151]
+            - row "天山铝业 002532 ~13.91 -3.07% 3.48% 当日净流出5566万 ⚠️ 谨慎 正T（急跌博反弹）" [ref=e152]:
+              - cell "天山铝业" [ref=e153]
+              - cell "002532" [ref=e154]
+              - cell "~13.91" [ref=e155]
+              - cell "-3.07%" [ref=e156]
+              - cell "3.48%" [ref=e157]
+              - cell "当日净流出5566万" [ref=e158]
+              - cell "⚠️ 谨慎" [ref=e159]
+              - cell "正T（急跌博反弹）" [ref=e160]
+            - row "拓维信息 002261 29.03 -2.81% 2.61% 近10日净流出12.2亿 ❌ 不建议 —" [ref=e161]:
+              - cell "拓维信息" [ref=e162]
+              - cell "002261" [ref=e163]
+              - cell "29.03" [ref=e164]
+              - cell "-2.81%" [ref=e165]
+              - cell "2.61%" [ref=e166]
+              - cell "近10日净流出12.2亿" [ref=e167]
+              - cell "❌ 不建议" [ref=e168]
+              - cell "—" [ref=e169]
+            - row "华胜天成 600410 ~17.87 -2.64% ~2.5% 近10日净流出9.78亿 ❌ 不建议 —" [ref=e170]:
+              - cell "华胜天成" [ref=e171]
+              - cell "600410" [ref=e172]
+              - cell "~17.87" [ref=e173]
+              - cell "-2.64%" [ref=e174]
+              - cell "~2.5%" [ref=e175]
+              - cell "近10日净流出9.78亿" [ref=e176]
+              - cell "❌ 不建议" [ref=e177]
+              - cell "—" [ref=e178]
+        - separator [ref=e179]
+        - heading "二、逐股详细分析 Permalink to \"二、逐股详细分析\"" [level=3] [ref=e180]:
+          - text: 二、逐股详细分析
+          - link "Permalink to \"二、逐股详细分析\"" [ref=e181] [cursor=pointer]:
+            - /url: "#二、逐股详细分析"
+            - text: "#"
+        - heading "1. 科大讯飞（002230）— ⚠️ 谨慎做T Permalink to \"1. 科大讯飞（002230）— ⚠️ 谨慎做T\"" [level=4] [ref=e182]:
+          - text: 1. 科大讯飞（002230）— ⚠️ 谨慎做T
+          - link "Permalink to \"1. 科大讯飞（002230）— ⚠️ 谨慎做T\"" [ref=e183] [cursor=pointer]:
+            - /url: "#_1-科大讯飞-002230-—-⚠️-谨慎做t"
+            - text: "#"
+        - paragraph [ref=e184]:
+          - strong [ref=e185]: 盘面特征：
+        - list [ref=e186]:
+          - listitem [ref=e187]: 6/5 收46.03元，盘中最低45.01元创60日新低，尾盘拉回收红
+          - listitem [ref=e188]: 全天振幅3.10%（45.01~46.43），做T空间充足
+          - listitem [ref=e189]: 从4月下旬高点约55元持续回落至45元附近，跌幅约18%
+          - listitem [ref=e190]: 接近52周低点44.98元，此处有一定技术支撑
+        - paragraph [ref=e191]:
+          - strong [ref=e192]: 资金面：
+        - table [ref=e193]:
+          - rowgroup [ref=e194]:
+            - row "维度 数据 信号" [ref=e195]:
+              - columnheader "维度" [ref=e196]
+              - columnheader "数据" [ref=e197]
+              - columnheader "信号" [ref=e198]
+          - rowgroup [ref=e199]:
+            - row "6/4主力净流出 -6.39亿 偏空" [ref=e200]:
+              - cell "6/4主力净流出" [ref=e201]
+              - cell "-6.39亿" [ref=e202]
+              - cell "偏空" [ref=e203]
+            - row "近10日主力累计 -6.34亿 持续流出" [ref=e204]:
+              - cell "近10日主力累计" [ref=e205]
+              - cell "-6.34亿" [ref=e206]
+              - cell "持续流出" [ref=e207]
+            - row "融资余额 62.48亿，环比-1.24% 杠杆资金也在撤退" [ref=e208]:
+              - cell "融资余额" [ref=e209]
+              - cell "62.48亿，环比-1.24%" [ref=e210]
+              - cell "杠杆资金也在撤退" [ref=e211]
+            - row "机构控盘度 32.65%（中度控盘） 一般" [ref=e212]:
+              - cell "机构控盘度" [ref=e213]
+              - cell "32.65%（中度控盘）" [ref=e214]
+              - cell "一般" [ref=e215]
+        - paragraph [ref=e216]:
+          - strong [ref=e217]: 做T评估：
+        - table [ref=e218]:
+          - rowgroup [ref=e219]:
+            - row "类型 可行性 理由" [ref=e220]:
+              - columnheader "类型" [ref=e221]
+              - columnheader "可行性" [ref=e222]
+              - columnheader "理由" [ref=e223]
+          - rowgroup [ref=e224]:
+            - row "正T（先买后卖） ❌ 不推荐 下跌趋势中接飞刀风险大，主力持续流出" [ref=e225]:
+              - cell "正T（先买后卖）" [ref=e226]
+              - cell "❌ 不推荐" [ref=e227]
+              - cell "下跌趋势中接飞刀风险大，主力持续流出" [ref=e228]
+            - row "倒T（先卖后买） ✅ 可行 顺势而为，利用反弹冲高先出，尾盘回接" [ref=e229]:
+              - cell "倒T（先卖后买）" [ref=e230]
+              - cell "✅ 可行" [ref=e231]
+              - cell "顺势而为，利用反弹冲高先出，尾盘回接" [ref=e232]
+        - paragraph [ref=e233]:
+          - strong [ref=e234]: 执行策略（倒T）：
+        - list [ref=e235]:
+          - listitem [ref=e236]:
+            - strong [ref=e237]: 卖出区间
+            - text: ：若次日开盘冲高至46.5~47.0（接近5日线反压），先卖出
+          - listitem [ref=e238]:
+            - strong [ref=e239]: 回接区间
+            - text: ：尾盘若回落至45.0~45.5，接回
+          - listitem [ref=e240]:
+            - strong [ref=e241]: 止损条件
+            - text: ：若放量突破47.5（站上10日线），放弃倒T，回补仓位
+          - listitem [ref=e242]:
+            - strong [ref=e243]: 不参与条件
+            - text: ：若开盘直接低开低走跌破44.98（52周低点），不做T，观望
+        - separator [ref=e244]
+        - heading "2. 紫金矿业（601899）— ✅ 可以做T Permalink to \"2. 紫金矿业（601899）— ✅ 可以做T\"" [level=4] [ref=e245]:
+          - text: 2. 紫金矿业（601899）— ✅ 可以做T
+          - link "Permalink to \"2. 紫金矿业（601899）— ✅ 可以做T\"" [ref=e246] [cursor=pointer]:
+            - /url: "#_2-紫金矿业-601899-—-✅-可以做t"
+            - text: "#"
+        - paragraph [ref=e247]:
+          - strong [ref=e248]: 盘面特征：
+        - list [ref=e249]:
+          - listitem [ref=e250]: 6/5 盘中约30.27元，高开冲高至30.85后回落，振幅2.70%
+          - listitem [ref=e251]: 6/2 有色板块爆发时单日涨4.60%，6/4 回调2.97%
+          - listitem [ref=e252]: 30元整数关口有强支撑，上方31.5附近为短期压力
+        - paragraph [ref=e253]:
+          - strong [ref=e254]: 资金面：
+        - table [ref=e255]:
+          - rowgroup [ref=e256]:
+            - row "维度 数据 信号" [ref=e257]:
+              - columnheader "维度" [ref=e258]
+              - columnheader "数据" [ref=e259]
+              - columnheader "信号" [ref=e260]
+          - rowgroup [ref=e261]:
+            - row "6/4主力净流出 -11.13亿 短期偏空" [ref=e262]:
+              - cell "6/4主力净流出" [ref=e263]
+              - cell "-11.13亿" [ref=e264]
+              - cell "短期偏空" [ref=e265]
+            - row "6/2主力净流入 +15.23亿 前期有大资金进场" [ref=e266]:
+              - cell "6/2主力净流入" [ref=e267]
+              - cell "+15.23亿" [ref=e268]
+              - cell "前期有大资金进场" [ref=e269]
+            - row "5日主力累计 约-0.49亿 基本平衡" [ref=e270]:
+              - cell "5日主力累计" [ref=e271]
+              - cell "约-0.49亿" [ref=e272]
+              - cell "基本平衡" [ref=e273]
+            - row "融资余额 128.56亿，环比+0.51% 杠杆资金仍在" [ref=e274]:
+              - cell "融资余额" [ref=e275]
+              - cell "128.56亿，环比+0.51%" [ref=e276]
+              - cell "杠杆资金仍在" [ref=e277]
+            - row "两融余额 129.14亿 有色行业第一" [ref=e278]:
+              - cell "两融余额" [ref=e279]
+              - cell "129.14亿" [ref=e280]
+              - cell "有色行业第一" [ref=e281]
+        - paragraph [ref=e282]:
+          - strong [ref=e283]: 做T评估：
+        - table [ref=e284]:
+          - rowgroup [ref=e285]:
+            - row "类型 可行性 理由" [ref=e286]:
+              - columnheader "类型" [ref=e287]
+              - columnheader "可行性" [ref=e288]
+              - columnheader "理由" [ref=e289]
+          - rowgroup [ref=e290]:
+            - row "正T（先买后卖） ✅ 条件可行 急跌至30元附近有支撑，可博反弹" [ref=e291]:
+              - cell "正T（先买后卖）" [ref=e292]
+              - cell "✅ 条件可行" [ref=e293]
+              - cell "急跌至30元附近有支撑，可博反弹" [ref=e294]
+            - row "倒T（先卖后买） ✅ 可行 冲高至30.8+后回落概率大" [ref=e295]:
+              - cell "倒T（先卖后买）" [ref=e296]
+              - cell "✅ 可行" [ref=e297]
+              - cell "冲高至30.8+后回落概率大" [ref=e298]
+        - paragraph [ref=e299]:
+          - strong [ref=e300]: 执行策略（倒T为主，正T为辅）：
+        - list [ref=e301]:
+          - listitem [ref=e302]:
+            - strong [ref=e303]: 倒T卖出区间
+            - text: ：若开盘冲高至30.8~31.0（接近6/3收盘价压力），先卖出
+          - listitem [ref=e304]:
+            - strong [ref=e305]: 倒T回接区间
+            - text: ：尾盘或盘中回落至30.0~30.2，接回
+          - listitem [ref=e306]:
+            - strong [ref=e307]: 正T买入区间
+            - text: ：若盘中急跌至29.8以下（跌破30元整数关口诱空），可轻仓买入
+          - listitem [ref=e308]:
+            - strong [ref=e309]: 正T卖出区间
+            - text: ：反弹至30.5以上即出，不贪
+          - listitem [ref=e310]:
+            - strong [ref=e311]: 止损条件
+            - text: ：倒T后若突破31.27（6/3高点），回补；正T后若跌破29.5，止损
+          - listitem [ref=e312]:
+            - strong [ref=e313]: 优势
+            - text: ：PE仅13倍，基本面扎实，振幅2.7%空间充足，流动性好（日成交额60亿+）
+        - separator [ref=e314]
+        - heading "3. 天山铝业（002532）— ⚠️ 谨慎做T Permalink to \"3. 天山铝业（002532）— ⚠️ 谨慎做T\"" [level=4] [ref=e315]:
+          - text: 3. 天山铝业（002532）— ⚠️ 谨慎做T
+          - link "Permalink to \"3. 天山铝业（002532）— ⚠️ 谨慎做T\"" [ref=e316] [cursor=pointer]:
+            - /url: "#_3-天山铝业-002532-—-⚠️-谨慎做t"
+            - text: "#"
+        - paragraph [ref=e317]:
+          - strong [ref=e318]: 盘面特征：
+        - list [ref=e319]:
+          - listitem [ref=e320]: 6/5 收约13.91元，-3.07%，盘中创60日新低
+          - listitem [ref=e321]: 全天振幅3.48%（13.91~14.41），空间较大
+          - listitem [ref=e322]: 从52周高点21.44跌至13.91，跌幅35%，已进入深跌区
+          - listitem [ref=e323]: 近10日累计下跌10.32%
+        - paragraph [ref=e324]:
+          - strong [ref=e325]: 基本面亮点：
+        - table [ref=e326]:
+          - rowgroup [ref=e327]:
+            - row "指标 数据" [ref=e328]:
+              - columnheader "指标" [ref=e329]
+              - columnheader "数据" [ref=e330]
+          - rowgroup [ref=e331]:
+            - row "动态PE 7.4倍（极低）" [ref=e332]:
+              - cell "动态PE" [ref=e333]
+              - cell "7.4倍（极低）" [ref=e334]
+            - row "Q1净利润 22.19亿，同比+109.70%" [ref=e335]:
+              - cell "Q1净利润" [ref=e336]
+              - cell "22.19亿，同比+109.70%" [ref=e337]
+            - row "股息率 3.83%" [ref=e338]:
+              - cell "股息率" [ref=e339]
+              - cell "3.83%" [ref=e340]
+            - row "ROE 7.27%" [ref=e341]:
+              - cell "ROE" [ref=e342]
+              - cell "7.27%" [ref=e343]
+        - paragraph [ref=e344]:
+          - strong [ref=e345]: 资金面：
+        - table [ref=e346]:
+          - rowgroup [ref=e347]:
+            - row "维度 数据 信号" [ref=e348]:
+              - columnheader "维度" [ref=e349]
+              - columnheader "数据" [ref=e350]
+              - columnheader "信号" [ref=e351]
+          - rowgroup [ref=e352]:
+            - row "6/5主力净流出 -5566万 偏空但规模可控" [ref=e353]:
+              - cell "6/5主力净流出" [ref=e354]
+              - cell "-5566万" [ref=e355]
+              - cell "偏空但规模可控" [ref=e356]
+            - row "近10日主力累计 -1.68亿 持续流出" [ref=e357]:
+              - cell "近10日主力累计" [ref=e358]
+              - cell "-1.68亿" [ref=e359]
+              - cell "持续流出" [ref=e360]
+            - row "融资余额 6.50亿，环比+6.69% 有资金逆势加杠杆" [ref=e361]:
+              - cell "融资余额" [ref=e362]
+              - cell "6.50亿，环比+6.69%" [ref=e363]
+              - cell "有资金逆势加杠杆" [ref=e364]
+        - paragraph [ref=e365]:
+          - strong [ref=e366]: 做T评估：
+        - table [ref=e367]:
+          - rowgroup [ref=e368]:
+            - row "类型 可行性 理由" [ref=e369]:
+              - columnheader "类型" [ref=e370]
+              - columnheader "可行性" [ref=e371]
+              - columnheader "理由" [ref=e372]
+          - rowgroup [ref=e373]:
+            - row "正T（先买后卖） ⚠️ 条件可行 基本面好+估值低+急跌后，若再急跌可博反弹" [ref=e374]:
+              - cell "正T（先买后卖）" [ref=e375]
+              - cell "⚠️ 条件可行" [ref=e376]
+              - cell "基本面好+估值低+急跌后，若再急跌可博反弹" [ref=e377]
+            - row "倒T（先卖后买） ❌ 不推荐 已深跌35%，低位割肉容易卖在最低点" [ref=e378]:
+              - cell "倒T（先卖后买）" [ref=e379]
+              - cell "❌ 不推荐" [ref=e380]
+              - cell "已深跌35%，低位割肉容易卖在最低点" [ref=e381]
+        - paragraph [ref=e382]:
+          - strong [ref=e383]: 执行策略（正T，急跌博反弹）：
+        - list [ref=e384]:
+          - listitem [ref=e385]:
+            - strong [ref=e386]: 买入条件（严格）
+            - text: ：盘中急跌至13.5以下（较收盘再跌3%+），且出现放量止跌信号，方可轻仓买入
+          - listitem [ref=e387]:
+            - strong [ref=e388]: 卖出区间
+            - text: ：反弹至14.0~14.2即出，目标1~2个点
+          - listitem [ref=e389]:
+            - strong [ref=e390]: 止损条件
+            - text: ：若买入后继续下跌破13.0，无条件止损
+          - listitem [ref=e391]:
+            - strong [ref=e392]: 不参与条件
+            - text: ：若开盘直接反弹1%+，不追高做正T
+          - listitem [ref=e393]:
+            - strong [ref=e394]: 核心逻辑
+            - text: ：基本面支撑（PE 7.4× + Q1利润翻倍），13.5以下有估值底，但短期趋势弱，只能做超跌反弹
+        - separator [ref=e395]
+        - heading "4. 拓维信息（002261）— ❌ 不建议做T Permalink to \"4. 拓维信息（002261）— ❌ 不建议做T\"" [level=4] [ref=e396]:
+          - text: 4. 拓维信息（002261）— ❌ 不建议做T
+          - link "Permalink to \"4. 拓维信息（002261）— ❌ 不建议做T\"" [ref=e397] [cursor=pointer]:
+            - /url: "#_4-拓维信息-002261-—-❌-不建议做t"
+            - text: "#"
+        - paragraph [ref=e398]:
+          - strong [ref=e399]: 盘面特征：
+        - list [ref=e400]:
+          - listitem [ref=e401]: 6/4 收29.03元，-2.81%，连续4日下跌
+          - listitem [ref=e402]: 从4月高点约39.48跌至29元，跌幅超26%
+          - listitem [ref=e403]: PE(TTM) 148倍，PB 14.05倍，估值极高
+        - paragraph [ref=e404]:
+          - strong [ref=e405]: 资金面：
+        - table [ref=e406]:
+          - rowgroup [ref=e407]:
+            - row "维度 数据 信号" [ref=e408]:
+              - columnheader "维度" [ref=e409]
+              - columnheader "数据" [ref=e410]
+              - columnheader "信号" [ref=e411]
+          - rowgroup [ref=e412]:
+            - row "6/4主力净流出 -1.83亿 偏空" [ref=e413]:
+              - cell "6/4主力净流出" [ref=e414]
+              - cell "-1.83亿" [ref=e415]
+              - cell "偏空" [ref=e416]
+            - row "近10日主力累计 -12.2亿 大幅流出" [ref=e417]:
+              - cell "近10日主力累计" [ref=e418]
+              - cell "-12.2亿" [ref=e419]
+              - cell "大幅流出" [ref=e420]
+            - row "近20日大单流出天数 15天 持续流出" [ref=e421]:
+              - cell "近20日大单流出天数" [ref=e422]
+              - cell "15天" [ref=e423]
+              - cell "持续流出" [ref=e424]
+            - row "融资余额 17.40亿 占流通市值5.23%，偏重" [ref=e425]:
+              - cell "融资余额" [ref=e426]
+              - cell "17.40亿" [ref=e427]
+              - cell "占流通市值5.23%，偏重" [ref=e428]
+        - paragraph [ref=e429]:
+          - strong [ref=e430]: 不做T的理由：
+        - list [ref=e431]:
+          - listitem [ref=e432]: 主力资金近10日流出12.2亿，机构态度明确偏空
+          - listitem [ref=e433]: PE 148倍 + 动态PE亏损，没有估值锚，下跌空间难以判断
+          - listitem [ref=e434]: 筹码成本均价33.74元，当前29元，获利盘仅2.81%——上方套牢盘沉重
+          - listitem [ref=e435]: 机构控盘度仅23.46%（轻度控盘），股价易被情绪左右
+          - listitem [ref=e436]: RSI死叉 + MACD双线下穿0轴，技术面全面偏空
+          - listitem [ref=e437]: 周五上涨概率仅45.36%，胜率不占优
+        - paragraph [ref=e438]:
+          - strong [ref=e439]: 结论：观望为主。若已持仓被套，不建议做T降低成本——在没有基本面支撑的情况下，做T可能越做越亏。不如等止跌信号明确后再操作。
+        - separator [ref=e440]
+        - heading "5. 华胜天成（600410）— ❌ 不建议做T Permalink to \"5. 华胜天成（600410）— ❌ 不建议做T\"" [level=4] [ref=e441]:
+          - text: 5. 华胜天成（600410）— ❌ 不建议做T
+          - link "Permalink to \"5. 华胜天成（600410）— ❌ 不建议做T\"" [ref=e442] [cursor=pointer]:
+            - /url: "#_5-华胜天成-600410-—-❌-不建议做t"
+            - text: "#"
+        - paragraph [ref=e443]:
+          - strong [ref=e444]: 盘面特征：
+        - list [ref=e445]:
+          - listitem [ref=e446]: 6/5 盘中约17.87元，创60日新低
+          - listitem [ref=e447]: 近60日跌幅高达41.43%，属于深度熊股
+          - listitem [ref=e448]: PE为负（亏损），Q1净利润-9229万，同比-162.30%
+        - paragraph [ref=e449]:
+          - strong [ref=e450]: 资金面：
+        - table [ref=e451]:
+          - rowgroup [ref=e452]:
+            - row "维度 数据 信号" [ref=e453]:
+              - columnheader "维度" [ref=e454]
+              - columnheader "数据" [ref=e455]
+              - columnheader "信号" [ref=e456]
+          - rowgroup [ref=e457]:
+            - row "6/4主力净流出 -6145万 偏空" [ref=e458]:
+              - cell "6/4主力净流出" [ref=e459]
+              - cell "-6145万" [ref=e460]
+              - cell "偏空" [ref=e461]
+            - row "近10日主力累计 -9.78亿 大幅流出" [ref=e462]:
+              - cell "近10日主力累计" [ref=e463]
+              - cell "-9.78亿" [ref=e464]
+              - cell "大幅流出" [ref=e465]
+            - row "5日跌幅 -5.75% 加速下跌" [ref=e466]:
+              - cell "5日跌幅" [ref=e467]
+              - cell "-5.75%" [ref=e468]
+              - cell "加速下跌" [ref=e469]
+            - row "股东户数 45.06万，+25.45% 散户大量涌入接盘" [ref=e470]:
+              - cell "股东户数" [ref=e471]
+              - cell "45.06万，+25.45%" [ref=e472]
+              - cell "散户大量涌入接盘" [ref=e473]
+        - paragraph [ref=e474]:
+          - strong [ref=e475]: 不做T的理由：
+        - list [ref=e476]:
+          - listitem [ref=e477]: 60日跌幅41%的深度熊股，做T风险极高
+          - listitem [ref=e478]: 基本面恶化——Q1亏损扩大162%，没有估值底
+          - listitem [ref=e479]: 股东户数暴增25%说明散户在接机构的货，筹码分散化
+          - listitem [ref=e480]: 均线形成死三角，技术面熊市排列
+          - listitem [ref=e481]: 在这种股票上做T，盈亏比极差——跌易涨难
+        - paragraph [ref=e482]:
+          - strong [ref=e483]: 结论：不建议任何做T操作。若持仓，应考虑止损而非做T。主力近10日出逃近10亿，散户增加25%，这是典型的机构出货、散户接盘格局。
+        - separator [ref=e484]
+        - heading "三、综合排序 Permalink to \"三、综合排序\"" [level=3] [ref=e485]:
+          - text: 三、综合排序
+          - link "Permalink to \"三、综合排序\"" [ref=e486] [cursor=pointer]:
+            - /url: "#三、综合排序"
+            - text: "#"
+        - table [ref=e487]:
+          - rowgroup [ref=e488]:
+            - row "排名 股票 做T综合评分 核心理由" [ref=e489]:
+              - columnheader "排名" [ref=e490]
+              - columnheader "股票" [ref=e491]
+              - columnheader "做T综合评分" [ref=e492]
+              - columnheader "核心理由" [ref=e493]
+          - rowgroup [ref=e494]:
+            - row "1 紫金矿业 ⭐⭐⭐⭐ 估值合理+流动性好+振幅充足+30元支撑明确" [ref=e495]:
+              - cell "1" [ref=e496]
+              - cell "紫金矿业" [ref=e497]:
+                - strong [ref=e498]: 紫金矿业
+              - cell "⭐⭐⭐⭐" [ref=e499]
+              - cell "估值合理+流动性好+振幅充足+30元支撑明确" [ref=e500]
+            - row "2 天山铝业 ⭐⭐⭐ 基本面优秀+PE极低+急跌后有机会，但趋势弱需等信号" [ref=e501]:
+              - cell "2" [ref=e502]
+              - cell "天山铝业" [ref=e503]
+              - cell "⭐⭐⭐" [ref=e504]
+              - cell "基本面优秀+PE极低+急跌后有机会，但趋势弱需等信号" [ref=e505]
+            - row "3 科大讯飞 ⭐⭐ 振幅空间可做倒T，但主力持续流出+接近52周低点" [ref=e506]:
+              - cell "3" [ref=e507]
+              - cell "科大讯飞" [ref=e508]
+              - cell "⭐⭐" [ref=e509]
+              - cell "振幅空间可做倒T，但主力持续流出+接近52周低点" [ref=e510]
+            - row "4 拓维信息 ⭐ 估值虚高+主力大幅流出+技术面全面偏空" [ref=e511]:
+              - cell "4" [ref=e512]
+              - cell "拓维信息" [ref=e513]
+              - cell "⭐" [ref=e514]
+              - cell "估值虚高+主力大幅流出+技术面全面偏空" [ref=e515]
+            - row "5 华胜天成 ☆ 深度熊股+基本面恶化+散户接盘，不应参与" [ref=e516]:
+              - cell "5" [ref=e517]
+              - cell "华胜天成" [ref=e518]
+              - cell "☆" [ref=e519]
+              - cell "深度熊股+基本面恶化+散户接盘，不应参与" [ref=e520]
+        - separator [ref=e521]
+        - heading "四、周五做T通用纪律 Permalink to \"四、周五做T通用纪律\"" [level=3] [ref=e522]:
+          - text: 四、周五做T通用纪律
+          - link "Permalink to \"四、周五做T通用纪律\"" [ref=e523] [cursor=pointer]:
+            - /url: "#四、周五做t通用纪律"
+            - text: "#"
+        - list [ref=e524]:
+          - listitem [ref=e525]:
+            - strong [ref=e526]: 仓位控制
+            - text: ：周五尾盘不确定性大，做T仓位不超过总仓位的30%
+          - listitem [ref=e527]:
+            - strong [ref=e528]: 不过夜原则
+            - text: ：当日T必须当日了结，周五不过周末
+          - listitem [ref=e529]:
+            - strong [ref=e530]: 振幅门槛
+            - text: ：振幅低于2%不参与，手续费都赚不回来
+          - listitem [ref=e531]:
+            - strong [ref=e532]: 顺势而为
+            - text: ：下跌趋势只做倒T（先卖后买），上涨趋势只做正T（先买后卖）
+          - listitem [ref=e533]:
+            - strong [ref=e534]: 止损铁律
+            - text: ：做T单笔亏损超过1.5%无条件平仓，不扛单
+        - separator [ref=e535]
+        - heading "五、明日观察要点 Permalink to \"五、明日观察要点\"" [level=3] [ref=e536]:
+          - text: 五、明日观察要点
+          - link "Permalink to \"五、明日观察要点\"" [ref=e537] [cursor=pointer]:
+            - /url: "#五、明日观察要点"
+            - text: "#"
+        - list [ref=e538]:
+          - listitem [ref=e539]:
+            - strong [ref=e540]: 紫金矿业
+            - text: ：是否守住30元整数关口，有色板块整体走势
+          - listitem [ref=e541]:
+            - strong [ref=e542]: 科大讯飞
+            - text: ：45元（52周低点）支撑有效性，若放量跌破则转空
+          - listitem [ref=e543]:
+            - strong [ref=e544]: 天山铝业
+            - text: ：13.5元以下是否出现放量止跌信号
+          - listitem [ref=e545]:
+            - strong [ref=e546]: 宏观
+            - text: ：关注周末前资金避险情绪，周五通常缩量
+        - separator [ref=e547]
+        - blockquote [ref=e548]:
+          - paragraph [ref=e549]:
+            - text: ⚠️
+            - strong [ref=e550]: 免责声明
+            - text: ：以上分析基于公开市场数据和历史统计，不构成任何投资建议。股市有风险，投资需谨慎。做T属于高频短线交易，对盯盘能力和纪律要求极高，请根据自身情况独立决策。
+        - separator [ref=e551]
+        - paragraph [ref=e552]: "Sources:"
+        - list [ref=e553]:
+          - listitem [ref=e554]:
+            - link "科大讯飞 - 东方财富" [ref=e555] [cursor=pointer]:
+              - /url: https://quote.eastmoney.com/q/0.002230.html
+          - listitem [ref=e556]:
+            - link "紫金矿业资金流向 - 东方财富" [ref=e557] [cursor=pointer]:
+              - /url: https://data.eastmoney.com/zjlx/601899.html
+          - listitem [ref=e558]:
+            - link "天山铝业 - 东方财富" [ref=e559] [cursor=pointer]:
+              - /url: https://quote.eastmoney.com/sz002532.html
+          - listitem [ref=e560]:
+            - link "拓维信息资金流向 - 东方财富" [ref=e561] [cursor=pointer]:
+              - /url: https://data.eastmoney.com/zjlx/002261.html
+          - listitem [ref=e562]:
+            - link "华胜天成资金流向 - 东方财富" [ref=e563] [cursor=pointer]:
+              - /url: https://data.eastmoney.com/zjlx/600410.html
+          - listitem [ref=e564]:
+            - link "科大讯飞异动提醒 - 证券之星" [ref=e565] [cursor=pointer]:
+              - /url: http://stock.stockstar.com/RB2026060500008755.shtml
+          - listitem [ref=e566]:
+            - link "华胜天成异动提醒 - 证券之星" [ref=e567] [cursor=pointer]:
+              - /url: http://stock.stockstar.com/RB2026060500008636.shtml
+          - listitem [ref=e568]:
+            - link "天山铝业异动提醒 - 证券之星" [ref=e569] [cursor=pointer]:
+              - /url: http://stock.stockstar.com/RB2026060500008040.shtml
+    - contentinfo [ref=e570]:
+      - navigation "Pager" [ref=e571]:
+        - generic [ref=e572]: Pager
+        - link "Previous page 05-28" [ref=e574] [cursor=pointer]:
+          - /url: /review/2026/05/2026-05-28.html
+          - generic [ref=e575]: Previous page
+          - generic [ref=e576]: 05-28
