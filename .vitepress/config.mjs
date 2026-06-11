@@ -8,10 +8,10 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
+      { text: '索引', link: '/catalog' },
       { text: '复盘', link: '/review/2026/2026' },
       { text: '问题清单', link: '/questions/index' },
-      { text: '知识库', link: '/docs/' },
-      { text: '关于', link: '/about' }
+      { text: '知识库', link: '/docs/' }
     ],
     sidebar: {
       '/review/': [
@@ -22,30 +22,30 @@ export default defineConfig({
             { text: '年度复盘', link: '/review/2026/2026' },
             {
               text: '5月',
-              collapsed: false,
+              collapsed: true,
               items: [
-                { text: '月复盘', link: '/review/2026/05/2026-05' },
+                { text: '📅 月复盘', link: '/review/2026/05/2026-05' },
                 { text: 'W21 周复盘', link: '/review/2026/05/2026-W21' },
-                { text: '05-21', link: '/review/2026/05/2026-05-21' },
-                { text: '05-22', link: '/review/2026/05/2026-05-22' },
-                { text: '05-25', link: '/review/2026/05/2026-05-25' },
-                { text: '05-26', link: '/review/2026/05/2026-05-26' },
-                { text: '05-27', link: '/review/2026/05/2026-05-27' },
-                { text: '05-28', link: '/review/2026/05/2026-05-28' }
+                { text: '05-28 周三', link: '/review/2026/05/2026-05-28' },
+                { text: '05-27 周二 · 伊朗空袭', link: '/review/2026/05/2026-05-27' },
+                { text: '05-26 周一', link: '/review/2026/05/2026-05-26' },
+                { text: '05-25 周日', link: '/review/2026/05/2026-05-25' },
+                { text: '05-22 周四', link: '/review/2026/05/2026-05-22' },
+                { text: '05-21 周三', link: '/review/2026/05/2026-05-21' }
               ]
             },
             {
-              text: '6月',
+              text: '6月 · 4000点拉锯',
               collapsed: false,
               items: [
-                { text: '月复盘', link: '/review/2026/06/2026-06' },
-                { text: '06-01（周一）', link: '/review/2026/06/2026-06-01' },
-                { text: '06-02（周二）', link: '/review/2026/06/2026-06-02' },
-                { text: '06-03（周三）', link: '/review/2026/06/2026-06-03' },
-                { text: '06-04（周四）', link: '/review/2026/06/2026-06-04' },
-                { text: '06-05（周五）', link: '/review/2026/06/2026-06-05' },
-                { text: '06-08（周一）', link: '/review/2026/06/2026-06-08' },
-                { text: '06-11（周四）', link: '/review/2026/06/2026-06-11' }
+                { text: '📅 月复盘 · 经济日历', link: '/review/2026/06/2026-06' },
+                { text: '06-11 周四 · FOMC前夕', link: '/review/2026/06/2026-06-11' },
+                { text: '06-08 周一 · 黑色星期一', link: '/review/2026/06/2026-06-08' },
+                { text: '06-05 周五 · 非农冲击', link: '/review/2026/06/2026-06-05' },
+                { text: '06-04 周四', link: '/review/2026/06/2026-06-04' },
+                { text: '06-03 周三', link: '/review/2026/06/2026-06-03' },
+                { text: '06-02 周二', link: '/review/2026/06/2026-06-02' },
+                { text: '06-01 周一', link: '/review/2026/06/2026-06-01' }
               ]
             }
           ]
@@ -86,6 +86,9 @@ export default defineConfig({
           ]
         }
       ]
+    },
+    search: {
+      provider: 'local'
     },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/sunyoboy' }
