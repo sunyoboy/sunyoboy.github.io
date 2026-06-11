@@ -52,6 +52,19 @@ export default defineConfig({
       ],
       '/questions/': [
         {
+          text: '特别专题',
+          collapsed: false,
+          items: [
+            {
+              text: '孕期管理',
+              collapsed: false,
+              items: [
+                { text: '06-11 情况汇总', link: '/questions/2026/06/2026-06-11' }
+              ]
+            }
+          ]
+        },
+        {
           text: '2026年',
           collapsed: false,
           items: [
