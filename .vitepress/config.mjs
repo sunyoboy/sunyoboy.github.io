@@ -57,7 +57,7 @@ export default defineConfig({
           items: [
             { text: '问题汇总', link: '/questions/index' },
             {
-              text: '特别专题',
+              text: '6月',
               collapsed: false,
               items: [
                 { text: '孕期管理 06-11', link: '/questions/2026/06/2026-06-11' }
