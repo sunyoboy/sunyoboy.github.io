@@ -12,4 +12,5 @@
 - [AI工具全景分析](ai-tools-analysis.md) — Cursor、Claude、v0 等 AI 编程工具对比
 - [投资心智](mindset.md) — 尹烨：改变自己，投资认知与思维模型
 - [矛盾论](contradiction.md) — 唯物辩证法核心，处理现实问题的方法论
+- [实践论](practice-theory.md) — 认识论基础，知行合一的哲学依据
 - [部署说明](deploy.md) — GitHub Pages + Gitee Pages 部署指南

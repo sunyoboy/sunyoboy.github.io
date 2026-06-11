@@ -69,6 +69,7 @@
 | [AI工具全景分析](docs/ai-tools-analysis) | Cursor、Claude、v0 等 AI 编程工具对比 |
 | [投资心智](docs/mindset) | 改变自己，投资认知与思维模型 |
 | [矛盾论](docs/contradiction) | 唯物辩证法核心观点与实际问题处理方法 |
+| [实践论](docs/practice-theory) | 认识论基础，知行合一的哲学依据 |
 | [决策记录](docs/decision-log) | 建站选型、目录结构、主题风格等关键决策 |
 | [部署说明](docs/deploy) | GitHub Pages + Gitee Pages 部署指南 |
 
