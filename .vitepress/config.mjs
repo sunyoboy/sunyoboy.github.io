@@ -72,9 +72,7 @@ export default defineConfig({
             {
               text: '6月',
               collapsed: false,
-              items: [
-                { text: '孕期管理 06-11', link: '/questions/2026/06/2026-06-11' }
-              ]
+              items: []
             },
             {
               text: '5月',
