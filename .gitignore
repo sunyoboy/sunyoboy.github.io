@@ -2,6 +2,9 @@ node_modules
 dist
 .vitepress/cache
 .vitepress/dist
+.playwright-mcp
 .env
+.wechat_token
+__pycache__
 .wechat_token
 __pycache__

@@ -1,9 +1,0 @@
-[    1212ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:5173/favicon.ico:0
-[ 6984304ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5173/@vite/client:559
-[ 8442292ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5173/@vite/client:559
-[ 8830733ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5173/@vite/client:559
-[77527930ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5173/@vite/client:559
-[114561431ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5173/@vite/client:559
-[115536484ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5173/@vite/client:559
-[159892995ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5173/@vite/client:559
-[163112654ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5173/@vite/client:559

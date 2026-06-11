@@ -24,8 +24,6 @@ export default defineConfig({
               text: '5月',
               collapsed: true,
               items: [
-                { text: '📅 月复盘', link: '/review/2026/05/2026-05' },
-                { text: 'W21 周复盘', link: '/review/2026/05/2026-W21' },
                 { text: '05-28 周三', link: '/review/2026/05/2026-05-28' },
                 { text: '05-27 周二 · 伊朗空袭', link: '/review/2026/05/2026-05-27' },
                 { text: '05-26 周一', link: '/review/2026/05/2026-05-26' },
