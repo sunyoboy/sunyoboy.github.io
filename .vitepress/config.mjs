@@ -37,6 +37,7 @@ export default defineConfig({
               collapsed: false,
               items: [
                 { text: '📅 月复盘 · 经济日历', link: '/review/2026/06/2026-06' },
+                { text: '📋 本周持仓建议', link: '/review/2026/06/2026-06-11-本周持仓建议' },
                 { text: '06-11 周四 · FOMC前夕', link: '/review/2026/06/2026-06-11' },
                 { text: '06-08 周一 · 黑色星期一', link: '/review/2026/06/2026-06-08' },
                 { text: '06-05 周五 · 非农冲击', link: '/review/2026/06/2026-06-05' },
