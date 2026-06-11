@@ -8,10 +8,10 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
-      { text: '索引', link: '/catalog' },
-      { text: '复盘', link: '/review/2026/2026' },
       { text: '问题清单', link: '/questions/index' },
-      { text: '知识库', link: '/docs/' }
+      { text: '复盘', link: '/review/2026/2026' },
+      { text: '知识库', link: '/docs/' },
+      { text: 'Index', link: '/catalog' }
     ],
     sidebar: {
       '/review/': [
@@ -57,6 +57,13 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: '问题汇总', link: '/questions/index' },
+            {
+              text: '特别专题',
+              collapsed: false,
+              items: [
+                { text: '孕期管理 06-11', link: '/questions/2026/06/2026-06-11' }
+              ]
+            },
             {
               text: '5月',
               collapsed: false,

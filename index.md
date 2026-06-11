@@ -12,14 +12,14 @@ hero:
       text: GitHub
       link: https://github.com/sunyoboy
 features:
-  - icon: 📊
-    title: 每日复盘
-    details: A股盘面分析、板块轮动、资金流向、持仓盈亏与操作反思
-    link: /review/2026/2026
   - icon: 📋
     title: 问题清单
     details: 投资中遇到的关键疑问和思考记录
     link: /questions/index
+  - icon: 📊
+    title: 每日复盘
+    details: A股盘面分析、板块轮动、资金流向、持仓盈亏与操作反思
+    link: /review/2026/2026
   - icon: 📚
     title: 知识库
     details: 投资工具、交易方法、政策分析等系统性知识沉淀
@@ -27,6 +27,10 @@ features:
 ---
 
 ## 最近更新
+
+### 问题清单
+
+- [问题汇总](/questions/index) — 投资中的关键疑问与思考
 
 ### 复盘
 
