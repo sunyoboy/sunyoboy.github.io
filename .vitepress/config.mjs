@@ -38,12 +38,14 @@ export default defineConfig({
               text: '6月',
               collapsed: false,
               items: [
+                { text: '月复盘', link: '/review/2026/06/2026-06' },
                 { text: '06-01（周一）', link: '/review/2026/06/2026-06-01' },
                 { text: '06-02（周二）', link: '/review/2026/06/2026-06-02' },
                 { text: '06-03（周三）', link: '/review/2026/06/2026-06-03' },
                 { text: '06-04（周四）', link: '/review/2026/06/2026-06-04' },
                 { text: '06-05（周五）', link: '/review/2026/06/2026-06-05' },
-                { text: '06-08（周一）', link: '/review/2026/06/2026-06-08' }
+                { text: '06-08（周一）', link: '/review/2026/06/2026-06-08' },
+                { text: '06-11（周四）', link: '/review/2026/06/2026-06-11' }
               ]
             }
           ]
