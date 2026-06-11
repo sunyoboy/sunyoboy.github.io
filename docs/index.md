@@ -11,4 +11,5 @@
 - [十五五投资方向](fifteen-five-investment.md) — 政策导向与产业投资机会
 - [AI工具全景分析](ai-tools-analysis.md) — Cursor、Claude、v0 等 AI 编程工具对比
 - [投资心智](mindset.md) — 尹烨：改变自己，投资认知与思维模型
+- [矛盾论](contradiction.md) — 唯物辩证法核心，处理现实问题的方法论
 - [部署说明](deploy.md) — GitHub Pages + Gitee Pages 部署指南

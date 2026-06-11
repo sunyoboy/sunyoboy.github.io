@@ -99,7 +99,8 @@ export default defineConfig({
             { text: '十五五投资方向', link: '/docs/fifteen-five-investment' },
             { text: 'A股做T操作指南', link: '/docs/t-trading' },
             { text: 'AI工具全景分析', link: '/docs/ai-tools-analysis' },
-            { text: '投资心智', link: '/docs/mindset' }
+            { text: '投资心智', link: '/docs/mindset' },
+            { text: '矛盾论', link: '/docs/contradiction' }
           ]
         }
       ]
