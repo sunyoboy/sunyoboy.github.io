@@ -57,6 +57,7 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: '🔥 信条', link: '/growth/信条' },
+            { text: '🔄 方法论', link: '/growth/方法论' },
             { text: '🎯 年度 OKR', link: '/growth/2026-年度OKR' },
             { text: '📋 个人周报模板', link: '/growth/个人周报模板' },
             { text: '📖 阅读清单', link: '/growth/阅读清单' },
