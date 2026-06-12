@@ -98,6 +98,7 @@ export default defineConfig({
               text: '管理孕期',
               collapsed: false,
               items: [
+                { text: '06-12 复查结果', link: '/questions/2026/06/2026-06-12' },
                 { text: '06-11 情况汇总', link: '/questions/2026/06/2026-06-11' }
               ]
             }
