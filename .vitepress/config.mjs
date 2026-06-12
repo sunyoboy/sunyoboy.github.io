@@ -8,10 +8,10 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
-      { text: '个人成长', link: '/growth/2026-年度OKR' },
-      { text: '复盘', link: '/review/2026/2026' },
-      { text: '知识库', link: '/docs/' },
       { text: '问题清单', link: '/questions/index' },
+      { text: '复盘', link: '/review/2026/2026' },
+      { text: '个人成长', link: '/growth/2026-年度OKR' },
+      { text: '知识库', link: '/docs/' },
       { text: 'Index', link: '/catalog' }
     ],
     sidebar: {
