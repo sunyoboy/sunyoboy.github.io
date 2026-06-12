@@ -8,9 +8,10 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
-      { text: '问题清单', link: '/questions/index' },
+      { text: '个人成长', link: '/growth/2026-年度OKR' },
       { text: '复盘', link: '/review/2026/2026' },
       { text: '知识库', link: '/docs/' },
+      { text: '问题清单', link: '/questions/index' },
       { text: 'Index', link: '/catalog' }
     ],
     sidebar: {
@@ -45,6 +46,33 @@ export default defineConfig({
                 { text: '05-25 周日', link: '/review/2026/05/2026-05-25' },
                 { text: '05-22 周四', link: '/review/2026/05/2026-05-22' },
                 { text: '05-21 周三', link: '/review/2026/05/2026-05-21' }
+              ]
+            }
+          ]
+        }
+      ],
+      '/growth/': [
+        {
+          text: '个人成长',
+          collapsed: false,
+          items: [
+            { text: '🔥 信条', link: '/growth/信条' },
+            { text: '🎯 年度 OKR', link: '/growth/2026-年度OKR' },
+            { text: '📋 个人周报模板', link: '/growth/个人周报模板' },
+            { text: '📖 阅读清单', link: '/growth/阅读清单' },
+            { text: '💰 财务仪表盘', link: '/growth/财务仪表盘' },
+            { text: '🛠️ 技能树', link: '/growth/技能树' },
+            {
+              text: '2026年',
+              collapsed: false,
+              items: [
+                {
+                  text: '6月',
+                  collapsed: false,
+                  items: [
+                    { text: '月回顾', link: '/growth/2026/06/2026-06-月回顾' }
+                  ]
+                }
               ]
             }
           ]
