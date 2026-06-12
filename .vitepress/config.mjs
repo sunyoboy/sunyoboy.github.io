@@ -142,6 +142,7 @@ export default defineConfig({
               items: [
                 { text: '个人操作系统', link: '/docs/personal-os' },
                 { text: '保持好心态', link: '/docs/peace-of-mind' },
+                { text: '巴菲特1998演讲', link: '/docs/buffett-1998' },
                 { text: '预期与现实的差距', link: '/docs/expectation-gap' },
                 { text: '矛盾论', link: '/docs/contradiction' },
                 { text: '实践论', link: '/docs/practice-theory' },

@@ -88,6 +88,7 @@
 | [投资心智](docs/mindset) | 改变自己，投资认知与思维模型 |
 | [个人操作系统](docs/personal-os) | 四层架构、五大子系统、关键思维模型 · 像 OS 一样管理人生 |
 | [保持好心态](docs/peace-of-mind) | 遇到糟心的人和事，四个步骤回到内核 |
+| [巴菲特1998演讲](docs/buffett-1998) | 段永平看10遍的经典：品格、护城河、杠杆、知足 |
 | [预期与现实的差距](docs/expectation-gap) | 偏离预期的四级响应、度的判断 |
 | [矛盾论](docs/contradiction) | 唯物辩证法核心观点与实际问题处理方法 |
 | [实践论](docs/practice-theory) | 认识论基础，知行合一的哲学依据 |
