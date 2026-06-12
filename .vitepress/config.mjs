@@ -56,18 +56,18 @@ export default defineConfig({
           collapsed: false,
           items: [
             {
-              text: '管理孕期',
-              collapsed: false,
-              items: [
-                { text: '06-11 情况汇总', link: '/questions/2026/06/2026-06-11' }
-              ]
-            },
-            {
               text: '提升认知',
               collapsed: false,
               items: [
                 { text: '矛盾论', link: '/docs/contradiction' },
                 { text: '实践论', link: '/docs/practice-theory' }
+              ]
+            },
+            {
+              text: '管理孕期',
+              collapsed: false,
+              items: [
+                { text: '06-11 情况汇总', link: '/questions/2026/06/2026-06-11' }
               ]
             }
           ]
