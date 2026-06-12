@@ -78,11 +78,6 @@ export default defineConfig({
           items: [
             { text: '问题汇总', link: '/questions/index' },
             {
-              text: '6月',
-              collapsed: false,
-              items: []
-            },
-            {
               text: '5月',
               collapsed: false,
               items: [
@@ -100,17 +95,36 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: '知识库首页', link: '/docs/' },
-            { text: '股票工具与渠道', link: '/docs/stock-tools' },
-            { text: '决策记录', link: '/docs/decision-log' },
-            { text: '部署说明', link: '/docs/deploy' },
-            { text: 'A股行情 05-26', link: '/docs/a-share-2026-05-26' },
-            { text: '十五五投资方向', link: '/docs/fifteen-five-investment' },
-            { text: 'A股做T操作指南', link: '/docs/t-trading' },
-            { text: '宽基ETF做T策略', link: '/docs/index-etf-trading' },
-            { text: 'AI工具全景分析', link: '/docs/ai-tools-analysis' },
-            { text: '投资心智', link: '/docs/mindset' },
-            { text: '矛盾论', link: '/docs/contradiction' },
-            { text: '实践论', link: '/docs/practice-theory' }
+            {
+              text: '💹 投资交易',
+              collapsed: false,
+              items: [
+                { text: 'A股做T操作指南', link: '/docs/t-trading' },
+                { text: '宽基ETF做T策略', link: '/docs/index-etf-trading' },
+                { text: 'A股行情分析', link: '/docs/a-share-2026-05-26' },
+                { text: '十五五投资方向', link: '/docs/fifteen-five-investment' },
+                { text: 'FOMC会议时间表', link: '/docs/fomc-schedule' },
+                { text: '股票工具与渠道', link: '/docs/stock-tools' }
+              ]
+            },
+            {
+              text: '🧠 思维认知',
+              collapsed: true,
+              items: [
+                { text: '矛盾论', link: '/docs/contradiction' },
+                { text: '实践论', link: '/docs/practice-theory' },
+                { text: '投资心智', link: '/docs/mindset' },
+                { text: 'AI工具全景分析', link: '/docs/ai-tools-analysis' }
+              ]
+            },
+            {
+              text: '🔧 其他',
+              collapsed: true,
+              items: [
+                { text: '决策记录', link: '/docs/decision-log' },
+                { text: '部署说明', link: '/docs/deploy' }
+              ]
+            }
           ]
         }
       ]
