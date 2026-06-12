@@ -98,6 +98,7 @@ export default defineConfig({
             { text: 'A股行情 05-26', link: '/docs/a-share-2026-05-26' },
             { text: '十五五投资方向', link: '/docs/fifteen-five-investment' },
             { text: 'A股做T操作指南', link: '/docs/t-trading' },
+            { text: '宽基ETF做T策略', link: '/docs/index-etf-trading' },
             { text: 'AI工具全景分析', link: '/docs/ai-tools-analysis' },
             { text: '投资心智', link: '/docs/mindset' },
             { text: '矛盾论', link: '/docs/contradiction' },

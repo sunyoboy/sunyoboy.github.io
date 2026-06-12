@@ -64,6 +64,7 @@
 |------|------|
 | [股票工具与渠道](docs/stock-tools) | A股交易工具、资讯渠道、数据平台 |
 | [A股「做T」操作指南](docs/t-trading) | T+0 变相做T的方法、纪律与常见错误 |
+| [宽基ETF做T策略](docs/index-etf-trading) | 指数ETF日内波段操作，信号体系与仓位管理 |
 | [A股行情分析 2026-05-26](docs/a-share-2026-05-26) | 指数表现、板块轮动与原因分析 |
 | [十五五投资方向](docs/fifteen-five-investment) | 政策导向与产业投资机会 |
 | [AI工具全景分析](docs/ai-tools-analysis) | Cursor、Claude、v0 等 AI 编程工具对比 |
