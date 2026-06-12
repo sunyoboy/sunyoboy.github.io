@@ -13,6 +13,7 @@
 - [AI工具全景分析](ai-tools-analysis.md) — Cursor、Claude、v0 等 AI 编程工具对比
 - [投资心智](mindset.md) — 尹烨：改变自己，投资认知与思维模型
 - [个人操作系统](personal-os.md) — 四层架构、五大子系统、关键思维模型
+- [保持好心态](peace-of-mind.md) — 遇到糟心的人和事，四个步骤回到内核
 - [矛盾论](contradiction.md) — 唯物辩证法核心，处理现实问题的方法论
 - [实践论](practice-theory.md) — 认识论基础，知行合一的哲学依据
 - [FOMC 议息会议时间表](fomc-schedule.md) — 美联储全年日程、决议时间、A股影响节奏

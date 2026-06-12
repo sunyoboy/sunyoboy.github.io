@@ -141,6 +141,7 @@ export default defineConfig({
               collapsed: true,
               items: [
                 { text: '个人操作系统', link: '/docs/personal-os' },
+                { text: '保持好心态', link: '/docs/peace-of-mind' },
                 { text: '矛盾论', link: '/docs/contradiction' },
                 { text: '实践论', link: '/docs/practice-theory' },
                 { text: '投资心智', link: '/docs/mindset' },
