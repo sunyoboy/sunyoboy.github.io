@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026-06-12 持仓分析图表</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+  body { font-family: -apple-system, sans-serif; max-width: 1000px; margin: 0 auto; padding: 20px; background: #fdf6ec; }
+  h1 { text-align: center; color: #3d3a35; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+  .card { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card h3 { margin-top: 0; color: #5b8c5a; }
+  .card.full { grid-column: 1 / -1; }
+  canvas { max-height: 400px; }
+</style>
+</head>
+<body>
+<h1>📊 2026-06-12 三账户持仓分析</h1>
+
+<div class="grid">
+  <div class="card">
+    <h3>资产分布 (总资产 280,471元)</h3>
+    <canvas id="chart1"></canvas>
+  </div>
+  <div class="card">
+    <h3>三账户仓位对比</h3>
+    <canvas id="chart2"></canvas>
+  </div>
+  <div class="card">
+    <h3>股票持仓分布</h3>
+    <canvas id="chart3"></canvas>
+  </div>
+  <div class="card">
+    <h3>各品种浮动盈亏 (元)</h3>
+    <canvas id="chart4"></canvas>
+  </div>
+  <div class="card">
+    <h3>风险分类占比</h3>
+    <canvas id="chart5"></canvas>
+  </div>
+  <div class="card">
+    <h3>优化前后对比</h3>
+    <canvas id="chart6"></canvas>
+  </div>
+  <div class="card full">
+    <h3>优化资金流向 (桑基图模拟)</h3>
+    <canvas id="chart7" style="max-height:300px"></canvas>
+  </div>
+</div>
+
+<script>
+// 1. 资产分布
+new Chart(document.getElementById('chart1'), {
+  type: 'doughnut',
+  data: {
+    labels: ['现金+逆回购 (173,333)', '股票/ETF (107,138)'],
+    datasets: [{
+      data: [173333, 107138],
+      backgroundColor: ['#5b8c5a', '#e07b5a'],
+      borderWidth: 0,
+    }]
+  },
+  options: {
+    plugins: {
+      legend: { position: 'bottom' },
+      tooltip: { callbacks: { label: ctx => ctx.label + ' (' + (ctx.raw/280471*100).toFixed(1) + '%)' } }
+    }
+  }
+});
+
+// 2. 三账户仓位
+new Chart(document.getElementById('chart2'), {
+  type: 'bar',
+  data: {
+    labels: ['富国', '广发', '东北'],
+    datasets: [
+      { label: '股票/ETF', data: [24940, 58200, 23998], backgroundColor: '#e07b5a' },
+      { label: '现金+逆回购', data: [39121, 80896, 53316], backgroundColor: '#5b8c5a' }
+    ]
+  },
+  options: {
+    responsive: true,
+    scales: {
+      x: { stacked: true },
+      y: { stacked: true, ticks: { callback: v => (v/10000).toFixed(1) + '万' } }
+    },
+    plugins: { legend: { position: 'bottom' } }
+  }
+});
+
+// 3. 股票持仓分布
+new Chart(document.getElementById('chart3'), {
+  type: 'pie',
+  data: {
+    labels: ['卫星ETF富国', '科大讯飞', '华胜天成', '黄金基金', '天山铝业', '紫金矿业', '宽基ETF', '其他'],
+    datasets: [{
+      data: [23976, 20195, 19195, 18160, 9401, 5818, 1788, 8605],
+      backgroundColor: ['#4e79a7','#f28e2b','#e15759','#76b7b2','#59a14f','#edc948','#b07aa1','#bab0ac']
+    }]
+  },
+  options: { plugins: { legend: { position: 'bottom', labels: { font: { size: 11 } } } } }
+});
+
+// 4. 盈亏
+new Chart(document.getElementById('chart4'), {
+  type: 'bar',
+  data: {
+    labels: ['有色ETF','500ETF','沪深300','芯片ETF','绿电ETF','天山铝业','黄金基金','科大讯飞','卫星ETF','紫金矿业','拓维信息','华胜天成'],
+    datasets: [{
+      label: '浮动盈亏',
+      data: [797,190,251,-32,-92,-1385,-2253,-2796,-3537,-2116,-3067,-13714],
+      backgroundColor: ctx => ctx.raw >= 0 ? '#5b8c5a' : '#e15759'
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    responsive: true,
+    scales: { x: { ticks: { callback: v => v + '元' } } },
+    plugins: { legend: { display: false } }
+  }
+});
+
+// 5. 风险分类
+new Chart(document.getElementById('chart5'), {
+  type: 'doughnut',
+  data: {
+    labels: ['宽基ETF(稳定)', '行业ETF(中等)', '单一个股(高)', '问题个股(极高)'],
+    datasets: [{
+      data: [1788, 44412, 51772, 22176],
+      backgroundColor: ['#5b8c5a', '#edc948', '#f28e2b', '#e15759']
+    }]
+  },
+  options: { plugins: { legend: { position: 'bottom' } } }
+});
+
+// 6. 优化前后对比
+new Chart(document.getElementById('chart6'), {
+  type: 'bar',
+  data: {
+    labels: ['宽基ETF', '行业ETF', '单一个股', '黄金', '问题个股'],
+    datasets: [
+      { label: '优化前', data: [1788, 24000, 29596, 23978, 22176], backgroundColor: '#e07b5a' },
+      { label: '优化后', data: [30000, 24000, 24700, 9000, 0], backgroundColor: '#5b8c5a' }
+    ]
+  },
+  options: {
+    responsive: true,
+    scales: { y: { ticks: { callback: v => (v/10000).toFixed(1) + '万' } } },
+    plugins: { legend: { position: 'bottom' } }
+  }
+});
+
+// 7. 资金流向
+new Chart(document.getElementById('chart7'), {
+  type: 'bar',
+  data: {
+    labels: ['华胜天成','紫金矿业','黄金基金','拓维信息','天山铝业','→ 沪深300ETF','→ 500ETF','→ 逆回购'],
+    datasets: [{
+      data: [19000, 5800, 9000, 3000, 4700, 15000, 10000, 16500],
+      backgroundColor: ['#e15759','#e15759','#e15759','#e15759','#e15759','#5b8c5a','#5b8c5a','#5b8c5a']
+    }]
+  },
+  options: {
+    responsive: true,
+    scales: { y: { ticks: { callback: v => (v/10000).toFixed(1) + '万' } } },
+    plugins: { legend: { display: false },
+      title: { display: true, text: '卖出(红) → 买入(绿)：回收4.15万，配置2.5万ETF，剩余入逆回购' }
+    }
+  }
+});
+</script>
+</body>
+</html>
