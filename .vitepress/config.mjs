@@ -82,40 +82,46 @@ export default defineConfig({
         }
       ],
       '/questions/': [
-        { text: '问题清单', link: '/questions/index' },
         {
-          text: '特别专题',
+          text: '问题清单',
           collapsed: false,
           items: [
+            { text: '📋 总览', link: '/questions/index' },
             {
-              text: '提升认知',
+              text: '特别专题',
               collapsed: false,
               items: [
-                { text: '矛盾论', link: '/docs/contradiction' },
-                { text: '实践论', link: '/docs/practice-theory' }
+                {
+                  text: '提升认知',
+                  collapsed: false,
+                  items: [
+                    { text: '矛盾论', link: '/docs/contradiction' },
+                    { text: '实践论', link: '/docs/practice-theory' }
+                  ]
+                },
+                {
+                  text: '管理孕期',
+                  collapsed: false,
+                  items: [
+                    { text: '06-12 复查结果', link: '/questions/2026/06/2026-06-12' },
+                    { text: '06-11 情况汇总', link: '/questions/2026/06/2026-06-11' }
+                  ]
+                }
               ]
             },
             {
-              text: '管理孕期',
+              text: '2026年',
               collapsed: false,
               items: [
-                { text: '06-12 复查结果', link: '/questions/2026/06/2026-06-12' },
-                { text: '06-11 情况汇总', link: '/questions/2026/06/2026-06-11' }
-              ]
-            }
-          ]
-        },
-        {
-          text: '2026年',
-          collapsed: false,
-          items: [
-            {
-              text: '5月',
-              collapsed: false,
-              items: [
-                { text: '05-21', link: '/questions/2026/05/2026-05-21' },
-                { text: '05-22', link: '/questions/2026/05/2026-05-22' },
-                { text: '05-26', link: '/questions/2026/05/2026-05-26' }
+                {
+                  text: '5月',
+                  collapsed: false,
+                  items: [
+                    { text: '05-21', link: '/questions/2026/05/2026-05-21' },
+                    { text: '05-22', link: '/questions/2026/05/2026-05-22' },
+                    { text: '05-26', link: '/questions/2026/05/2026-05-26' }
+                  ]
+                }
               ]
             }
           ]
