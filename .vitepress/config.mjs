@@ -82,6 +82,7 @@ export default defineConfig({
         }
       ],
       '/questions/': [
+        { text: '总览', link: '/questions/index' },
         {
           text: '特别专题',
           collapsed: false,
@@ -108,7 +109,6 @@ export default defineConfig({
           text: '2026年',
           collapsed: false,
           items: [
-            { text: '问题汇总', link: '/questions/index' },
             {
               text: '5月',
               collapsed: false,
