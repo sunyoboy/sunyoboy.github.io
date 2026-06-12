@@ -92,14 +92,6 @@ export default defineConfig({
               collapsed: false,
               items: [
                 {
-                  text: '提升认知',
-                  collapsed: false,
-                  items: [
-                    { text: '矛盾论', link: '/docs/contradiction' },
-                    { text: '实践论', link: '/docs/practice-theory' }
-                  ]
-                },
-                {
                   text: '管理孕期',
                   collapsed: false,
                   items: [
@@ -134,6 +126,14 @@ export default defineConfig({
           items: [
             { text: '知识库首页', link: '/docs/' },
             {
+              text: '🧠 提升认知',
+              collapsed: false,
+              items: [
+                { text: '矛盾论', link: '/docs/contradiction' },
+                { text: '实践论', link: '/docs/practice-theory' }
+              ]
+            },
+            {
               text: '💹 投资交易',
               collapsed: false,
               items: [
@@ -153,8 +153,6 @@ export default defineConfig({
                 { text: '保持好心态', link: '/docs/peace-of-mind' },
                 { text: '巴菲特1998演讲', link: '/docs/buffett-1998' },
                 { text: '预期与现实的差距', link: '/docs/expectation-gap' },
-                { text: '矛盾论', link: '/docs/contradiction' },
-                { text: '实践论', link: '/docs/practice-theory' },
                 { text: '投资心智', link: '/docs/mindset' },
                 { text: 'AI工具全景分析', link: '/docs/ai-tools-analysis' }
               ]
