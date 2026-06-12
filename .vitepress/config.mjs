@@ -140,6 +140,7 @@ export default defineConfig({
               text: '🧠 思维认知',
               collapsed: true,
               items: [
+                { text: '个人操作系统', link: '/docs/personal-os' },
                 { text: '矛盾论', link: '/docs/contradiction' },
                 { text: '实践论', link: '/docs/practice-theory' },
                 { text: '投资心智', link: '/docs/mindset' },
