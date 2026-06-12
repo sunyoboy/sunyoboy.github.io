@@ -42,12 +42,12 @@ export default defineConfig({
               text: '5月',
               collapsed: true,
               items: [
-                { text: '05-28 周三', link: '/review/2026/05/2026-05-28' },
-                { text: '05-27 周二 · 伊朗空袭', link: '/review/2026/05/2026-05-27' },
-                { text: '05-26 周一', link: '/review/2026/05/2026-05-26' },
-                { text: '05-25 周日', link: '/review/2026/05/2026-05-25' },
-                { text: '05-22 周四', link: '/review/2026/05/2026-05-22' },
-                { text: '05-21 周三', link: '/review/2026/05/2026-05-21' }
+                { text: '05-28 周四', link: '/review/2026/05/2026-05-28' },
+                { text: '05-27 周三 · 伊朗空袭', link: '/review/2026/05/2026-05-27' },
+                { text: '05-26 周二', link: '/review/2026/05/2026-05-26' },
+                { text: '05-25 周一', link: '/review/2026/05/2026-05-25' },
+                { text: '05-22 周五', link: '/review/2026/05/2026-05-22' },
+                { text: '05-21 周四', link: '/review/2026/05/2026-05-21' }
               ]
             }
           ]
