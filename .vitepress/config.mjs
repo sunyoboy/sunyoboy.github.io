@@ -82,7 +82,7 @@ export default defineConfig({
         }
       ],
       '/questions/': [
-        { text: '总览', link: '/questions/index' },
+        { text: '问题清单', link: '/questions/index' },
         {
           text: '特别专题',
           collapsed: false,
