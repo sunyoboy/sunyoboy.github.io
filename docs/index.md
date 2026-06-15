@@ -8,6 +8,7 @@
 - [决策记录](decision-log.md) — 建站选型、目录结构、主题风格等关键决策
 - [A股「做T」操作指南](t-trading.md) — T+0 变相做T的方法、纪律与常见错误
 - [宽基ETF做T策略](index-etf-trading.md) — 指数ETF日内波段操作，信号体系与止盈止损
+- [海鸥期权策略](seagull-strategy.md) — 三腿期权组合，零成本震荡市套保
 - [A股行情分析 2026-05-26](a-share-2026-05-26.md) — 指数表现、板块轮动与原因分析
 - [十五五投资方向](fifteen-five-investment.md) — 政策导向与产业投资机会
 - [AI工具全景分析](ai-tools-analysis.md) — Cursor、Claude、v0 等 AI 编程工具对比
@@ -15,6 +16,7 @@
 - [个人操作系统](personal-os.md) — 四层架构、五大子系统、关键思维模型
 - [保持好心态](peace-of-mind.md) — 遇到糟心的人和事，四个步骤回到内核
 - [巴菲特1998演讲](buffett-1998.md) — 段永平看10遍的经典：品格、护城河、知足
+- [想赢怕输的心态](fear-greed.md) — 交易心理陷阱，用系统替代情绪做决策
 - [预期与现实的差距](expectation-gap.md) — 偏离预期的四级响应、度的判断
 - [矛盾论](contradiction.md) — 唯物辩证法核心，处理现实问题的方法论
 - [实践论](practice-theory.md) — 认识论基础，知行合一的哲学依据

@@ -141,6 +141,7 @@ export default defineConfig({
                 { text: '宽基ETF做T策略', link: '/docs/index-etf-trading' },
                 { text: 'A股行情分析', link: '/docs/a-share-2026-05-26' },
                 { text: '十五五投资方向', link: '/docs/fifteen-five-investment' },
+                { text: '海鸥期权策略', link: '/docs/seagull-strategy' },
                 { text: 'FOMC会议时间表', link: '/docs/fomc-schedule' },
                 { text: '股票工具与渠道', link: '/docs/stock-tools' }
               ]
@@ -152,6 +153,7 @@ export default defineConfig({
                 { text: '个人操作系统', link: '/docs/personal-os' },
                 { text: '保持好心态', link: '/docs/peace-of-mind' },
                 { text: '巴菲特1998演讲', link: '/docs/buffett-1998' },
+                { text: '想赢怕输的心态', link: '/docs/fear-greed' },
                 { text: '预期与现实的差距', link: '/docs/expectation-gap' },
                 { text: '投资心智', link: '/docs/mindset' },
                 { text: 'AI工具全景分析', link: '/docs/ai-tools-analysis' }
