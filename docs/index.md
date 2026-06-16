@@ -20,5 +20,6 @@
 - [预期与现实的差距](expectation-gap.md) — 偏离预期的四级响应、度的判断
 - [矛盾论](contradiction.md) — 唯物辩证法核心，处理现实问题的方法论
 - [实践论](practice-theory.md) — 认识论基础，知行合一的哲学依据
+- [三大法宝](three-weapons.md) — 统一战线/武装斗争/党的建设，个人成长三维映射
 - [FOMC 议息会议时间表](fomc-schedule.md) — 美联储全年日程、决议时间、A股影响节奏
 - [部署说明](deploy.md) — GitHub Pages + Gitee Pages 部署指南
