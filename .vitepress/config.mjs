@@ -26,6 +26,7 @@ export default defineConfig({
               collapsed: false,
               items: [
                 { text: '📅 月复盘 · 经济日历', link: '/review/2026/06/2026-06' },
+                { text: '06-17 周三 · FOMC落地点评', link: '/review/2026/06/2026-06-17' },
                 { text: '📋 本周持仓建议', link: '/review/2026/06/2026-06-11-本周持仓建议' },
                 { text: '📊 06-12 持仓分析', link: '/review/2026/06/2026-06-12-持仓分析' },
                 { text: '📈 净值与仓位跟踪', link: '/review/2026/06/2026-06-12-净值跟踪' },
