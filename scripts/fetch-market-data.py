@@ -57,13 +57,24 @@ def fetch_indices(date_str):
         for name, code in INDICES.items():
             try:
                 df = ak.stock_zh_index_daily(symbol=code)
-                # 找目标日期的数据
-                row = df[df['date'] == date_str]
+                # 找目标日期的数据（date 列是 datetime.date 类型）
+                from datetime import date as date_type
+                target_date = date_type.fromisoformat(date_str)
+                row = df[df['date'] == target_date]
                 if not row.empty:
                     r = row.iloc[-1]
+                    close = float(r['close'])
+                    # 计算涨跌幅：与前一日收盘价对比
+                    row_idx = df[df['date'] == target_date].index[0]
+                    if row_idx > 0:
+                        prev_close = float(df.iloc[row_idx - 1]['close'])
+                        pct = round((close - prev_close) / prev_close * 100, 2)
+                    else:
+                        pct = 0.0
+
                     results[name] = {
-                        "close": round(float(r['close']), 2),
-                        "pct_chg": round(float(r.get('pct_change', r.get('pct_chg', 0))), 2),
+                        "close": round(close, 2),
+                        "pct_chg": pct,
                         "volume": int(r.get('volume', 0)) if 'volume' in r else None,
                     }
                     print(f"  ✅ {name}: {results[name]['close']} ({results[name]['pct_chg']:+.2f}%)")
