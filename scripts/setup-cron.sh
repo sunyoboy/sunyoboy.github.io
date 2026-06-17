@@ -34,32 +34,33 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
         <string>$SCRIPT</string>
     </array>
     <key>StartCalendarInterval</key>
-    <dict>
-        <key>Hour</key><integer>15</integer>
-        <key>Minute</key><integer>35</integer>
-        <key>Weekday</key><integer>1</integer>
-    </dict>
-    <key>StartCalendarInterval</key>
-    <dict>
-        <key>Hour</key><integer>15</integer>
-        <key>Minute</key><integer>35</integer>
-        <key>Weekday</key><integer>2</integer>
-    </dict>
-    <dict>
-        <key>Hour</key><integer>15</integer>
-        <key>Minute</key><integer>35</integer>
-        <key>Weekday</key><integer>3</integer>
-    </dict>
-    <dict>
-        <key>Hour</key><integer>15</integer>
-        <key>Minute</key><integer>35</integer>
-        <key>Weekday</key><integer>4</integer>
-    </dict>
-    <dict>
-        <key>Hour</key><integer>15</integer>
-        <key>Minute</key><integer>35</integer>
-        <key>Weekday</key><integer>5</integer>
-    </dict>
+    <array>
+        <dict>
+            <key>Hour</key><integer>15</integer>
+            <key>Minute</key><integer>35</integer>
+            <key>Weekday</key><integer>1</integer>
+        </dict>
+        <dict>
+            <key>Hour</key><integer>15</integer>
+            <key>Minute</key><integer>35</integer>
+            <key>Weekday</key><integer>2</integer>
+        </dict>
+        <dict>
+            <key>Hour</key><integer>15</integer>
+            <key>Minute</key><integer>35</integer>
+            <key>Weekday</key><integer>3</integer>
+        </dict>
+        <dict>
+            <key>Hour</key><integer>15</integer>
+            <key>Minute</key><integer>35</integer>
+            <key>Weekday</key><integer>4</integer>
+        </dict>
+        <dict>
+            <key>Hour</key><integer>15</integer>
+            <key>Minute</key><integer>35</integer>
+            <key>Weekday</key><integer>5</integer>
+        </dict>
+    </array>
     <key>StandardOutPath</key>
     <string>$LOG</string>
     <key>StandardErrorPath</key>
