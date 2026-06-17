@@ -159,7 +159,8 @@ export default defineConfig({
                 { text: '想赢怕输的心态', link: '/docs/fear-greed' },
                 { text: '预期与现实的差距', link: '/docs/expectation-gap' },
                 { text: '投资心智', link: '/docs/mindset' },
-                { text: 'AI工具全景分析', link: '/docs/ai-tools-analysis' }
+                { text: 'AI工具全景分析', link: '/docs/ai-tools-analysis' },
+                { text: '个人开发者深耕方向', link: '/docs/solo-dev-strategy' }
               ]
             },
             {
