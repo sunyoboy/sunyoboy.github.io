@@ -28,7 +28,9 @@ INDICES = {
     "深证成指": "sz399001",
     "创业板指": "sz399006",
     "科创50": "sh000688",
+    "上证50": "sh000016",
     "沪深300": "sh000300",
+    "中证500": "sh000905",
 }
 
 def get_date():
@@ -101,7 +103,7 @@ def generate_template(date_str, index_data):
 
     # 构建表格行
     index_rows = ""
-    for name in ["上证指数","深证成指","创业板指","科创50","沪深300"]:
+    for name in ["上证指数","深证成指","创业板指","科创50","上证50","沪深300","中证500"]:
         if name in index_data:
             d = index_data[name]
             index_rows += f"| {name} | {d['close']} | **{d['pct_chg']:+.2f}%** |\n"
