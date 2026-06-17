@@ -30,7 +30,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     <string>com.knowingdoing.fetch</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/usr/bin/python3</string>
+        <string>$HOME/.pyenv/shims/python3</string>
         <string>$SCRIPT</string>
     </array>
     <key>StartCalendarInterval</key>
