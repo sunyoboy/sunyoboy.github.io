@@ -142,6 +142,7 @@ export default defineConfig({
                 { text: 'A股做T操作指南', link: '/docs/t-trading' },
                 { text: '宽基ETF做T策略', link: '/docs/index-etf-trading' },
                 { text: 'A股行情分析', link: '/docs/a-share-2026-05-26' },
+                { text: '盈利分红型行业', link: '/docs/profitable-industries' },
                 { text: '十五五投资方向', link: '/docs/fifteen-five-investment' },
                 { text: '海鸥期权策略', link: '/docs/seagull-strategy' },
                 { text: 'FOMC会议时间表', link: '/docs/fomc-schedule' },

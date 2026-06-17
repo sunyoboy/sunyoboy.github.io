@@ -102,6 +102,7 @@
 | [A股做T操作指南](docs/t-trading) | T+0 变相做T的方法、纪律与常见错误 |
 | [宽基ETF做T策略](docs/index-etf-trading) | 指数ETF日内波段操作，信号体系与仓位管理 |
 | [A股行情分析](docs/a-share-2026-05-26) | 指数表现、板块轮动与原因分析 |
+| [盈利分红型行业](docs/profitable-industries) | 白酒/银行/煤炭/水电/家电/通信——不靠投资拉动的现金奶牛 |
 | [十五五投资方向](docs/fifteen-five-investment) | 政策导向与产业投资机会 |
 | [海鸥期权策略](docs/seagull-strategy) | 三腿期权组合，零成本震荡市套保 |
 | [FOMC会议时间表](docs/fomc-schedule) | 美联储全年日程、决议时间、A股影响节奏 |

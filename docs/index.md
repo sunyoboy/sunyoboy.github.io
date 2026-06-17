@@ -10,6 +10,7 @@
 - [宽基ETF做T策略](index-etf-trading.md) — 指数ETF日内波段操作，信号体系与止盈止损
 - [海鸥期权策略](seagull-strategy.md) — 三腿期权组合，零成本震荡市套保
 - [A股行情分析 2026-05-26](a-share-2026-05-26.md) — 指数表现、板块轮动与原因分析
+- [盈利分红型行业](profitable-industries.md) — 不靠投资拉动、真实盈利分红的行业
 - [十五五投资方向](fifteen-five-investment.md) — 政策导向与产业投资机会
 - [AI工具全景分析](ai-tools-analysis.md) — Cursor、Claude、v0 等 AI 编程工具对比
 - [投资心智](mindset.md) — 尹烨：改变自己，投资认知与思维模型
