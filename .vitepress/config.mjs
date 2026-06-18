@@ -146,6 +146,7 @@ export default defineConfig({
                 { text: '盈利分红型行业', link: '/docs/profitable-industries' },
                 { text: '十五五投资方向', link: '/docs/fifteen-five-investment' },
                 { text: '海鸥期权策略', link: '/docs/seagull-strategy' },
+                { text: '建仓纪律', link: '/docs/position-discipline' },
                 { text: 'FOMC会议时间表', link: '/docs/fomc-schedule' },
                 { text: '股票工具与渠道', link: '/docs/stock-tools' }
               ]
