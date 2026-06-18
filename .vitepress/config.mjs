@@ -6,6 +6,7 @@ export default defineConfig({
   lang: 'zh-CN',
   appearance: true,
   themeConfig: {
+    siteTitle: '网站全景图',
     nav: [
       { text: '首页', link: '/' },
       { text: '复盘', link: '/review/2026/2026' },
@@ -39,6 +40,7 @@ export default defineConfig({
                   text: '📂 日复盘',
                   collapsed: true,
                   items: [
+                    { text: '06-18 · 端午前收官', link: '/review/2026/06/2026-06-18' },
                     { text: '06-17 · FOMC落地', link: '/review/2026/06/2026-06-17' },
                     { text: '06-11 · FOMC前夕', link: '/review/2026/06/2026-06-11' },
                     { text: '06-08 · 黑色星期一', link: '/review/2026/06/2026-06-08' },
@@ -139,23 +141,22 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: '知识库首页', link: '/docs/' },
+            { text: '🗺️ 网站全景图', link: '/docs/knowledge-tree' },
             {
-              text: '🔴 交易系统',
+              text: '💹 投资体系',
               collapsed: false,
               items: [
-                { text: 'FOMC决策全景', link: '/docs/fomc-schedule' },
+                { text: '🔴 FOMC决策全景', link: '/docs/fomc-schedule' },
                 { text: '交易纪律', link: '/docs/position-discipline' },
+                { text: '股票评估框架', link: '/docs/stock-evaluation' },
                 { text: 'A股做T操作指南', link: '/docs/t-trading' },
-                { text: '宽基ETF做T策略', link: '/docs/index-etf-trading' }
-              ]
-            },
-            {
-              text: '📚 投资研究',
-              collapsed: true,
-              items: [
+                { text: '宽基ETF做T策略', link: '/docs/index-etf-trading' },
                 { text: '盈利分红型行业', link: '/docs/profitable-industries' },
                 { text: '十五五投资方向', link: '/docs/fifteen-five-investment' },
                 { text: '海鸥期权策略', link: '/docs/seagull-strategy' },
+                { text: '巴菲特1998演讲', link: '/docs/buffett-1998' },
+                { text: '想赢怕输的心态', link: '/docs/fear-greed' },
+                { text: '投资心智', link: '/docs/mindset' },
                 { text: 'A股行情分析', link: '/docs/a-share-2026-05-26' },
                 { text: '股票工具与渠道', link: '/docs/stock-tools' }
               ]
@@ -168,11 +169,8 @@ export default defineConfig({
                 { text: '矛盾论', link: '/docs/contradiction' },
                 { text: '实践论', link: '/docs/practice-theory' },
                 { text: '三大法宝', link: '/docs/three-weapons' },
-                { text: '巴菲特1998演讲', link: '/docs/buffett-1998' },
-                { text: '想赢怕输的心态', link: '/docs/fear-greed' },
                 { text: '保持好心态', link: '/docs/peace-of-mind' },
                 { text: '预期与现实的差距', link: '/docs/expectation-gap' },
-                { text: '投资心智', link: '/docs/mindset' },
                 { text: 'AI工具全景分析', link: '/docs/ai-tools-analysis' },
                 { text: '个人开发者深耕方向', link: '/docs/solo-dev-strategy' }
               ]
