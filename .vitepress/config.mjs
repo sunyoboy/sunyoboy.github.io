@@ -140,6 +140,7 @@ export default defineConfig({
               text: '💹 投资交易',
               collapsed: false,
               items: [
+                { text: '🔴 FOMC决策全景', link: '/docs/fomc-schedule' },
                 { text: 'A股做T操作指南', link: '/docs/t-trading' },
                 { text: '宽基ETF做T策略', link: '/docs/index-etf-trading' },
                 { text: 'A股行情分析', link: '/docs/a-share-2026-05-26' },
@@ -147,7 +148,6 @@ export default defineConfig({
                 { text: '十五五投资方向', link: '/docs/fifteen-five-investment' },
                 { text: '海鸥期权策略', link: '/docs/seagull-strategy' },
                 { text: '交易纪律', link: '/docs/position-discipline' },
-                { text: 'FOMC会议时间表', link: '/docs/fomc-schedule' },
                 { text: '股票工具与渠道', link: '/docs/stock-tools' }
               ]
             },
