@@ -40,6 +40,7 @@ export default defineConfig({
                   text: '📂 日复盘',
                   collapsed: true,
                   items: [
+                    { text: '06-22 · 高低切换', link: '/review/2026/06/2026-06-22' },
                     { text: '06-18 · 端午前收官', link: '/review/2026/06/2026-06-18' },
                     { text: '06-17 · FOMC落地', link: '/review/2026/06/2026-06-17' },
                     { text: '06-11 · FOMC前夕', link: '/review/2026/06/2026-06-11' },
