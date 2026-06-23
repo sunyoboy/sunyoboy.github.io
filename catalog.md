@@ -113,6 +113,7 @@
 | [十五五投资方向](docs/fifteen-five-investment) | 政策导向与产业投资机会 |
 | [海鸥期权策略](docs/seagull-strategy) | 三腿期权组合，零成本震荡市套保 |
 | [交易纪律](docs/position-discipline) | 建仓/持仓/止损/止盈/做T/心态/复盘 全纪律体系 |
+| [📐 投资纪律指标化](docs/investment-discipline-indicators) | 管住手/控仓位/别加杠杆/黄金=配置，四项检验+自动化脚本 |
 | [🔴 FOMC决策全景](docs/fomc-schedule) | 决策逻辑/H2数据日历/6月结论/A股策略/盯盘优先级 |
 | [股票工具与渠道](docs/stock-tools) | A股交易工具、资讯渠道、数据平台 |
 

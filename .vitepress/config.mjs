@@ -152,6 +152,7 @@ export default defineConfig({
               collapsed: false,
               items: [
                 { text: '🔴 FOMC决策全景', link: '/docs/fomc-schedule' },
+                { text: '📐 投资纪律指标化', link: '/docs/investment-discipline-indicators' },
                 { text: '交易纪律', link: '/docs/position-discipline' },
                 { text: '股票评估框架', link: '/docs/stock-evaluation' },
                 { text: 'A股做T操作指南', link: '/docs/t-trading' },

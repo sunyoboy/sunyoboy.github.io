@@ -1,0 +1,17 @@
+{
+  "total_assets": 283000,
+  "cash": 240000,
+  "margin_debt": 0,
+  "holdings": [
+    {"name": "科大讯飞", "code": "sz002230", "shares": 400, "sector": "AI科技"},
+    {"name": "天山铝业", "code": "sz002532", "shares": 700, "sector": "有色金属"},
+    {"name": "紫金矿业", "code": "sh601899", "shares": 200, "sector": "有色金属"},
+    {"name": "黄金ETF", "code": "sh518800", "shares": 1700, "sector": "贵金属"},
+    {"name": "有色ETF", "code": "sh512400", "shares": 500, "sector": "有色金属"},
+    {"name": "中证500ETF", "code": "sh510500", "shares": 100, "sector": "宽基"},
+    {"name": "卫星ETF", "code": "sh563230", "shares": 10000, "sector": "主题ETF"}
+  ],
+  "target_allocation": {
+    "黄金": 0.07
+  }
+}

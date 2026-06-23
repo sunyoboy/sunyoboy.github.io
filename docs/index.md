@@ -10,6 +10,7 @@
 - [宽基ETF做T策略](index-etf-trading.md) — 指数ETF日内波段操作，信号体系与止盈止损
 - [海鸥期权策略](seagull-strategy.md) — 三腿期权组合，零成本震荡市套保
 - [交易纪律](position-discipline.md) — 建仓/持仓/止损/止盈/做T/心态/复盘 全纪律体系
+- [📐 投资纪律指标化](investment-discipline-indicators.md) — 管住手/控仓位/别加杠杆/黄金=配置，四项检验+自动化脚本
 - [A股行情分析 2026-05-26](a-share-2026-05-26.md) — 指数表现、板块轮动与原因分析
 - [盈利分红型行业](profitable-industries.md) — 不靠投资拉动、真实盈利分红的行业
 - [十五五投资方向](fifteen-five-investment.md) — 政策导向与产业投资机会
