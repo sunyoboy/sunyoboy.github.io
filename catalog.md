@@ -126,6 +126,7 @@
 | [想赢怕输的心态](docs/fear-greed) | 交易心理陷阱，用系统替代情绪做决策 |
 | [预期与现实的差距](docs/expectation-gap) | 偏离预期的四级响应、度的判断 |
 | [投资心智](docs/mindset) | 改变自己，投资认知与思维模型 |
+| [🧠 自我认知框架](docs/self-awareness) | 优势/劣势审计、财务增长点评判、A/B分类法 |
 | [AI工具全景分析](docs/ai-tools-analysis) | Cursor、Claude、v0 等 AI 编程工具对比 |
 | [🤖 AI编程模型收费对比 2026](docs/ai-coding-models-2026) | Top 5 + GLM-5.2 + 豆包2.1 价格与选型 |
 | [个人开发者深耕方向](docs/solo-dev-strategy) | 四大必投系统、五年路线图、什么是值得的长期投入 |
