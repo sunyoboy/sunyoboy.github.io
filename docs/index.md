@@ -10,12 +10,16 @@
 - [宽基ETF做T策略](index-etf-trading.md) — 指数ETF日内波段操作，信号体系与止盈止损
 - [海鸥期权策略](seagull-strategy.md) — 三腿期权组合，零成本震荡市套保
 - [交易纪律](position-discipline.md) — 建仓/持仓/止损/止盈/做T/心态/复盘 全纪律体系
+- [📐 投资纪律指标化](investment-discipline-indicators.md) — 管住手/控仓位/别加杠杆/黄金=配置，四项检验+自动化脚本
+- [📦 开源量化项目调研](opensource-quant-projects.md) — 7项目+12数据源+7券商API+选型推荐
 - [A股行情分析 2026-05-26](a-share-2026-05-26.md) — 指数表现、板块轮动与原因分析
 - [盈利分红型行业](profitable-industries.md) — 不靠投资拉动、真实盈利分红的行业
 - [十五五投资方向](fifteen-five-investment.md) — 政策导向与产业投资机会
 - [AI工具全景分析](ai-tools-analysis.md) — Cursor、Claude、v0 等 AI 编程工具对比
+- [🤖 AI编程模型收费对比 2026](ai-coding-models-2026.md) — Top 5 + GLM-5.2 + 豆包2.1 价格与选型
 - [个人开发者深耕方向](solo-dev-strategy.md) — 四大必投系统、两个技术护城河、五年路线图
 - [投资心智](mindset.md) — 尹烨：改变自己，投资认知与思维模型
+- [🧠 自我认知框架](self-awareness.md) — 优势/劣势审计、A/B分类法、财务增长点评判标准
 - [个人操作系统](personal-os.md) — 四层架构、五大子系统、关键思维模型
 - [保持好心态](peace-of-mind.md) — 遇到糟心的人和事，四个步骤回到内核
 - [巴菲特1998演讲](buffett-1998.md) — 段永平看10遍的经典：品格、护城河、知足

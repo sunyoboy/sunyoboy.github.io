@@ -22,7 +22,7 @@
 </head>
 <body>
 <h1>🤰 孕期激素跟踪</h1>
-<div class="status"><span class="good">✅ 情况A：HCG 正常翻倍，胚胎活性极好</span></div>
+<div class="status"><span class="good">✅ HCG 14795（6天翻10倍）</span> <span class="warn">⚠️ 孕酮 16.30（持续下降）</span></div>
 
 <div class="card">
   <h3>β-HCG 变化趋势</h3>
@@ -49,20 +49,20 @@
 
 <script>
 // ===== 数据 =====
-const dates = ['6/10','6/12','6/16','6/18','6/20','6/23','6/25','6/28','6/30'];
+const dates = ['6/10','6/12','6/16','6/18','6/20','6/22','6/23','6/25','6/28','6/30'];
 // 已有数据点，null = 待填充
-const hcgData  = [12.76, 287, 1466, null, null, null, null, null, null];
-const e2Data   = [232.32, 247, 338.00, null, null, null, null, null, null];
-const progData = [34.44, 25.20, 19.40, null, null, null, null, null, null];
+const hcgData  = [12.76, 287, 1466, null, null, 14795, null, null, null, null];
+const e2Data   = [232.32, 247, 338.00, null, null, null, null, null, null, null];
+const progData = [34.44, 25.20, 19.40, null, null, 16.30, null, null, null, null];
 
 // HCG 安全范围参考线
-const hcgExpectedLow  = [12.76, 25.52, 51, 102, 204, 408, 816, 1632, 3264]; // 最低48h翻倍
-const hcgExpectedHigh = [12.76, 51, 204, 816, 3264, 13056, null, null, null]; // 快速增长
+const hcgExpectedLow  = [12.76, 25.52, 51, 102, 204, 408, 816, 1632, 3264, 6528]; // 最低48h翻倍
+const hcgExpectedHigh = [12.76, 51, 204, 816, 3264, 13056, 52224, null, null, null]; // 快速增长
 
 // 孕酮安全区间
-const progMin = Array(9).fill(11);  // 下限
-const progMax = Array(9).fill(53);  // 上限
-const progIdeal = Array(9).fill(20); // 理想下限(孕早期)
+const progMin = Array(10).fill(11);  // 下限
+const progMax = Array(10).fill(53);  // 上限
+const progIdeal = Array(10).fill(20); // 理想下限(孕早期)
 
 // ===== 1. HCG 趋势 (对数刻度) =====
 new Chart(document.getElementById('chartHCG'), {
@@ -79,7 +79,7 @@ new Chart(document.getElementById('chartHCG'), {
         tension: 0.2,
         pointRadius: 6,
         pointBackgroundColor: '#e15759',
-        spanGaps: false
+        spanGaps: true
       },
       {
         label: '最低翻倍参考 (48h×2)',
@@ -165,7 +165,7 @@ new Chart(document.getElementById('chartProg'), {
         tension: 0.3,
         pointRadius: 6,
         pointBackgroundColor: '#f28e2b',
-        spanGaps: false
+        spanGaps: true
       },
       {
         label: '安全上限 (53)',
@@ -226,7 +226,7 @@ new Chart(document.getElementById('chartAll'), {
         borderWidth: 2,
         tension: 0.3,
         pointRadius: 5,
-        spanGaps: false,
+        spanGaps: true,
         yAxisID: 'y'
       },
       {
@@ -246,7 +246,7 @@ new Chart(document.getElementById('chartAll'), {
         borderWidth: 2,
         tension: 0.3,
         pointRadius: 5,
-        spanGaps: false,
+        spanGaps: true,
         yAxisID: 'y1'
       }
     ]

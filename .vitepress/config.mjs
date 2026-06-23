@@ -40,7 +40,7 @@ export default defineConfig({
                   text: '📂 日复盘',
                   collapsed: true,
                   items: [
-                    { text: '06-23 · 全线回调+持仓诊断', link: '/review/2026/06/2026-06-23' },
+                    { text: '06-23 · 加速下跌+持仓诊断', link: '/review/2026/06/2026-06-23' },
                     { text: '06-22 · 高低切换', link: '/review/2026/06/2026-06-22' },
                     { text: '06-18 · 端午前收官', link: '/review/2026/06/2026-06-18' },
                     { text: '06-17 · FOMC落地', link: '/review/2026/06/2026-06-17' },
@@ -83,6 +83,7 @@ export default defineConfig({
             { text: '📖 阅读清单', link: '/growth/阅读清单' },
             { text: '💰 财务仪表盘', link: '/growth/财务仪表盘' },
             { text: '🛠️ 技能树', link: '/growth/技能树' },
+            { text: '📈 第二增长曲线', link: '/growth/第二增长曲线' },
             {
               text: '2026年',
               collapsed: false,
@@ -152,6 +153,8 @@ export default defineConfig({
               collapsed: false,
               items: [
                 { text: '🔴 FOMC决策全景', link: '/docs/fomc-schedule' },
+                { text: '📦 开源量化项目调研', link: '/docs/opensource-quant-projects' },
+                { text: '📐 投资纪律指标化', link: '/docs/investment-discipline-indicators' },
                 { text: '交易纪律', link: '/docs/position-discipline' },
                 { text: 'MA5 偏离度 · 持仓纪律', link: '/docs/ma5-deviation-discipline' },
                 { text: '股票评估框架', link: '/docs/stock-evaluation' },
@@ -163,6 +166,7 @@ export default defineConfig({
                 { text: '巴菲特1998演讲', link: '/docs/buffett-1998' },
                 { text: '想赢怕输的心态', link: '/docs/fear-greed' },
                 { text: '投资心智', link: '/docs/mindset' },
+                { text: '🧠 自我认知框架', link: '/docs/self-awareness' },
                 { text: 'A股行情分析', link: '/docs/a-share-2026-05-26' },
                 { text: '股票工具与渠道', link: '/docs/stock-tools' }
               ]
@@ -177,6 +181,7 @@ export default defineConfig({
                 { text: '三大法宝', link: '/docs/three-weapons' },
                 { text: '保持好心态', link: '/docs/peace-of-mind' },
                 { text: '预期与现实的差距', link: '/docs/expectation-gap' },
+                { text: '🤖 AI编程模型收费对比 2026', link: '/docs/ai-coding-models-2026' },
                 { text: 'AI工具全景分析', link: '/docs/ai-tools-analysis' },
                 { text: '个人开发者深耕方向', link: '/docs/solo-dev-strategy' }
               ]
