@@ -30,13 +30,25 @@ INDICES = {
     "sh000905": "中证500",
 }
 
+# 重点跟踪标的（ETF/个股，同一 API 接口）
+WATCHLIST = {
+    "sh510500": "中证500ETF",
+    "sh518800": "黄金ETF",
+    "sz002230": "科大讯飞",
+    "sz002532": "天山铝业",
+    "sh601899": "紫金矿业",
+    "sh512400": "有色ETF",
+}
+
 DISPLAY_ORDER = ["上证指数", "深证成指", "创业板指", "科创50", "上证50", "沪深300", "中证500"]
 
 
-def fetch_from_tencent():
-    """从腾讯财经 API 获取指数实时数据"""
+def fetch_from_tencent(symbols=None, label="数据"):
+    """从腾讯财经 API 获取实时数据（指数/ETF/个股通用）"""
+    if symbols is None:
+        symbols = INDICES
     results = {}
-    for code, name in INDICES.items():
+    for code, name in symbols.items():
         try:
             url = f"https://qt.gtimg.cn/q={code}"
             req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
@@ -61,7 +73,7 @@ def fetch_from_tencent():
     return results if results else None
 
 
-def generate_template(date_str, index_data):
+def generate_template(date_str, index_data, watchlist_data=None):
     """生成复盘 Markdown 模板"""
     if not index_data:
         return None
@@ -86,12 +98,31 @@ def generate_template(date_str, index_data):
             d = index_data[name]
             rows += f"| {name} | {d['close']} | **{d['pct_chg']:+.2f}%** |\n"
 
+    # 低吸区间参考值（手动维护）
+    BUY_ZONES = {
+        "中证500ETF": "8.75-8.79",
+        "黄金ETF": "9.05-9.09",
+        "科大讯飞": "42.85-43.00",
+        "天山铝业": "11.99-12.05",
+        "紫金矿业": "29.08-29.21",
+        "有色ETF": "2.05-2.06",
+    }
+
+    watchlist_rows = ""
+    if watchlist_data:
+        for name, d in watchlist_data.items():
+            zone = BUY_ZONES.get(name, "—")
+            watchlist_rows += f"| {name} | {d['close']} | {d['pct_chg']:+.2f}% | {zone} | — |\n"
+    if not watchlist_rows:
+        watchlist_rows = "| — | — | — | — | — |\n"
+
     template = f"""# {date_str}
 
 ## 目录
 
 - [A股复盘](#a股复盘)
   - [指数表现](#指数表现)
+  - [重点标的](#重点标的)
   - [盘面特征](#盘面特征)
   - [今日驱动](#今日驱动)
   - [热门板块](#热门板块)
@@ -114,6 +145,13 @@ def generate_template(date_str, index_data):
 |------|------|--------|
 {rows}
 > 成交额 — 亿。涨跌比 —。
+
+### 重点标的
+
+| 标的 | 收盘 | 涨跌幅 | 低吸区间 | 状态 |
+|------|------|:------:|------|------|
+{watchlist_rows}
+> 🤖 数据由 fetch-market-data.py 自动抓取，低吸区间需手动维护。
 
 ### 盘面特征
 
@@ -179,12 +217,22 @@ def generate_template(date_str, index_data):
 
 if __name__ == "__main__":
     date_str = sys.argv[1] if len(sys.argv) > 1 else datetime.now().strftime("%Y-%m-%d")
-    print(f"📊 KnowingDoing 市场数据抓取 · {date_str}  (腾讯财经)")
-    data = fetch_from_tencent()
-    generate_template(date_str, data)
+    print(f"📊 KnowingDoing 市场数据抓取 · {date_str}  (腾讯财经)\n")
+
+    # 抓取指数
+    print("[指数]")
+    data = fetch_from_tencent(INDICES, "指数")
+
+    # 抓取重点标的
+    print("\n[重点标的]")
+    watchlist = fetch_from_tencent(WATCHLIST, "标的")
+
+    generate_template(date_str, data, watchlist)
     print(f"\n{'='*50}")
     if data:
-        print(f"✅ 7 大指数抓取完成")
+        idx_count = len(data)
+        wl_count = len(watchlist) if watchlist else 0
+        print(f"✅ {idx_count} 大指数 + {wl_count} 重点标的 抓取完成")
         print(f"📝 打开编辑器补充分析")
     else:
         print(f"⚠️ 数据获取失败，请检查网络")
