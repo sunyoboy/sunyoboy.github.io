@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>净值与仓位跟踪 · 2026年6月</title>
+<script src="./chart.min.js"></script>
+<style>
+  body { font-family: -apple-system, sans-serif; max-width: 1100px; margin: 0 auto; padding: 20px; background: #fdf6ec; }
+  h1 { text-align: center; color: #3d3a35; }
+  .card { background: white; border-radius: 12px; padding: 20px; margin: 20px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card h3 { margin-top: 0; color: #5b8c5a; }
+  canvas { max-height: 450px; }
+  .note { color: #888; font-size: 13px; text-align: center; margin-top: 10px; }
+</style>
+</head>
+<body>
+<h1>📊 上证指数 · 净值 · 仓位 跟踪</h1>
+
+<div class="card">
+  <h3>上证指数走势（5/21 → 6/12）</h3>
+  <canvas id="chartIndex"></canvas>
+  <div class="note">上证从 5/25 高点 4152 → 6/8 低点 3959，区间跌幅 -4.7%</div>
+</div>
+
+<div class="card">
+  <h3>仓位与指数联动</h3>
+  <canvas id="chartPosition"></canvas>
+  <div class="note">仓位数据从 6/12 起记录，虚线表示未记录期间</div>
+</div>
+
+<div class="card">
+  <h3>持仓品种盈亏分布（6/12）</h3>
+  <canvas id="chartPnL"></canvas>
+</div>
+
+<div class="card">
+  <h3>品种集中度（6/12）</h3>
+  <canvas id="chartConcentration"></canvas>
+</div>
+
+<script>
+// ===== 1. 上证指数走势 =====
+const dates = ['5/21','5/22','5/25','5/26','5/27','5/28','6/01','6/02','6/03','6/04','6/05','6/08','6/11','6/12'];
+const shIndex = [4077.28,4112.90,4152.57,4133.49,4093.73,4098.64,4057.74,4075.10,4083.97,4057.78,4027.74,3959.34,3993.23,3987.01];
+
+new Chart(document.getElementById('chartIndex'), {
+  type: 'line',
+  data: {
+    labels: dates,
+    datasets: [{
+      label: '上证指数',
+      data: shIndex,
+      borderColor: '#e15759',
+      backgroundColor: 'rgba(225,87,89,0.1)',
+      fill: true,
+      tension: 0.3,
+      pointRadius: 5,
+      pointBackgroundColor: '#e15759'
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { display: true },
+      annotation: false,
+      tooltip: { callbacks: { label: ctx => '上证: ' + ctx.raw } }
+    },
+    scales: {
+      y: {
+        min: 3900, max: 4200,
+        ticks: { callback: v => v.toFixed(0) }
+      }
+    }
+  }
+});
+
+// ===== 2. 仓位与指数联动 =====
+// Placeholder for future daily position tracking
+// For now showing 指数 only with position overlay at 6/12
+const positionPct = [null,null,null,null,null,null,null,null,null,null,null,null,null,38.2];
+
+new Chart(document.getElementById('chartPosition'), {
+  type: 'line',
+  data: {
+    labels: dates,
+    datasets: [
+      {
+        label: '上证指数',
+        data: shIndex,
+        borderColor: '#e15759',
+        backgroundColor: 'transparent',
+        tension: 0.3,
+        pointRadius: 4,
+        yAxisID: 'y'
+      },
+      {
+        label: '股票仓位(%)',
+        data: positionPct,
+        borderColor: '#5b8c5a',
+        backgroundColor: 'transparent',
+        borderWidth: 3,
+        borderDash: [5,5],
+        tension: 0,
+        pointRadius: 6,
+        pointBackgroundColor: '#5b8c5a',
+        spanGaps: false,
+        yAxisID: 'y1'
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { position: 'bottom' },
+      tooltip: { mode: 'index', intersect: false }
+    },
+    scales: {
+      y: {
+        type: 'linear',
+        display: true,
+        position: 'left',
+        min: 3900, max: 4200,
+        title: { display: true, text: '上证指数' }
+      },
+      y1: {
+        type: 'linear',
+        display: true,
+        position: 'right',
+        min: 0, max: 100,
+        title: { display: true, text: '仓位 (%)' },
+        grid: { drawOnChartArea: false }
+      }
+    }
+  }
+});
+
+// ===== 3. 持仓盈亏分布 =====
+new Chart(document.getElementById('chartPnL'), {
+  type: 'bar',
+  data: {
+    labels: ['华胜天成','拓维信息','卫星ETF','科大讯飞','黄金基金','紫金矿业','天山铝业','绿电ETF','芯片ETF','有色ETF','沪深300','500ETF'],
+    datasets: [{
+      label: '浮动盈亏(元)',
+      data: [-13714,-3067,-3537,-2796,-2253,-2116,-1385,-92,-32,+797,+251,+190],
+      backgroundColor: ctx => ctx.raw >= 0 ? '#5b8c5a' : '#e15759',
+      borderWidth: 0
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    responsive: true,
+    plugins: { legend: { display: false } },
+    scales: { x: { title: { display: true, text: '浮动盈亏 (元)' } } }
+  }
+});
+
+// ===== 4. 品种集中度 =====
+new Chart(document.getElementById('chartConcentration'), {
+  type: 'doughnut',
+  data: {
+    labels: ['卫星ETF富国 22.4%','科大讯飞 18.9%','华胜天成 17.9%','黄金基金 17.0%','天山铝业 8.8%','紫金矿业 5.4%','拓维信息 2.8%','其他 6.9%'],
+    datasets: [{
+      data: [23976,20195,19195,18160,9401,5818,2981,7412],
+      backgroundColor: ['#4e79a7','#f28e2b','#e15759','#76b7b2','#59a14f','#edc948','#b07aa1','#bab0ac'],
+      borderWidth: 1
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { position: 'right', labels: { font: { size: 12 }, padding: 8 } },
+      tooltip: { callbacks: { label: ctx => ctx.label + ' (' + (ctx.raw/107138*100).toFixed(1) + '%)' } }
+    }
+  }
+});
+</script>
+</body>
+</html>

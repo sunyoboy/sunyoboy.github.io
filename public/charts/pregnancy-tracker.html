@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>孕期激素跟踪 · 2026年6月</title>
+<script src="./chart.min.js"></script>
+<style>
+  body { font-family: -apple-system, sans-serif; max-width: 1100px; margin: 0 auto; padding: 20px; background: #fdf6ec; }
+  h1 { text-align: center; color: #3d3a35; }
+  .status { text-align: center; font-size: 18px; margin: 10px 0; }
+  .status span { padding: 4px 12px; border-radius: 16px; font-weight: bold; }
+  .good { background: #d4edda; color: #155724; }
+  .warn { background: #fff3cd; color: #856404; }
+  .card { background: white; border-radius: 12px; padding: 20px; margin: 20px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card h3 { margin-top: 0; color: #5b8c5a; }
+  canvas { max-height: 420px; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 768px) { .grid2 { grid-template-columns: 1fr; } }
+  .note { color: #888; font-size: 13px; text-align: center; margin-top: 10px; }
+</style>
+</head>
+<body>
+<h1>🤰 孕期激素跟踪</h1>
+<div class="status"><span class="good">✅ 情况A：HCG 正常翻倍，胚胎活性极好</span></div>
+
+<div class="card">
+  <h3>β-HCG 变化趋势</h3>
+  <canvas id="chartHCG"></canvas>
+  <div class="note">HCG 早期呈指数增长，使用对数刻度更直观。虚线 = 预估趋势线</div>
+</div>
+
+<div class="grid2">
+  <div class="card">
+    <h3>雌二醇 (E2)</h3>
+    <canvas id="chartE2"></canvas>
+  </div>
+  <div class="card">
+    <h3>孕酮 (Prog)</h3>
+    <canvas id="chartProg"></canvas>
+  </div>
+</div>
+
+<div class="card">
+  <h3>三指标综合图（标准化）</h3>
+  <canvas id="chartAll"></canvas>
+  <div class="note">以 6/10 为基准 = 100%，观察各指标相对变化趋势</div>
+</div>
+
+<script>
+// ===== 数据 =====
+const dates = ['6/10','6/12','6/16','6/18','6/20','6/23','6/25','6/28','6/30'];
+// 已有数据点，null = 待填充
+const hcgData  = [12.76, 287, 1466, null, null, null, null, null, null];
+const e2Data   = [232.32, 247, 338.00, null, null, null, null, null, null];
+const progData = [34.44, 25.20, 19.40, null, null, null, null, null, null];
+
+// HCG 安全范围参考线
+const hcgExpectedLow  = [12.76, 25.52, 51, 102, 204, 408, 816, 1632, 3264]; // 最低48h翻倍
+const hcgExpectedHigh = [12.76, 51, 204, 816, 3264, 13056, null, null, null]; // 快速增长
+
+// 孕酮安全区间
+const progMin = Array(9).fill(11);  // 下限
+const progMax = Array(9).fill(53);  // 上限
+const progIdeal = Array(9).fill(20); // 理想下限(孕早期)
+
+// ===== 1. HCG 趋势 (对数刻度) =====
+new Chart(document.getElementById('chartHCG'), {
+  type: 'line',
+  data: {
+    labels: dates,
+    datasets: [
+      {
+        label: 'HCG 实测',
+        data: hcgData,
+        borderColor: '#e15759',
+        backgroundColor: 'rgba(225,87,89,0.1)',
+        borderWidth: 3,
+        tension: 0.2,
+        pointRadius: 6,
+        pointBackgroundColor: '#e15759',
+        spanGaps: false
+      },
+      {
+        label: '最低翻倍参考 (48h×2)',
+        data: hcgExpectedLow,
+        borderColor: '#888',
+        borderWidth: 1,
+        borderDash: [5,5],
+        tension: 0.2,
+        pointRadius: 0,
+        fill: false
+      },
+      {
+        label: '良好增长参考',
+        data: hcgExpectedHigh,
+        borderColor: '#5b8c5a',
+        borderWidth: 1,
+        borderDash: [3,3],
+        tension: 0.2,
+        pointRadius: 0,
+        fill: false
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { position: 'bottom' },
+      tooltip: { callbacks: { label: ctx => ctx.dataset.label + ': ' + (ctx.raw ?? '待测') + ' mIU/mL' } }
+    },
+    scales: {
+      y: {
+        type: 'logarithmic',
+        title: { display: true, text: 'HCG (mIU/mL) — 对数刻度' },
+        min: 10, max: 100000,
+        ticks: { callback: v => v.toLocaleString() }
+      }
+    }
+  }
+});
+
+// ===== 2. 雌二醇 =====
+new Chart(document.getElementById('chartE2'), {
+  type: 'line',
+  data: {
+    labels: dates,
+    datasets: [{
+      label: '雌二醇 E2 (pg/mL)',
+      data: e2Data,
+      borderColor: '#4e79a7',
+      backgroundColor: 'rgba(78,121,167,0.1)',
+      borderWidth: 3,
+      tension: 0.3,
+      pointRadius: 6,
+      pointBackgroundColor: '#4e79a7',
+      fill: true,
+      spanGaps: false
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { display: false } },
+    scales: {
+      y: {
+        min: 150, max: 400,
+        title: { display: true, text: 'pg/mL' }
+      }
+    }
+  }
+});
+
+// ===== 3. 孕酮 =====
+new Chart(document.getElementById('chartProg'), {
+  type: 'line',
+  data: {
+    labels: dates,
+    datasets: [
+      {
+        label: '孕酮实测',
+        data: progData,
+        borderColor: '#f28e2b',
+        backgroundColor: 'transparent',
+        borderWidth: 3,
+        tension: 0.3,
+        pointRadius: 6,
+        pointBackgroundColor: '#f28e2b',
+        spanGaps: false
+      },
+      {
+        label: '安全上限 (53)',
+        data: progMax,
+        borderColor: '#e15759',
+        borderWidth: 1,
+        borderDash: [3,3],
+        pointRadius: 0,
+        fill: false
+      },
+      {
+        label: '理想下限 (20)',
+        data: progIdeal,
+        borderColor: '#5b8c5a',
+        borderWidth: 1,
+        borderDash: [5,5],
+        pointRadius: 0,
+        fill: false
+      },
+      {
+        label: '安全下限 (11)',
+        data: progMin,
+        borderColor: '#e15759',
+        borderWidth: 1,
+        borderDash: [8,4],
+        pointRadius: 0,
+        fill: false
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { position: 'bottom' } },
+    scales: {
+      y: {
+        min: 0, max: 60,
+        title: { display: true, text: 'ng/mL' }
+      }
+    }
+  }
+});
+
+// ===== 4. 三指标综合 (标准化 = 以6/10为100) =====
+const baseHCG = hcgData[0], baseE2 = e2Data[0], baseProg = progData[0];
+const normHCG  = hcgData.map(v => v ? +(v/baseHCG*100).toFixed(0) : null);
+const normE2   = e2Data.map(v => v ? +(v/baseE2*100).toFixed(0) : null);
+const normProg  = progData.map(v => v ? +(v/baseProg*100).toFixed(0) : null);
+
+new Chart(document.getElementById('chartAll'), {
+  type: 'line',
+  data: {
+    labels: dates,
+    datasets: [
+      {
+        label: 'HCG (6/10=100)',
+        data: normHCG,
+        borderColor: '#e15759',
+        borderWidth: 2,
+        tension: 0.3,
+        pointRadius: 5,
+        spanGaps: false,
+        yAxisID: 'y'
+      },
+      {
+        label: '雌二醇 (6/10=100)',
+        data: normE2,
+        borderColor: '#4e79a7',
+        borderWidth: 2,
+        tension: 0.3,
+        pointRadius: 5,
+        spanGaps: false,
+        yAxisID: 'y1'
+      },
+      {
+        label: '孕酮 (6/10=100)',
+        data: normProg,
+        borderColor: '#f28e2b',
+        borderWidth: 2,
+        tension: 0.3,
+        pointRadius: 5,
+        spanGaps: false,
+        yAxisID: 'y1'
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { position: 'bottom' },
+      tooltip: { callbacks: { label: ctx => ctx.dataset.label.replace(' (6/10=100)','') + ': ' + ctx.raw + '%' } }
+    },
+    scales: {
+      y: {
+        type: 'linear',
+        display: true,
+        position: 'left',
+        min: 0,
+        title: { display: true, text: 'HCG 相对变化 (%)' }
+      },
+      y1: {
+        type: 'linear',
+        display: true,
+        position: 'right',
+        min: 0, max: 200,
+        title: { display: true, text: 'E2 / Prog 相对变化 (%)' },
+        grid: { drawOnChartArea: false }
+      }
+    }
+  }
+});
+</script>
+</body>
+</html>

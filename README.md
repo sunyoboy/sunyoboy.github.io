@@ -14,10 +14,15 @@
 
 ```
 KnowingDoing/
-├── .vitepress/
-│   └── config.mjs      # 站点配置
-├── index.md             # 首页
-├── about.md             # 关于
+├── .vitepress/           # VitePress 配置与主题
+├── public/charts/        # 交互图表
+├── index.md              # 首页
+├── catalog.md            # 全站索引
+├── growth/               # 个人成长（OKR/周报/财务/技能）
+├── review/               # A股复盘（按年/月/日）
+├── docs/                 # 知识库
+├── questions/            # 问题清单
+├── scripts/              # 工具脚本
 ├── package.json
 └── .gitignore
 ```
