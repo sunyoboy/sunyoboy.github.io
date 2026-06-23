@@ -59,6 +59,7 @@ export default defineConfig({
               text: '5月',
               collapsed: true,
               items: [
+                { text: '📊 月度市场概况 (05-26)', link: '/review/2026/05/2026-05-26-月度市场概况' },
                 { text: '05-28', link: '/review/2026/05/2026-05-28' },
                 { text: '05-27 · 伊朗空袭', link: '/review/2026/05/2026-05-27' },
                 { text: '05-26', link: '/review/2026/05/2026-05-26' },
@@ -152,6 +153,7 @@ export default defineConfig({
               items: [
                 { text: '🔴 FOMC决策全景', link: '/docs/fomc-schedule' },
                 { text: '交易纪律', link: '/docs/position-discipline' },
+                { text: 'MA5 偏离度 · 持仓纪律', link: '/docs/ma5-deviation-discipline' },
                 { text: '股票评估框架', link: '/docs/stock-evaluation' },
                 { text: 'A股做T操作指南', link: '/docs/t-trading' },
                 { text: '宽基ETF做T策略', link: '/docs/index-etf-trading' },
