@@ -37,7 +37,8 @@ SINA_STOCK_CODES = {
 }
 
 def fetch_kline(symbol, datalen=200):
-    """新浪日K线 → {date_str: {open,high,low,close,volume(手),turnover_yi(亿)}}"""
+    """新浪日K线 → {date_str: {open,high,low,close,volume(股)}}。
+    ⚠️ volume=成交量(股数)，不是成交额。指数K线API不提供成交额。"""
     try:
         url = f"https://money.finance.sina.com.cn/quotes_service/api/json_v2.php/CN_MarketData.getKLineData?symbol={symbol}&scale=240&ma=no&datalen={datalen}"
         req = urllib.request.Request(url, headers={"Referer": "https://finance.sina.com.cn"})
@@ -45,12 +46,10 @@ def fetch_kline(symbol, datalen=200):
             data = json.loads(resp.read().decode("gbk"))
             result = {}
             for d in data:
-                vol_yuan = float(d["volume"])
                 result[d["day"]] = {
                     "open": float(d["open"]), "high": float(d["high"]),
                     "low": float(d["low"]), "close": float(d["close"]),
-                    "volume_shou": int(float(d["volume"]) / 10000),  # 元→手(近似)
-                    "turnover_yi": round(vol_yuan / 1e8, 2),
+                    "volume_gu": float(d["volume"]),  # 股数
                 }
             return result
     except Exception as e:
@@ -182,25 +181,20 @@ def build_records():
                         rec["stocks"][name]["pct"] = round((kd["close"] - pk["close"]) / pk["close"] * 100, 2)
                         break
 
-        # 成交额：上证+深证 K线合计（亿）
-        sh = index_kline.get("上证指数", {}).get(day, {})
-        sz = index_kline.get("深证成指", {}).get(day, {})
-        if sh.get("turnover_yi") and sz.get("turnover_yi"):
-            rec["turnover_yi"] = round(sh["turnover_yi"] + sz["turnover_yi"], 2)
-            rec["turnover_source"] = "sina_kline"
-
-        # 复盘文件交叉验证
+        # 成交额：复盘手写值（全市场成交额）— 唯一验证来源
+        # ⚠️ 新浪K线API的volume字段=成交量(股数),不是成交额,不可用
         rd = review_data.get(day, {})
         if rd:
             # 标的补充（复盘有的但K线没有的）
             for sname, sdata in rd.get("stocks", {}).items():
                 if sname not in rec["stocks"]:
                     rec["stocks"][sname] = sdata
-            # 成交额交叉验证：复盘手写值优先（全市场）
+            # 成交额：仅复盘手写值有效
             review_to = rd.get("turnover_review")
             if review_to and review_to > 1000:
                 rec["turnover_yi"] = review_to
                 rec["turnover_source"] = "review"
+        # 非review日不填成交额(sina_kline的volume是股数不是成交额)
 
         # 只有有数据的日期才保留
         if rec["indices"] or rec["stocks"]:
