@@ -7,7 +7,7 @@
   - [1. 创建仓库](#1-创建仓库)
   - [2. 配置 remote](#2-配置-remote)
 - [GitHub Pages](#github-pages)
-- [Gitee Pages](#gitee-pages)
+- ~~[Gitee Pages](#gitee-pages)~~（已暂停服务）
 - [日常推送](#日常推送)
 
 ---
@@ -44,7 +44,10 @@ git remote add gitee  git@gitee.com:<username>/<repo>.git
 
 ## Gitee Pages
 
-**手动部署**（免费版）。
+> ⚠️ **已于2024年暂停服务。** 官网公告："因服务维护调整，Gitee Pages 暂停提供服务"。以下内容仅供存档参考，无需执行。
+
+<details>
+<summary>📦 历史部署步骤（已失效）</summary>
 
 1. `git push gitee main`
 2. 仓库 → 服务 → Gitee Pages
@@ -53,10 +56,13 @@ git remote add gitee  git@gitee.com:<username>/<repo>.git
 
 > 需实名认证。每次推送后手动点击更新。付费版支持自动部署。
 
+</details>
+
 ---
 
 ## 日常推送
 
 ```bash
-git push github main && git push gitee main
+git push github main
+# Gitee Pages 已暂停服务，无需再推 Gitee
 ```
