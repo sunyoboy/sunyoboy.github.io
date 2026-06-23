@@ -82,6 +82,7 @@ export default defineConfig({
             { text: '📖 阅读清单', link: '/growth/阅读清单' },
             { text: '💰 财务仪表盘', link: '/growth/财务仪表盘' },
             { text: '🛠️ 技能树', link: '/growth/技能树' },
+            { text: '📈 第二增长曲线', link: '/growth/第二增长曲线' },
             {
               text: '2026年',
               collapsed: false,
