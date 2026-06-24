@@ -13,6 +13,7 @@
 - [交易纪律](position-discipline.md) — 建仓/持仓/止损/止盈/做T/心态/复盘 全纪律体系
 - [📐 投资纪律指标化](investment-discipline-indicators.md) — 管住手/控仓位/别加杠杆/黄金=配置，四项检验+自动化脚本
 - [📐 决策方法论与策略体系](decision-methodology.md) — 六层过滤→决策矩阵→为什么不加的数学依据
+- [📖 范·撒普 核心提炼](van-tharp-trade-your-way.md) — 头寸规模确定是灵魂·R乘数·与你的七层框架映射
 - [📦 开源量化项目调研](opensource-quant-projects.md) — 7项目+12数据源+7券商API+选型推荐
 - [A股行情分析 2026-05-26](a-share-2026-05-26.md) — 指数表现、板块轮动与原因分析
 - [盈利分红型行业](profitable-industries.md) — 不靠投资拉动、真实盈利分红的行业

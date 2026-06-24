@@ -119,6 +119,7 @@
 | [📦 开源量化项目调研](docs/opensource-quant-projects) | 7个项目+12个A股数据源+7券商API+选型推荐(Quool) |
 | [📐 投资纪律指标化](docs/investment-discipline-indicators) | 管住手/控仓位/别加杠杆/黄金=配置，四项检验+自动化脚本 |
 | [📐 决策方法论与策略体系](docs/decision-methodology) | 六层过滤→决策矩阵→为什么不加的数学依据 |
+| [📖 范·撒普 核心提炼](docs/van-tharp-trade-your-way) | 头寸规模确定是灵魂·R乘数·与你的七层框架映射 |
 | [🔴 FOMC决策全景](docs/fomc-schedule) | 决策逻辑/H2数据日历/6月结论/A股策略/盯盘优先级 |
 | [股票工具与渠道](docs/stock-tools) | A股交易工具、资讯渠道、数据平台 |
 

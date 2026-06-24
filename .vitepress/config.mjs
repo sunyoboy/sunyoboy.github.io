@@ -157,6 +157,7 @@ export default defineConfig({
                 { text: '📦 开源量化项目调研', link: '/docs/opensource-quant-projects' },
                 { text: '📐 投资纪律指标化', link: '/docs/investment-discipline-indicators' },
                 { text: '📐 决策方法论与策略体系', link: '/docs/decision-methodology' },
+                { text: '📖 范·撒普 核心提炼', link: '/docs/van-tharp-trade-your-way' },
                 { text: '交易纪律', link: '/docs/position-discipline' },
                 { text: 'MA5 偏离度 · 持仓纪律', link: '/docs/ma5-deviation-discipline' },
                 { text: '股票评估框架', link: '/docs/stock-evaluation' },
