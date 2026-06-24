@@ -170,6 +170,7 @@ export default defineConfig({
                 { text: '想赢怕输的心态', link: '/docs/fear-greed' },
                 { text: '投资心智', link: '/docs/mindset' },
                 { text: '🧠 自我认知框架', link: '/docs/self-awareness' },
+                { text: '🧠 NLP 逻辑层次 · 迪尔茨', link: '/docs/nlp-dilts-logical-levels' },
                 { text: 'A股行情分析', link: '/docs/a-share-2026-05-26' },
                 { text: '股票工具与渠道', link: '/docs/stock-tools' }
               ]
