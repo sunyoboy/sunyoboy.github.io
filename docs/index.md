@@ -6,6 +6,7 @@
 
 - [股票工具与渠道](stock-tools.md) — A股交易工具、资讯渠道、数据平台
 - [决策记录](decision-log.md) — 建站选型、目录结构、主题风格等关键决策
+- [🚫 为什么盯盘不可取](why-not-watch-market.md) — 盯盘=情绪高潮点做最差决策，框架替代盯盘
 - [A股「做T」操作指南](t-trading.md) — T+0 变相做T的方法、纪律与常见错误
 - [宽基ETF做T策略](index-etf-trading.md) — 指数ETF日内波段操作，信号体系与止盈止损
 - [海鸥期权策略](seagull-strategy.md) — 三腿期权组合，零成本震荡市套保
