@@ -29,6 +29,9 @@
 - [想赢怕输的心态](fear-greed.md) — 交易心理陷阱，用系统替代情绪做决策
 - [预期与现实的差距](expectation-gap.md) — 偏离预期的四级响应、度的判断
 - [矛盾论](contradiction.md) — 唯物辩证法核心，处理现实问题的方法论
+- [⚔️ 中美 AI 研发成本对比](us-ai-monopoly-analysis.md) — DeepSeek $557万 vs GPT-5 $5亿，垄断定价已破产
+- [🔒 Claude Fable 5 + 禁令分析](claude-fable-5-analysis.md) — 5倍代码碾压→3天下架→ROI死亡螺旋
+- [🫘 豆包专业版价值评估](doubao-pro-evaluation.md) — 68/200/500元三档，本地Agent是唯一护城河
 - [实践论](practice-theory.md) — 认识论基础，知行合一的哲学依据
 - [三大法宝](three-weapons.md) — 统一战线/武装斗争/党的建设，个人成长三维映射
 - [🔴 FOMC决策全景](fomc-schedule.md) — 决策逻辑/数据日历/6月结论/A股策略/盯盘优先级

@@ -185,6 +185,8 @@ export default defineConfig({
                 { text: '🔀 AI聚合平台性价比', link: '/docs/ai-model-aggregators-2026' },
                 { text: '🏦 美国AI投入ROI分析', link: '/docs/us-ai-capex-roi-analysis' },
                 { text: '⚔️ 中美AI研发成本对比', link: '/docs/us-ai-monopoly-analysis' },
+                { text: '🔒 Claude Fable 5 + 禁令分析', link: '/docs/claude-fable-5-analysis' },
+                { text: '🫘 豆包专业版价值评估', link: '/docs/doubao-pro-evaluation' },
                 { text: 'AI工具全景分析', link: '/docs/ai-tools-analysis' },
                 { text: '🚀 前端输出加速', link: '/docs/frontend-output-acceleration' },
                 { text: '个人开发者深耕方向', link: '/docs/solo-dev-strategy' }

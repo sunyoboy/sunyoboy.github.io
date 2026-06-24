@@ -135,6 +135,8 @@
 | [🚀 前端输出加速](docs/frontend-output-acceleration) | Streamlit/一模版三发/ECharts/多平台发布 |
 | [🤖 AI编程模型收费对比 2026](docs/ai-coding-models-2026) | Top 5 + GLM-5.2 + 豆包2.1 价格与选型 |
 | [⚔️ 中美AI研发成本对比](docs/us-ai-monopoly-analysis) | DeepSeek $557万 vs GPT-5 $5亿，垄断定价已破产 |
+| [🔒 Claude Fable 5 + 禁令分析](docs/claude-fable-5-analysis) | 5倍代码碾压→3天下架→禁令ROI死亡螺旋 |
+| [🫘 豆包专业版价值评估](docs/doubao-pro-evaluation) | 68/200/500元三档，本地Agent是唯一护城河 |
 | [个人开发者深耕方向](docs/solo-dev-strategy) | 四大必投系统、五年路线图、什么是值得的长期投入 |
 
 ### 🔧 其他
