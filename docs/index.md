@@ -17,6 +17,9 @@
 - [十五五投资方向](fifteen-five-investment.md) — 政策导向与产业投资机会
 - [AI工具全景分析](ai-tools-analysis.md) — Cursor、Claude、v0 等 AI 编程工具对比
 - [🤖 AI编程模型收费对比 2026](ai-coding-models-2026.md) — Top 5 + GLM-5.2 + 豆包2.1 价格与选型
+- [🔀 AI聚合平台性价比](ai-model-aggregators-2026.md) — DeepInfra/OpenRouter/硅基流动/七牛云等全平台对比
+- [🚀 前端输出加速](frontend-output-acceleration.md) — Streamlit/一模版三发/ECharts/多平台发布
+- [🤖 AI编程模型收费对比 2026](ai-coding-models-2026.md) — Top 5 + GLM-5.2 + 豆包2.1 价格与选型
 - [个人开发者深耕方向](solo-dev-strategy.md) — 四大必投系统、两个技术护城河、五年路线图
 - [投资心智](mindset.md) — 尹烨：改变自己，投资认知与思维模型
 - [🧠 自我认知框架](self-awareness.md) — 优势/劣势审计、A/B分类法、财务增长点评判标准
