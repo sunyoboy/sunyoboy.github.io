@@ -40,6 +40,7 @@ export default defineConfig({
                   text: '📂 日复盘',
                   collapsed: true,
                   items: [
+                    { text: '06-24', link: '/review/2026/06/2026-06-24' },
                     { text: '06-23 · 加速下跌+持仓诊断', link: '/review/2026/06/2026-06-23' },
                     { text: '06-22 · 高低切换', link: '/review/2026/06/2026-06-22' },
                     { text: '06-18 · 端午前收官', link: '/review/2026/06/2026-06-18' },
@@ -59,6 +60,7 @@ export default defineConfig({
               text: '5月',
               collapsed: true,
               items: [
+                { text: '📋 W21 周复盘 (5.20-5.24)', link: '/review/2026/05/2026-W21' },
                 { text: '📊 月度市场概况 (05-26)', link: '/review/2026/05/2026-05-26-月度市场概况' },
                 { text: '05-28', link: '/review/2026/05/2026-05-28' },
                 { text: '05-27 · 伊朗空袭', link: '/review/2026/05/2026-05-27' },
@@ -168,6 +170,7 @@ export default defineConfig({
                 { text: '投资心智', link: '/docs/mindset' },
                 { text: '🧠 自我认知框架', link: '/docs/self-awareness' },
                 { text: 'A股行情分析', link: '/docs/a-share-2026-05-26' },
+                { text: '🔄 美股-A股 AI全产业链对标', link: '/docs/us-china-ai-hardware-mapping' },
                 { text: '股票工具与渠道', link: '/docs/stock-tools' }
               ]
             },
