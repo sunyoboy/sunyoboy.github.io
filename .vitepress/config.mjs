@@ -40,6 +40,7 @@ export default defineConfig({
                   text: '📂 日复盘',
                   collapsed: true,
                   items: [
+                    { text: '06-24 · 缩量企稳+科创领涨', link: '/review/2026/06/2026-06-24' },
                     { text: '06-23 · 加速下跌+持仓诊断', link: '/review/2026/06/2026-06-23' },
                     { text: '06-22 · 高低切换', link: '/review/2026/06/2026-06-22' },
                     { text: '06-18 · 端午前收官', link: '/review/2026/06/2026-06-18' },
