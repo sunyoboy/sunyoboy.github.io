@@ -134,7 +134,7 @@
 | [AI工具全景分析](docs/ai-tools-analysis) | Cursor、Claude、v0 等 AI 编程工具对比 |
 | [🚀 前端输出加速](docs/frontend-output-acceleration) | Streamlit/一模版三发/ECharts/多平台发布 |
 | [🤖 AI编程模型收费对比 2026](docs/ai-coding-models-2026) | Top 5 + GLM-5.2 + 豆包2.1 价格与选型 |
-| [🔀 AI聚合平台性价比](docs/ai-model-aggregators-2026) | DeepInfra/OpenRouter/硅基流动/七牛云等全平台对比 |
+| [⚔️ 中美AI研发成本对比](docs/us-ai-monopoly-analysis) | DeepSeek $557万 vs GPT-5 $5亿，垄断定价已破产 |
 | [个人开发者深耕方向](docs/solo-dev-strategy) | 四大必投系统、五年路线图、什么是值得的长期投入 |
 
 ### 🔧 其他

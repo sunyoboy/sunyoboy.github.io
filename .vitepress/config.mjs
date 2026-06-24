@@ -183,6 +183,8 @@ export default defineConfig({
                 { text: '预期与现实的差距', link: '/docs/expectation-gap' },
                 { text: '🤖 AI编程模型收费对比 2026', link: '/docs/ai-coding-models-2026' },
                 { text: '🔀 AI聚合平台性价比', link: '/docs/ai-model-aggregators-2026' },
+                { text: '🏦 美国AI投入ROI分析', link: '/docs/us-ai-capex-roi-analysis' },
+                { text: '⚔️ 中美AI研发成本对比', link: '/docs/us-ai-monopoly-analysis' },
                 { text: 'AI工具全景分析', link: '/docs/ai-tools-analysis' },
                 { text: '🚀 前端输出加速', link: '/docs/frontend-output-acceleration' },
                 { text: '个人开发者深耕方向', link: '/docs/solo-dev-strategy' }
