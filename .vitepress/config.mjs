@@ -81,7 +81,7 @@ export default defineConfig({
             { text: '🔄 方法论', link: '/growth/方法论' },
             { text: '🎯 年度 OKR', link: '/growth/2026-年度OKR' },
             { text: '📋 个人周报模板', link: '/growth/个人周报模板' },
-            { text: '📖 阅读清单', link: '/growth/阅读清单' },
+            { text: '📖 阅读清单(14本)', link: '/growth/阅读清单' },
             { text: '💰 财务仪表盘', link: '/growth/财务仪表盘' },
             { text: '🛠️ 技能树', link: '/growth/技能树' },
             { text: '📈 第二增长曲线', link: '/growth/第二增长曲线' },
