@@ -136,6 +136,7 @@
 | [投资心智](docs/mindset) | 改变自己，投资认知与思维模型 |
 | [🧠 自我认知框架](docs/self-awareness) | 优势/劣势审计、财务增长点评判、A/B分类法 |
 | [🧠 NLP 逻辑层次 · 迪尔茨](docs/nlp-dilts-logical-levels) | 六层模型/信念搭桥/重塑印记/与知行合一的映射 |
+| [🧠 卡尼曼 思考快与慢](docs/kahneman-thinking-fast-slow) | 系统1与系统2·损失厌恶·可用性启发式·为什么盯盘是老虎机 |
 | [📚 完善操作系统的推荐书单](docs/reading-list-recommendations) | 七本书按缺口填入：先治后建 |
 | [AI工具全景分析](docs/ai-tools-analysis) | Cursor、Claude、v0 等 AI 编程工具对比 |
 | [🚀 前端输出加速](docs/frontend-output-acceleration) | Streamlit/一模版三发/ECharts/多平台发布 |

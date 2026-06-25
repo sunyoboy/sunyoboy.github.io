@@ -28,7 +28,8 @@
 - [投资心智](mindset.md) — 尹烨：改变自己，投资认知与思维模型
 - [🧠 自我认知框架](self-awareness.md) — 优势/劣势审计、A/B分类法、财务增长点评判标准
 - [🧠 NLP 逻辑层次 · 迪尔茨](nlp-dilts-logical-levels.md) — 六层模型/信念搭桥/拖延的NLP诊断/知行合一映射
-- [📚 完善操作系统的推荐书单](reading-list-recommendations.md) — 七本书按缺口填入：诊断层+建造层
+- [🧠 卡尼曼 思考快与慢](kahneman-thinking-fast-slow.md) — 系统1与系统2·损失厌恶·为什么盯盘是老虎机
+- [📚 完善操作系统的推荐书单](reading-list-recommendations.md) — 14本书按缺口填入：先治后建
 - [个人操作系统](personal-os.md) — 四层架构、五大子系统、关键思维模型
 - [保持好心态](peace-of-mind.md) — 遇到糟心的人和事，四个步骤回到内核
 - [巴菲特1998演讲](buffett-1998.md) — 段永平看10遍的经典：品格、护城河、知足
