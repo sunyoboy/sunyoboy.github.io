@@ -162,6 +162,7 @@ export default defineConfig({
                 { text: 'MA5 偏离度 · 持仓纪律', link: '/docs/ma5-deviation-discipline' },
                 { text: '股票评估框架', link: '/docs/stock-evaluation' },
                 { text: '🚫 为什么盯盘不可取', link: '/docs/why-not-watch-market' },
+                { text: '💼 上班族交易规划', link: '/docs/office-worker-trading' },
                 { text: 'A股做T操作指南', link: '/docs/t-trading' },
                 { text: '宽基ETF做T策略', link: '/docs/index-etf-trading' },
                 { text: '盈利分红型行业', link: '/docs/profitable-industries' },

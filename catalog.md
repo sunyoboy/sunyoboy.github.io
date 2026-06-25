@@ -108,6 +108,7 @@
 | 文档 | 说明 |
 |------|------|
 | [🚫 为什么盯盘不可取](docs/why-not-watch-market) | 盯盘=情绪高潮点做最差决策，框架替代盯盘 |
+| [💼 上班族交易规划](docs/office-worker-trading) | 每天<40分钟·条件单替你盯盘·离合器三项 |
 | [A股做T操作指南](docs/t-trading) | T+0 变相做T的方法、纪律与常见错误 |
 | [宽基ETF做T策略](docs/index-etf-trading) | 指数ETF日内波段操作，信号体系与仓位管理 |
 | [A股行情分析](docs/a-share-2026-05-26) | 指数表现、板块轮动与原因分析 |
