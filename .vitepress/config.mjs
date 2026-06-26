@@ -156,6 +156,7 @@ export default defineConfig({
               items: [
                 { text: '🔴 FOMC决策全景', link: '/docs/fomc-schedule' },
                 { text: '📦 开源量化项目调研', link: '/docs/opensource-quant-projects' },
+                { text: '📊 申万行业分类', link: '/docs/shenwan-industry-classification' },
                 { text: '📐 投资纪律指标化', link: '/docs/investment-discipline-indicators' },
                 { text: '📐 决策方法论与策略体系', link: '/docs/decision-methodology' },
                 { text: '📖 范·撒普 核心提炼', link: '/docs/van-tharp-trade-your-way' },

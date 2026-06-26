@@ -16,6 +16,7 @@
 - [📐 决策方法论与策略体系](decision-methodology.md) — 六层过滤→决策矩阵→为什么不加的数学依据
 - [📖 范·撒普 核心提炼](van-tharp-trade-your-way.md) — 头寸规模确定是灵魂·R乘数·与你的七层框架映射
 - [📦 开源量化项目调研](opensource-quant-projects.md) — 7项目+12数据源+7券商API+选型推荐
+- [📊 申万行业分类](shenwan-industry-classification.md) — 31行业体系/5个评估益处/板块筛和相关性校验
 - [A股行情分析 2026-05-26](a-share-2026-05-26.md) — 指数表现、板块轮动与原因分析
 - [盈利分红型行业](profitable-industries.md) — 不靠投资拉动、真实盈利分红的行业
 - [十五五投资方向](fifteen-five-investment.md) — 政策导向与产业投资机会

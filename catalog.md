@@ -118,6 +118,7 @@
 | [交易纪律](docs/position-discipline) | 建仓/持仓/止损/止盈/做T/心态/复盘 全纪律体系 |
 | [MA5 偏离度 · 持仓纪律](docs/ma5-deviation-discipline) | 三维决策框架：偏离方向+持续时间+价格位置，减仓/清仓细则 |
 | [📦 开源量化项目调研](docs/opensource-quant-projects) | 7个项目+12个A股数据源+7券商API+选型推荐(Quool) |
+| [📊 申万行业分类](docs/shenwan-industry-classification) | 31行业体系/5个评估益处/如何用于板块筛和相关性校验 |
 | [📐 投资纪律指标化](docs/investment-discipline-indicators) | 管住手/控仓位/别加杠杆/黄金=配置，四项检验+自动化脚本 |
 | [📐 决策方法论与策略体系](docs/decision-methodology) | 六层过滤→决策矩阵→为什么不加的数学依据 |
 | [📖 范·撒普 核心提炼](docs/van-tharp-trade-your-way) | 头寸规模确定是灵魂·R乘数·与你的七层框架映射 |
