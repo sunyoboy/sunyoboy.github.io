@@ -40,6 +40,7 @@ export default defineConfig({
                   text: '📂 日复盘',
                   collapsed: true,
                   items: [
+                    { text: '06-26 · 月末杀跌+宽基入场', link: '/review/2026/06/2026-06-26' },
                     { text: '06-25 · PCE落地+五条件4/5', link: '/review/2026/06/2026-06-25' },
                     { text: '06-24 · 缩量企稳+科创领涨', link: '/review/2026/06/2026-06-24' },
                     { text: '06-23 · 加速下跌+持仓诊断', link: '/review/2026/06/2026-06-23' },
@@ -117,6 +118,7 @@ export default defineConfig({
                   collapsed: false,
                   items: [
                     { text: '📅 全程日历', link: '/questions/孕期全程日历' },
+                    { text: '06-27 复查结果', link: '/questions/2026/06/2026-06-27' },
                     { text: '06-22 复查结果', link: '/questions/2026/06/2026-06-22' },
                     { text: '06-16 复查结果', link: '/questions/2026/06/2026-06-16' },
                     { text: '06-12 复查结果', link: '/questions/2026/06/2026-06-12' },
