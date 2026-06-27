@@ -41,7 +41,7 @@ export default defineConfig({
                   collapsed: true,
                   items: [
                     { text: '06-26 · 月末杀跌+宽基入场', link: '/review/2026/06/2026-06-26' },
-                    { text: '06-25 · PCE落地+五条件4/5', link: '/review/2026/06/2026-06-25' },
+                    { text: '06-25 · 美光反转+PCE落地', link: '/review/2026/06/2026-06-25' },
                     { text: '06-24 · 缩量企稳+科创领涨', link: '/review/2026/06/2026-06-24' },
                     { text: '06-23 · 加速下跌+持仓诊断', link: '/review/2026/06/2026-06-23' },
                     { text: '06-22 · 高低切换', link: '/review/2026/06/2026-06-22' },
@@ -62,6 +62,7 @@ export default defineConfig({
               text: '5月',
               collapsed: true,
               items: [
+                { text: '📋 W21 周复盘 (5.20-5.24)', link: '/review/2026/05/2026-W21' },
                 { text: '📊 月度市场概况 (05-26)', link: '/review/2026/05/2026-05-26-月度市场概况' },
                 { text: '05-28', link: '/review/2026/05/2026-05-28' },
                 { text: '05-27 · 伊朗空袭', link: '/review/2026/05/2026-05-27' },
@@ -181,6 +182,7 @@ export default defineConfig({
                 { text: '🫱 团队质疑七层过滤', link: '/docs/team-critical-thinking' },
                 { text: '📚 完善操作系统的推荐书单', link: '/docs/reading-list-recommendations' },
                 { text: 'A股行情分析', link: '/docs/a-share-2026-05-26' },
+                { text: '🔄 美股-A股 AI全产业链对标', link: '/docs/us-china-ai-hardware-mapping' },
                 { text: '股票工具与渠道', link: '/docs/stock-tools' }
               ]
             },
