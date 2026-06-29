@@ -40,6 +40,7 @@ export default defineConfig({
                   text: '📂 日复盘',
                   collapsed: true,
                   items: [
+                    { text: '06-29 · 全面拉升+K型分化', link: '/review/2026/06/2026-06-29' },
                     { text: '06-26 · 月末杀跌+宽基入场', link: '/review/2026/06/2026-06-26' },
                     { text: '06-25 · 美光反转+PCE落地', link: '/review/2026/06/2026-06-25' },
                     { text: '06-24 · 缩量企稳+科创领涨', link: '/review/2026/06/2026-06-24' },
@@ -191,6 +192,7 @@ export default defineConfig({
               collapsed: true,
               items: [
                 { text: '个人操作系统', link: '/docs/personal-os' },
+                { text: '🧬 仿生学习系统', link: '/docs/digestion-learning-system' },
                 { text: '矛盾论', link: '/docs/contradiction' },
                 { text: '实践论', link: '/docs/practice-theory' },
                 { text: '三大法宝', link: '/docs/three-weapons' },
