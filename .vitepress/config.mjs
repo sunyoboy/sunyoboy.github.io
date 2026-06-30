@@ -40,6 +40,7 @@ export default defineConfig({
                   text: '📂 日复盘',
                   collapsed: true,
                   items: [
+                    { text: '06-30 · 换刀完成+百花齐放', link: '/review/2026/06/2026-06-30' },
                     { text: '06-29 · 全面拉升+K型分化', link: '/review/2026/06/2026-06-29' },
                     { text: '06-26 · 月末杀跌+宽基入场', link: '/review/2026/06/2026-06-26' },
                     { text: '06-25 · 美光反转+PCE落地', link: '/review/2026/06/2026-06-25' },
