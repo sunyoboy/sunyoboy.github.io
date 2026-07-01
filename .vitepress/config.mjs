@@ -40,6 +40,7 @@ export default defineConfig({
                   text: '📂 日复盘',
                   collapsed: true,
                   items: [
+                    { text: '07-01 · 高开低走+卫星减仓', link: '/review/2026/07/2026-07-01' },
                     { text: '06-30 · 换刀完成+百花齐放', link: '/review/2026/06/2026-06-30' },
                     { text: '06-29 · 全面拉升+K型分化', link: '/review/2026/06/2026-06-29' },
                     { text: '06-26 · 月末杀跌+宽基入场', link: '/review/2026/06/2026-06-26' },
@@ -96,7 +97,7 @@ export default defineConfig({
               items: [
                 {
                   text: '6月',
-                  collapsed: false,
+                  collapsed: true,
                   items: [
                     { text: '月回顾', link: '/growth/2026/06/2026-06-月回顾' }
                   ]
@@ -195,6 +196,7 @@ export default defineConfig({
               items: [
                 { text: '个人操作系统', link: '/docs/personal-os' },
                 { text: '🧬 仿生学习系统', link: '/docs/digestion-learning-system' },
+                { text: '🔡 维特根斯坦·语言澄清', link: '/docs/wittgenstein-language-clarity' },
                 { text: '矛盾论', link: '/docs/contradiction' },
                 { text: '实践论', link: '/docs/practice-theory' },
                 { text: '三大法宝', link: '/docs/three-weapons' },

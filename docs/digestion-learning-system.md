@@ -718,6 +718,7 @@ ghrelin 激素上升              问题清单堆积
 
 ## 链接
 
+- [[wittgenstein-language-clarity]] — 第一性原理的语言版：拆解模糊大词到不可再拆的具体问题
 - [[kahneman-thinking-fast-slow]] — 系统1=无氧代谢，系统2=有氧代谢
 - [[decision-methodology]] — 七层框架=你的消化酶系统
 - [[position-discipline]] — 交易纪律=代谢规律（该排泄的不留）
