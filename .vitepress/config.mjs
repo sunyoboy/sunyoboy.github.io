@@ -40,7 +40,6 @@ export default defineConfig({
                   text: '📂 日复盘',
                   collapsed: true,
                   items: [
-                    { text: '07-01 · 高开低走+卫星减仓', link: '/review/2026/07/2026-07-01' },
                     { text: '06-30 · 换刀完成+百花齐放', link: '/review/2026/06/2026-06-30' },
                     { text: '06-29 · 全面拉升+K型分化', link: '/review/2026/06/2026-06-29' },
                     { text: '06-26 · 月末杀跌+宽基入场', link: '/review/2026/06/2026-06-26' },
@@ -136,6 +135,14 @@ export default defineConfig({
               text: '2026年',
               collapsed: true,
               items: [
+                {
+                  text: '6月',
+                  collapsed: false,
+                  items: [
+                    { text: '06-24 问题汇总', link: '/questions/2026/06/2026-06-24' },
+                    { text: '06-24 盯盘+拖延+NLP', link: '/questions/2026/06/2026-06-24-盯盘与NLP' }
+                  ]
+                },
                 {
                   text: '5月',
                   collapsed: false,
