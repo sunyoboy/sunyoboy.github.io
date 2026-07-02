@@ -61,6 +61,21 @@ export default defineConfig({
               ]
             },
             {
+              text: '7月',
+              collapsed: false,
+              items: [
+                {
+                  text: '📂 日复盘',
+                  collapsed: false,
+                  items: [
+                    { text: '07-03 · 期货分裂+不加仓', link: '/review/2026/07/2026-07-03' },
+                    { text: '07-02 · 全线暴跌+三只清仓', link: '/review/2026/07/2026-07-02' },
+                    { text: '07-01 · 新刀第一天+卫星减仓', link: '/review/2026/07/2026-07-01' }
+                  ]
+                }
+              ]
+            },
+            {
               text: '5月',
               collapsed: true,
               items: [
