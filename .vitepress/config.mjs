@@ -200,6 +200,7 @@ export default defineConfig({
                 { text: 'A股做T操作指南', link: '/docs/t-trading' },
                 { text: '宽基ETF做T策略', link: '/docs/index-etf-trading' },
                 { text: '📋 三账户ETF观察清单 07-06', link: '/docs/etf-watchlist-2026-07-06' },
+                { text: '🏦 基金公司与基金经理观察清单', link: '/docs/fund-managers-watchlist' },
                 { text: '盈利分红型行业', link: '/docs/profitable-industries' },
                 { text: '十五五投资方向', link: '/docs/fifteen-five-investment' },
                 { text: '海鸥期权策略', link: '/docs/seagull-strategy' },
