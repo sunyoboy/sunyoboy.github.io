@@ -137,6 +137,7 @@ export default defineConfig({
                   collapsed: false,
                   items: [
                     { text: '📅 全程日历', link: '/questions/孕期全程日历' },
+                    { text: '07-06 常规血检', link: '/questions/2026/07/2026-07-06' },
                     { text: '07-01 检验汇总', link: '/questions/2026/07/2026-07-01' },
                     { text: '06-27 复查结果', link: '/questions/2026/06/2026-06-27' },
                     { text: '06-22 复查结果', link: '/questions/2026/06/2026-06-22' },
