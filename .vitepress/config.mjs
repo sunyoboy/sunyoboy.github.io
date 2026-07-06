@@ -68,6 +68,7 @@ export default defineConfig({
                   text: '📂 日复盘',
                   collapsed: false,
                   items: [
+                    { text: '07-06 · 周末复盘+周一盘前', link: '/review/2026/07/2026-07-06' },
                     { text: '07-03 · 期货分裂+不加仓', link: '/review/2026/07/2026-07-03' },
                     { text: '07-02 · 全线暴跌+三只清仓', link: '/review/2026/07/2026-07-02' },
                     { text: '07-01 · 新刀第一天+卫星减仓', link: '/review/2026/07/2026-07-01' }
