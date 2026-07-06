@@ -103,6 +103,7 @@ export default defineConfig({
             { text: '🎯 年度 OKR', link: '/growth/2026-年度OKR' },
             { text: '📋 个人周报模板', link: '/growth/个人周报模板' },
             { text: '📖 阅读清单(14本)', link: '/growth/阅读清单' },
+            { text: '📋 下半年读书计划', link: '/growth/读书计划-2026下半年' },
             { text: '💰 财务仪表盘', link: '/growth/财务仪表盘' },
             { text: '🛠️ 技能树', link: '/growth/技能树' },
             { text: '📈 第二增长曲线', link: '/growth/第二增长曲线' },
