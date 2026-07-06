@@ -20,6 +20,8 @@
 
 ## 问题清单
 
+### 📋 [总览](questions/index)
+
 ### 特别专题
 
 | 日期 | 链接 |
@@ -53,6 +55,8 @@
 ---
 
 ## 复盘
+
+### 📅 [2026年度复盘](review/2026/2026) — FOMC日历/里程碑/经济数据时间表
 
 ### 2026年6月
 
@@ -126,6 +130,8 @@
 
 | 文档 | 说明 |
 |------|------|
+| [🧠 提升认知](docs/index) | 知识库首页 |
+| [🗺️ 网站全景图](docs/knowledge-tree) | 全站可视化导航 |
 | [矛盾论](docs/contradiction) | 唯物辩证法核心，处理现实问题的方法论 |
 | [实践论](docs/practice-theory) | 认识论基础，知行合一的哲学依据 |
 | [三大法宝](docs/three-weapons) | 统一战线/武装斗争/党的建设 · 个人成长三维映射 |
@@ -147,6 +153,7 @@
 | [十五五投资方向](docs/fifteen-five-investment) | 政策导向与产业投资机会 |
 | [海鸥期权策略](docs/seagull-strategy) | 三腿期权组合，零成本震荡市套保 |
 | [交易纪律](docs/position-discipline) | 建仓/持仓/止损/止盈/做T/心态/复盘 全纪律体系 |
+| [股票评估框架](docs/stock-evaluation) | 基本面/技术面/资金面三维评估 |
 | [MA5 偏离度 · 持仓纪律](docs/ma5-deviation-discipline) | 三维决策框架：偏离方向+持续时间+价格位置，减仓/清仓细则 |
 | [📦 开源量化项目调研](docs/opensource-quant-projects) | 7个项目+12个A股数据源+7券商API+选型推荐(Quool) |
 | [📊 申万行业分类](docs/shenwan-industry-classification) | 31行业体系/5个评估益处/如何用于板块筛和相关性校验 |
@@ -174,6 +181,8 @@
 | [AI工具全景分析](docs/ai-tools-analysis) | Cursor、Claude、v0 等 AI 编程工具对比 |
 | [🚀 前端输出加速](docs/frontend-output-acceleration) | Streamlit/一模版三发/ECharts/多平台发布 |
 | [🤖 AI编程模型收费对比 2026](docs/ai-coding-models-2026) | Top 5 + GLM-5.2 + 豆包2.1 价格与选型 |
+| [🔀 AI聚合平台性价比](docs/ai-model-aggregators-2026) | 多模型聚合平台对比与选型 |
+| [🏦 美国AI投入ROI分析](docs/us-ai-capex-roi-analysis) | 四大科技巨头AI投入回报深度分析 |
 | [⚔️ 中美AI研发成本对比](docs/us-ai-monopoly-analysis) | DeepSeek $557万 vs GPT-5 $5亿，垄断定价已破产 |
 | [🔒 Claude Fable 5 + 禁令分析](docs/claude-fable-5-analysis) | 5倍代码碾压→3天下架→禁令ROI死亡螺旋 |
 | [🫘 豆包专业版价值评估](docs/doubao-pro-evaluation) | 68/200/500元三档，本地Agent是唯一护城河 |
