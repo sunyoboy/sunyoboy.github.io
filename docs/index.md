@@ -27,6 +27,7 @@
 - [🤖 AI编程模型收费对比 2026](ai-coding-models-2026.md) — Top 5 + GLM-5.2 + 豆包2.1 价格与选型
 - [个人开发者深耕方向](solo-dev-strategy.md) — 四大必投系统、两个技术护城河、五年路线图
 - [投资心智](mindset.md) — 尹烨：改变自己，投资认知与思维模型
+- [《掌控习惯》精炼](atomic-habits.md) — 四大定律+身份认同+与交易系统精确映射
 - [🧠 自我认知框架](self-awareness.md) — 优势/劣势审计、A/B分类法、财务增长点评判标准
 - [🧠 NLP 逻辑层次 · 迪尔茨](nlp-dilts-logical-levels.md) — 六层模型/信念搭桥/拖延的NLP诊断/知行合一映射
 - [🧠 卡尼曼 思考快与慢](kahneman-thinking-fast-slow.md) — 系统1与系统2·损失厌恶·为什么盯盘是老虎机

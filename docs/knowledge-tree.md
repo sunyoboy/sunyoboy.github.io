@@ -27,6 +27,7 @@
 - [矛盾论](contradiction) — 6个核心观点/5步实践/投资应用
 - [实践论](practice-theory) — 感性→理性→实践→循环/4种错误
 - [三大法宝](three-weapons) — 统一战线/武装斗争/党的建设
+- [《掌控习惯》精炼](atomic-habits) — 四大定律+身份认同+交易系统精确映射
 - [巴菲特1998演讲](buffett-1998) — 品格/护城河/杠杆/知足/定价权
 - [想赢怕输的心态](fear-greed) — 贪婪vs恐惧/系统替代情绪
 - [保持好心态](peace-of-mind) — 可控vs不可控/主要矛盾/bug report

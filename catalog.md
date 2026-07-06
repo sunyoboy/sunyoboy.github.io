@@ -134,6 +134,7 @@
 | [🗺️ 网站全景图](docs/knowledge-tree) | 全站可视化导航 |
 | [矛盾论](docs/contradiction) | 唯物辩证法核心，处理现实问题的方法论 |
 | [实践论](docs/practice-theory) | 认识论基础，知行合一的哲学依据 |
+| [《掌控习惯》精炼](docs/atomic-habits) | 四大定律+身份认同+与交易系统精确映射 |
 | [三大法宝](docs/three-weapons) | 统一战线/武装斗争/党的建设 · 个人成长三维映射 |
 | [🧬 仿生学习系统](docs/digestion-learning-system) | 五仿生模型+三层古典智慧：消化·免疫·肌肉·进化·菌根+卖油翁·庖丁·第一性 |
 | [🔡 维特根斯坦·语言澄清](docs/wittgenstein-language-clarity) | 哲学问题不存在=语言用错了地方；框架=可说的说清楚，不可说的沉默 |

@@ -210,6 +210,7 @@ export default defineConfig({
                 { text: '🧠 自我认知框架', link: '/docs/self-awareness' },
                 { text: '🧠 NLP 逻辑层次 · 迪尔茨', link: '/docs/nlp-dilts-logical-levels' },
                 { text: '🧠 卡尼曼 思考快与慢', link: '/docs/kahneman-thinking-fast-slow' },
+                { text: '📖 《掌控习惯》精炼', link: '/docs/atomic-habits' },
                 { text: '🫱 团队质疑七层过滤', link: '/docs/team-critical-thinking' },
                 { text: '📚 完善操作系统的推荐书单', link: '/docs/reading-list-recommendations' },
                 { text: 'A股行情分析', link: '/docs/a-share-2026-05-26' },
