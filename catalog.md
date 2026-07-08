@@ -161,7 +161,8 @@
 | [十五五投资方向](docs/fifteen-five-investment) | 政策导向与产业投资机会 |
 | [海鸥期权策略](docs/seagull-strategy) | 三腿期权组合，零成本震荡市套保 |
 | [交易纪律](docs/position-discipline) | 建仓/持仓/止损/止盈/做T/心态/复盘 全纪律体系 |
-| [📋 交易执行SOP·PDCA](docs/trading-sop-pdca) | 条件单+网格交易+每日速查卡·纪律靠系统不靠意志力 |
+| [📋 交易执行SOP](docs/trading-sop-pdca) | 条件单+网格交易+每日速查卡·纪律靠系统不靠意志力 |
+| [📱 手机端速查清单](docs/mobile-checklist) | 盘前4条·盘中1条·买入3问·卖出1条·每月1次 |
 | [股票评估框架](docs/stock-evaluation) | 基本面/技术面/资金面三维评估 |
 | [MA5 偏离度 · 持仓纪律](docs/ma5-deviation-discipline) | 三维决策框架：偏离方向+持续时间+价格位置，减仓/清仓细则 |
 | [📦 开源量化项目调研](docs/opensource-quant-projects) | 7个项目+12个A股数据源+7券商API+选型推荐(Quool) |
