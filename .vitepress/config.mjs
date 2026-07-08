@@ -200,6 +200,7 @@ export default defineConfig({
                 { text: '交易纪律', link: '/docs/position-discipline' },
                 { text: '📋 交易执行SOP', link: '/docs/trading-sop-pdca' },
                 { text: '📱 手机端速查清单', link: '/docs/mobile-checklist' },
+                { text: '📖 外部交易规则参考', link: '/docs/trading-rules-external' },
                 { text: 'MA5 偏离度 · 持仓纪律', link: '/docs/ma5-deviation-discipline' },
                 { text: '股票评估框架', link: '/docs/stock-evaluation' },
                 { text: '🚫 为什么盯盘不可取', link: '/docs/why-not-watch-market' },
