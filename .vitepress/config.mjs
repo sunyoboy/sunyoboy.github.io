@@ -210,6 +210,7 @@ export default defineConfig({
                 { text: '📋 三账户ETF观察清单 07-06', link: '/docs/etf-watchlist-2026-07-06' },
                 { text: '📜 债券ETF投资入门', link: '/docs/bond-investment-basics' },
                 { text: '🏦 基金公司与基金经理观察清单', link: '/docs/fund-managers-watchlist' },
+                { text: '🎯 曹名长·深度价值投资框架', link: '/docs/cao-mingchang-value-investing' },
                 { text: '盈利分红型行业', link: '/docs/profitable-industries' },
                 { text: '十五五投资方向', link: '/docs/fifteen-five-investment' },
                 { text: '海鸥期权策略', link: '/docs/seagull-strategy' },

@@ -155,6 +155,7 @@
 | [📋 三账户ETF观察清单 07-06](docs/etf-watchlist-2026-07-06) | 华泰/广发/东北各4只观察ETF，含入场价/止损价/仓位三要素 |
 | [📜 债券ETF投资入门](docs/bond-investment-basics) | 如何购买30年国债+收益机制+久期概念+与股票仓位配比 |
 | [🏦 基金公司与基金经理观察清单](docs/fund-managers-watchlist) | ETF公司实力榜 + 8位主动经理分析 + 如何用他们验证你的系统 |
+| [🎯 曹名长·深度价值投资框架](docs/cao-mingchang-value-investing) | 三类资产组合·安全边际·分散是为了不下牌桌 |
 | [A股行情分析](docs/a-share-2026-05-26) | 指数表现、板块轮动与原因分析 |
 | [🔄 美股-A股 AI全产业链对标](docs/us-china-ai-hardware-mapping) | 18大环节：芯片→服务器→光通信→云→模型→数据→安全→金融→自动驾驶→机器人→医疗→教育→AIGC |
 | [盈利分红型行业](docs/profitable-industries) | 白酒/银行/煤炭/水电/家电/通信——不靠投资拉动的现金奶牛 |
