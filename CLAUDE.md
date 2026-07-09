@@ -444,6 +444,7 @@ ThinkingDoing/
 
 | 脚本 | 用途 | 频率 |
 |------|------|:--:|
+| `/knowingdoing-review` | 🆕 **每日复盘 Skill** · 自动拉数据+查纪律+给建议 | 每日收盘后 |
 | `python3 scripts/fetch-market-data.py` | 抓取 7 大指数 + 6 个标的行情，生成当日复盘 Markdown 模板 | 每日收盘后 |
 | `python3 scripts/fetch-market-data.py 2026-06-17` | 指定日期抓取（补写历史复盘用） | 按需 |
 | `python3 scripts/ma5-deviation.py` | 持仓标的 MA5 偏离度全景诊断（三维指标 + 操作建议） | 每日收盘后 |
@@ -451,6 +452,16 @@ ThinkingDoing/
 | `bash scripts/setup-cron.sh` | 安装/重装 macOS launchd 定时任务（交易日 15:35 自动抓取） | 一次 |
 | `bash scripts/gitee-deploy.sh` | Gitee Pages 手动部署 | 按需 |
 | `python3 scripts/wechat-publish.py` | 微信公众号发布 | 按需 |
+
+### 华泰 API Skill（需 HT_APIKEY）
+
+| Skill | 用途 |
+|------|------|
+| `/query-indicator` | 金融指标与行情综合检索 |
+| `/select-stock` | 条件选股（自然语言筛股票） |
+| `/a-share-paper-trading` | A 股模拟交易（报价/下单/持仓） |
+| `/financial-analysis` | 金融分析与资讯 |
+| `/watchlist-management` | 自选股管理 |
 
 ---
 
