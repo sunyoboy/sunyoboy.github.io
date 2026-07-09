@@ -68,6 +68,7 @@ export default defineConfig({
                   text: '📂 日复盘',
                   collapsed: false,
                   items: [
+                    { text: '07-10 · 全面暴涨·科创+7.32%', link: '/review/2026/07/2026-07-10' },
                     { text: '07-08 · 美伊战事+金叉变死叉', link: '/review/2026/07/2026-07-08' },
                     { text: '07-07 · 失守4000+4涨27跌', link: '/review/2026/07/2026-07-07' },
                     { text: '07-06 · 周末复盘+周一盘前', link: '/review/2026/07/2026-07-06' },
