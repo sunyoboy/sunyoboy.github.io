@@ -23,7 +23,7 @@ metadata:
 ### Step 1: 拉取数据
 
 ```bash
-cd /Users/ninebot/02-sourceCode/gitee/KnowingDoing
+cd $KNOWINGDOING_HOME  # 项目根目录
 python3 scripts/fetch-market-data.py $(date +%Y-%m-%d)
 python3 scripts/ma5-deviation.py
 python3 scripts/shenwan-monitor.py
