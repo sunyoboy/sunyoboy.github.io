@@ -27,6 +27,7 @@ cd $KNOWINGDOING_HOME  # 项目根目录
 python3 scripts/fetch-market-data.py $(date +%Y-%m-%d)
 python3 scripts/ma5-deviation.py
 python3 scripts/shenwan-monitor.py
+python3 scripts/save-to-db.py   # 数据持久化到 SQLite
 ```
 
 ### Step 2: 检查纪律信号

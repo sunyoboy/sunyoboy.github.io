@@ -448,7 +448,10 @@ ThinkingDoing/
 | `python3 scripts/fetch-market-data.py` | 抓取 7 大指数 + 6 个标的行情，生成当日复盘 Markdown 模板 | 每日收盘后 |
 | `python3 scripts/fetch-market-data.py 2026-06-17` | 指定日期抓取（补写历史复盘用） | 按需 |
 | `python3 scripts/ma5-deviation.py` | 持仓标的 MA5 偏离度全景诊断（三维指标 + 操作建议） | 每日收盘后 |
+| `python3 scripts/save-to-db.py` | 🆕 一键入库：将当日脚本数据写入 SQLite | 每日收盘后 |
 | `python3 scripts/shenwan-monitor.py` | 31 个申万一级行业全景监测（ETF代理 + 涨跌比 + 极端信号） | 每日收盘后 |
+| `python3 scripts/market_db.py` | 🆕 SQLite 数据仓库模块（建表·写入·查询·统计） | 按需 |
+| `python3 scripts/migrate_history.py` | 🆕 一次性迁移：将 JSON 历史数据导入 SQLite | 首次使用 |
 | `bash scripts/setup-cron.sh` | 安装/重装 macOS launchd 定时任务（交易日 15:35 自动抓取） | 一次 |
 | `bash scripts/gitee-deploy.sh` | Gitee Pages 手动部署 | 按需 |
 | `python3 scripts/wechat-publish.py` | 微信公众号发布 | 按需 |
