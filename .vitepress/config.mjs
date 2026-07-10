@@ -196,6 +196,7 @@ export default defineConfig({
                 { text: '🔴 FOMC决策全景', link: '/docs/fomc-schedule' },
                 { text: '📦 开源量化项目调研', link: '/docs/opensource-quant-projects' },
                 { text: '🤖 华泰AI涨乐Skills安装指南', link: '/docs/htsc-skills-setup' },
+                { text: '🔧 AI金融工具·分工指南', link: '/docs/ai-tools-selection-guide' },
                 { text: '🔧 AI金融投资工具调研', link: '/docs/ai-finance-tools' },
                 { text: '📊 申万行业分类', link: '/docs/shenwan-industry-classification' },
                 { text: '📐 投资纪律指标化', link: '/docs/investment-discipline-indicators' },
