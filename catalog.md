@@ -171,6 +171,7 @@
 | [MA5 偏离度 · 持仓纪律](docs/ma5-deviation-discipline) | 三维决策框架：偏离方向+持续时间+价格位置，减仓/清仓细则 |
 | [📦 开源量化项目调研](docs/opensource-quant-projects) | 7个项目+12个A股数据源+7券商API+选型推荐(Quool) |
 | [🤖 华泰AI涨乐Skills安装指南](docs/htsc-skills-setup) | 5个Skill一键安装+量化接入方案(选股/行情/模拟交易) |
+| [🔧 AI金融投资工具调研](docs/ai-finance-tools) | 19款工具×体系互补·同花顺问财/BigQuant/东方财富妙想 |
 | [📊 申万行业分类](docs/shenwan-industry-classification) | 31行业体系/5个评估益处/如何用于板块筛和相关性校验 |
 | [📐 投资纪律指标化](docs/investment-discipline-indicators) | 管住手/控仓位/别加杠杆/黄金=配置，四项检验+自动化脚本 |
 | [📐 决策方法论与策略体系](docs/decision-methodology) | 六层过滤→决策矩阵→为什么不加的数学依据 |
