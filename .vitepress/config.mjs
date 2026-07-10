@@ -69,6 +69,7 @@ export default defineConfig({
                   collapsed: false,
                   items: [
                     { text: '07-10 · 全面暴涨·科创+7.32%', link: '/review/2026/07/2026-07-10' },
+                    { text: '07-09 · 全面暴力反弹+止损触发', link: '/review/2026/07/2026-07-09' },
                     { text: '07-08 · 美伊战事+金叉变死叉', link: '/review/2026/07/2026-07-08' },
                     { text: '07-07 · 失守4000+4涨27跌', link: '/review/2026/07/2026-07-07' },
                     { text: '07-06 · 周末复盘+周一盘前', link: '/review/2026/07/2026-07-06' },
@@ -111,6 +112,7 @@ export default defineConfig({
             { text: '💰 财务仪表盘', link: '/growth/财务仪表盘' },
             { text: '🛠️ 技能树', link: '/growth/技能树' },
             { text: '📈 第二增长曲线', link: '/growth/第二增长曲线' },
+            { text: '💼 软件工程师价值转移', link: '/growth/软件工程师价值转移与行动方向' },
             {
               text: '2026年',
               collapsed: false,
@@ -142,6 +144,7 @@ export default defineConfig({
                   collapsed: false,
                   items: [
                     { text: '📅 全程日历', link: '/questions/孕期全程日历' },
+                    { text: '🛒 饮食与零食清单', link: '/questions/孕期饮食与零食清单' },
                     { text: '07-06 常规血检', link: '/questions/2026/07/2026-07-06' },
                     { text: '07-01 检验汇总', link: '/questions/2026/07/2026-07-01' },
                     { text: '06-27 复查结果', link: '/questions/2026/06/2026-06-27' },
