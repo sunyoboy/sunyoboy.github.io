@@ -113,6 +113,7 @@ export default defineConfig({
             { text: '🛠️ 技能树', link: '/growth/技能树' },
             { text: '📈 第二增长曲线', link: '/growth/第二增长曲线' },
             { text: '💼 软件工程师价值转移', link: '/growth/软件工程师价值转移与行动方向' },
+            { text: '💡 投资教训与根因分析', link: '/growth/投资教训与根因分析' },
             {
               text: '2026年',
               collapsed: false,
@@ -145,6 +146,7 @@ export default defineConfig({
                   items: [
                     { text: '📅 全程日历', link: '/questions/孕期全程日历' },
                     { text: '🛒 饮食与零食清单', link: '/questions/孕期饮食与零食清单' },
+                    { text: '💝 异地陪伴指南', link: '/questions/孕期异地陪伴指南' },
                     { text: '07-06 常规血检', link: '/questions/2026/07/2026-07-06' },
                     { text: '07-01 检验汇总', link: '/questions/2026/07/2026-07-01' },
                     { text: '06-27 复查结果', link: '/questions/2026/06/2026-06-27' },
@@ -198,6 +200,7 @@ export default defineConfig({
                 { text: '🤖 华泰AI涨乐Skills安装指南', link: '/docs/htsc-skills-setup' },
                 { text: '🔧 AI金融工具·分工指南', link: '/docs/ai-tools-selection-guide' },
                 { text: '🚀 AI工具飞轮加速', link: '/docs/ai-tools-flywheel' },
+                { text: '💰 AI工具·副业变现', link: '/docs/ai-tools-sidehustle' },
                 { text: '🔧 AI金融投资工具调研', link: '/docs/ai-finance-tools' },
                 { text: '📊 申万行业分类', link: '/docs/shenwan-industry-classification' },
                 { text: '📐 投资纪律指标化', link: '/docs/investment-discipline-indicators' },

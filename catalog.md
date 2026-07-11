@@ -176,6 +176,7 @@
 | [🤖 华泰AI涨乐Skills安装指南](docs/htsc-skills-setup) | 5个Skill一键安装+量化接入方案(选股/行情/模拟交易) |
 | [🔧 AI金融工具·分工指南](docs/ai-tools-selection-guide) | 选股→问财·报价→华泰·交易→paper·分析→妙想 |
 | [🚀 AI工具飞轮加速](docs/ai-tools-flywheel) | 扣子/小浣熊/蛙蛙×四飞轮·自动化Pipeline |
+| [💰 AI工具·副业变现筛选](docs/ai-tools-sidehustle) | 4条变现路径×工具·稿定/Napkin·短视频复用策略+合规红线 |
 | [🔧 AI金融投资工具调研](docs/ai-finance-tools) | 19款工具×体系互补·同花顺问财/BigQuant/东方财富妙想 |
 | [📊 申万行业分类](docs/shenwan-industry-classification) | 31行业体系/5个评估益处/如何用于板块筛和相关性校验 |
 | [📐 投资纪律指标化](docs/investment-discipline-indicators) | 管住手/控仓位/别加杠杆/黄金=配置，四项检验+自动化脚本 |
