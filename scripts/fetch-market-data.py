@@ -5,7 +5,9 @@
 
 用法：
   python3 scripts/fetch-market-data.py            # 今天
-  python3 scripts/fetch-market-data.py 2026-06-17 # 指定日期
+  python3 scripts/fetch-market-data.py 2026-06-17 # ⚠️ 已废弃：腾讯 API 只返回实时快照，
+                                                  #    传非今天的日期会被拒绝（否则把今天数据写进旧文件）。
+                                                  #    历史回补请用华泰 query-indicator skill。
 
 定时运行（macOS）：
   每个交易日 15:35 自动执行（通过 setup-cron.sh 安装的 launchd 任务）
@@ -63,6 +65,7 @@ def fetch_from_tencent(symbols=None, label="数据"):
                         "close": round(price, 2),
                         "pct_chg": round(pct, 2),
                         "prev_close": round(prev_close, 2) if prev_close else None,
+                        "api_dt": data[30] if len(data) > 30 else "",
                     }
                     print(f"  ✅ {name}: {results[name]['close']} ({results[name]['pct_chg']:+.2f}%)")
                 else:
@@ -73,7 +76,7 @@ def fetch_from_tencent(symbols=None, label="数据"):
     return results if results else None
 
 
-def generate_template(date_str, index_data, watchlist_data=None):
+def generate_template(date_str, index_data, watchlist_data=None, warning=""):
     """生成复盘 Markdown 模板"""
     if not index_data:
         return None
@@ -118,7 +121,7 @@ def generate_template(date_str, index_data, watchlist_data=None):
 
     template = f"""# {date_str}
 
-## 目录
+{warning}## 目录
 
 - [A股复盘](#a股复盘)
   - [指数表现](#指数表现)
@@ -218,17 +221,42 @@ def generate_template(date_str, index_data, watchlist_data=None):
 
 if __name__ == "__main__":
     date_str = sys.argv[1] if len(sys.argv) > 1 else datetime.now().strftime("%Y-%m-%d")
+    now = datetime.now()
+    today = now.strftime("%Y-%m-%d")
+
+    # 🛑 防串位：腾讯 API 只返回「实时/最新」快照，无法回补历史日期。
+    # 若 date_str 不是今天，会把「今天的实时数据」写进标着旧日期的文件——7/9-7/11 污染的根因。
+    if date_str != today:
+        print(f"🛑 拒绝执行：date_str={date_str} 不是今天({today})。")
+        print("   腾讯实时 API 无法回补历史收盘，会写入错误数据。")
+        print("   回补历史请用华泰 query-indicator skill 查询后手工填写。")
+        sys.exit(1)
+
+    # ⏰ 盘中警告：未到收盘(15:00)抓取的是盘中价，不能当收盘用。
+    warning = ""
+    if now.hour < 15:
+        warning = f"> ⚠️ **盘中数据**：本文件于 {now.strftime('%H:%M')} 抓取，市场未收盘，为盘中快照，收盘后需重抓订正。\n\n"
+        print(f"⚠️ 当前 {now.strftime('%H:%M')} 未到收盘，抓取的是盘中数据！")
+
     print(f"📊 KnowingDoing 市场数据抓取 · {date_str}  (腾讯财经)\n")
 
     # 抓取指数
     print("[指数]")
     data = fetch_from_tencent(INDICES, "指数")
 
+    # 🔍 校验 API 时间戳日期是否与 date_str 一致（防非交易日返回上一交易日数据）
+    if data:
+        api_dt = next((v.get("api_dt", "") for v in data.values() if v.get("api_dt")), "")
+        if api_dt[:8] and api_dt[:8] != date_str.replace("-", ""):
+            print(f"⚠️ API 时间戳 {api_dt[:8]} 与目标日期 {date_str.replace('-', '')} 不符，可能是非交易日！")
+            if not warning:
+                warning = f"> ⚠️ **数据日期存疑**：API 时间戳 {api_dt} 与文件日期不符，请人工核对。\n\n"
+
     # 抓取重点标的
     print("\n[重点标的]")
     watchlist = fetch_from_tencent(WATCHLIST, "标的")
 
-    generate_template(date_str, data, watchlist)
+    generate_template(date_str, data, watchlist, warning)
     print(f"\n{'='*50}")
     if data:
         idx_count = len(data)
