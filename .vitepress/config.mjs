@@ -23,8 +23,36 @@ export default defineConfig({
           items: [
             { text: '年度复盘', link: '/review/2026/2026' },
             {
-              text: '6月',
+              text: '7月',
               collapsed: false,
+              items: [
+                {
+                  text: '📂 周复盘',
+                  collapsed: false,
+                  items: [
+                    { text: '📋 W29 周计划 (7/13-7/17)', link: '/review/2026/07/2026-W29' },
+                    { text: '📋 W28 周复盘 (7/6-7/11)', link: '/review/2026/07/2026-W28' },
+                  ]
+                },
+                {
+                  text: '📂 日复盘',
+                  collapsed: false,
+                  items: [
+                    { text: '07-10 · 全面暴涨·科创+7.32%', link: '/review/2026/07/2026-07-10' },
+                    { text: '07-09 · 全面暴力反弹+止损触发', link: '/review/2026/07/2026-07-09' },
+                    { text: '07-08 · 美伊战事+金叉变死叉', link: '/review/2026/07/2026-07-08' },
+                    { text: '07-07 · 失守4000+4涨27跌', link: '/review/2026/07/2026-07-07' },
+                    { text: '07-06 · 周末复盘+周一盘前', link: '/review/2026/07/2026-07-06' },
+                    { text: '07-03 · 期货分裂+不加仓', link: '/review/2026/07/2026-07-03' },
+                    { text: '07-02 · 全线暴跌+三只清仓', link: '/review/2026/07/2026-07-02' },
+                    { text: '07-01 · 新刀第一天+卫星减仓', link: '/review/2026/07/2026-07-01' }
+                  ]
+                }
+              ]
+            },
+            {
+              text: '6月',
+              collapsed: true,
               items: [
                 {
                   text: '📂 专题报告',
@@ -61,32 +89,16 @@ export default defineConfig({
               ]
             },
             {
-              text: '7月',
-              collapsed: false,
-              items: [
-                {
-                  text: '📂 日复盘',
-                  collapsed: false,
-                  items: [
-                    { text: '07-10 · 全面暴涨·科创+7.32%', link: '/review/2026/07/2026-07-10' },
-                    { text: '07-09 · 全面暴力反弹+止损触发', link: '/review/2026/07/2026-07-09' },
-                    { text: '07-08 · 美伊战事+金叉变死叉', link: '/review/2026/07/2026-07-08' },
-                    { text: '07-07 · 失守4000+4涨27跌', link: '/review/2026/07/2026-07-07' },
-                    { text: '07-06 · 周末复盘+周一盘前', link: '/review/2026/07/2026-07-06' },
-                    { text: '07-03 · 期货分裂+不加仓', link: '/review/2026/07/2026-07-03' },
-                    { text: '07-02 · 全线暴跌+三只清仓', link: '/review/2026/07/2026-07-02' },
-                    { text: '07-01 · 新刀第一天+卫星减仓', link: '/review/2026/07/2026-07-01' }
-                  ]
-                }
-              ]
-            },
-            {
               text: '5月',
               collapsed: true,
               items: [
-                { text: '📋 W29 周计划 (7/13-7/17)', link: '/review/2026/07/2026-W29' },
-                { text: '📋 W28 周复盘 (7/6-7/11)', link: '/review/2026/07/2026-W28' },
-                { text: '📋 W21 周复盘 (5.20-5.24)', link: '/review/2026/05/2026-W21' },
+                {
+                  text: '📂 周复盘',
+                  collapsed: false,
+                  items: [
+                    { text: '📋 W21 周复盘 (5.20-5.24)', link: '/review/2026/05/2026-W21' },
+                  ]
+                },
                 { text: '📊 月度市场概况 (05-26)', link: '/review/2026/05/2026-05-26-月度市场概况' },
                 { text: '05-28', link: '/review/2026/05/2026-05-28' },
                 { text: '05-27 · 伊朗空袭', link: '/review/2026/05/2026-05-27' },
