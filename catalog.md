@@ -157,6 +157,7 @@
 | [A股做T操作指南](docs/t-trading) | T+0 变相做T的方法、纪律与常见错误 |
 | [宽基ETF做T策略](docs/index-etf-trading) | 指数ETF日内波段操作，信号体系与仓位管理 |
 | [📋 三账户ETF观察清单 07-06](docs/etf-watchlist-2026-07-06) | 华泰/广发/东北各4只观察ETF，含入场价/止损价/仓位三要素 |
+| [🎯 HALO观察池·对标美股](docs/watchlist-halo) | 12只ETF·战略/战术分账本·电力/卡脖子命中·缺算力军工航天创新药 |
 | [📜 债券ETF投资入门](docs/bond-investment-basics) | 如何购买30年国债+收益机制+久期概念+与股票仓位配比 |
 | [🏦 基金公司与基金经理观察清单](docs/fund-managers-watchlist) | ETF公司实力榜 + 8位主动经理分析 + 如何用他们验证你的系统 |
 | [🎯 曹名长·深度价值投资框架](docs/cao-mingchang-value-investing) | 三类资产组合·安全边际·分散是为了不下牌桌 |
@@ -164,6 +165,7 @@
 | [🔄 美股-A股 AI全产业链对标](docs/us-china-ai-hardware-mapping) | 18大环节：芯片→服务器→光通信→云→模型→数据→安全→金融→自动驾驶→机器人→医疗→教育→AIGC |
 | [盈利分红型行业](docs/profitable-industries) | 白酒/银行/煤炭/水电/家电/通信——不靠投资拉动的现金奶牛 |
 | [十五五投资方向](docs/fifteen-five-investment) | 政策导向与产业投资机会 |
+| [🇺🇸对标美股·十五五ETF](docs/fifteen-five-us-benchmark) | 美股主线→A股ETF·战略/战术分账本·硬目标底仓清单 |
 | [海鸥期权策略](docs/seagull-strategy) | 三腿期权组合，零成本震荡市套保 |
 | [交易纪律](docs/position-discipline) | 建仓/持仓/止损/止盈/做T/心态/复盘 全纪律体系 |
 | [📋 交易执行SOP](docs/trading-sop-pdca) | 条件单+网格交易+每日速查卡·纪律靠系统不靠意志力 |
