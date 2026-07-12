@@ -84,6 +84,7 @@ export default defineConfig({
               text: '5月',
               collapsed: true,
               items: [
+                { text: '📋 W29 周计划 (7/13-7/17)', link: '/review/2026/07/2026-W29' },
                 { text: '📋 W28 周复盘 (7/6-7/11)', link: '/review/2026/07/2026-W28' },
                 { text: '📋 W21 周复盘 (5.20-5.24)', link: '/review/2026/05/2026-W21' },
                 { text: '📊 月度市场概况 (05-26)', link: '/review/2026/05/2026-05-26-月度市场概况' },
