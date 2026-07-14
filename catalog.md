@@ -145,6 +145,7 @@
 | [矛盾论](docs/contradiction) | 唯物辩证法核心，处理现实问题的方法论 |
 | [实践论](docs/practice-theory) | 认识论基础，知行合一的哲学依据 |
 | [《掌控习惯》精炼](docs/atomic-habits) | 四大定律+身份认同+与交易系统精确映射 |
+| [🏛️ 斯多葛主义](docs/stoicism) | 控制二分法 · 四大美德 · 三位哲人 · 交易/孕期/成长精确映射 |
 | [三大法宝](docs/three-weapons) | 统一战线/武装斗争/党的建设 · 个人成长三维映射 |
 | [🧬 仿生学习系统](docs/digestion-learning-system) | 五仿生模型+三层古典智慧：消化·免疫·肌肉·进化·菌根+卖油翁·庖丁·第一性 |
 | [🔡 维特根斯坦·语言澄清](docs/wittgenstein-language-clarity) | 哲学问题不存在=语言用错了地方；框架=可说的说清楚，不可说的沉默 |
@@ -160,6 +161,7 @@
 | [📋 三账户ETF观察清单 07-06](docs/etf-watchlist-2026-07-06) | 华泰/广发/东北各4只观察ETF，含入场价/止损价/仓位三要素 |
 | [🎯 HALO观察池·对标美股](docs/watchlist-halo) | 12只ETF·战略/战术分账本·电力/卡脖子命中·缺算力军工航天创新药 |
 | [📜 债券ETF投资入门](docs/bond-investment-basics) | 如何购买30年国债+收益机制+久期概念+与股票仓位配比 |
+| [🏛️ 中国首席经济学家论坛](docs/chief-economist-forum) | 97+首席智库 · 宏观判断交叉验证 · 年度年会路演浓缩 |
 | [🏦 基金公司与基金经理观察清单](docs/fund-managers-watchlist) | ETF公司实力榜 + 8位主动经理分析 + 如何用他们验证你的系统 |
 | [🎯 曹名长·深度价值投资框架](docs/cao-mingchang-value-investing) | 三类资产组合·安全边际·分散是为了不下牌桌 |
 | [A股行情分析](docs/a-share-2026-05-26) | 指数表现、板块轮动与原因分析 |
