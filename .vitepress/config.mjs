@@ -38,6 +38,8 @@ export default defineConfig({
                   text: '📂 日复盘',
                   collapsed: false,
                   items: [
+                    { text: '07-15 · 三重事件+中报截止·极致分化', link: '/review/2026/07/2026-07-15' },
+                    { text: '07-14 · V型反转·创业板+3.43%', link: '/review/2026/07/2026-07-14' },
                     { text: '07-10 · 科技杀跌·科创-5.53%', link: '/review/2026/07/2026-07-10' },
                     { text: '07-09 · 全面暴力反弹+止损触发', link: '/review/2026/07/2026-07-09' },
                     { text: '07-08 · 美伊战事+金叉变死叉', link: '/review/2026/07/2026-07-08' },
