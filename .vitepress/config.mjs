@@ -239,6 +239,7 @@ export default defineConfig({
                 { text: '🏛️ 中国首席经济学家论坛', link: '/docs/chief-economist-forum' },
                 { text: '🏦 基金公司与基金经理观察清单', link: '/docs/fund-managers-watchlist' },
                 { text: '🎯 曹名长·深度价值投资框架', link: '/docs/cao-mingchang-value-investing' },
+                { text: '🛡️ 防御型ETF买入优先级', link: '/docs/defensive-etf-buy-guide' },
                 { text: '盈利分红型行业', link: '/docs/profitable-industries' },
                 { text: '十五五投资方向', link: '/docs/fifteen-five-investment' },
                 { text: '🇺🇸对标美股·十五五ETF', link: '/docs/fifteen-five-us-benchmark' },
@@ -252,6 +253,7 @@ export default defineConfig({
                 { text: '📖 《掌控习惯》精炼', link: '/docs/atomic-habits' },
                 { text: '🫱 团队质疑七层过滤', link: '/docs/team-critical-thinking' },
                 { text: '📚 完善操作系统的推荐书单', link: '/docs/reading-list-recommendations' },
+                { text: '✍️ 人生散文阅读指南 · 为人之道', link: '/docs/essay-reading-guide' },
                 { text: 'A股行情分析', link: '/docs/a-share-2026-05-26' },
                 { text: '🔄 美股-A股 AI全产业链对标', link: '/docs/us-china-ai-hardware-mapping' },
                 { text: '股票工具与渠道', link: '/docs/stock-tools' }

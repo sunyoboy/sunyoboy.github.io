@@ -167,6 +167,7 @@
 | [🏦 基金公司与基金经理观察清单](docs/fund-managers-watchlist) | ETF公司实力榜 + 8位主动经理分析 + 如何用他们验证你的系统 |
 | [🎯 曹名长·深度价值投资框架](docs/cao-mingchang-value-investing) | 三类资产组合·安全边际·分散是为了不下牌桌 |
 | [A股行情分析](docs/a-share-2026-05-26) | 指数表现、板块轮动与原因分析 |
+| [🛡️ 防御型ETF买入优先级](docs/defensive-etf-buy-guide) | 七只防御ETF·估值分位+技术面+主力资金+买点四维排序 |
 | [🔄 美股-A股 AI全产业链对标](docs/us-china-ai-hardware-mapping) | 18大环节：芯片→服务器→光通信→云→模型→数据→安全→金融→自动驾驶→机器人→医疗→教育→AIGC |
 | [盈利分红型行业](docs/profitable-industries) | 白酒/银行/煤炭/水电/家电/通信——不靠投资拉动的现金奶牛 |
 | [十五五投资方向](docs/fifteen-five-investment) | 政策导向与产业投资机会 |
@@ -208,6 +209,7 @@
 | [🧠 卡尼曼 思考快与慢](docs/kahneman-thinking-fast-slow) | 系统1与系统2·损失厌恶·可用性启发式·为什么盯盘是老虎机 |
 | [🫱 团队质疑七层过滤](docs/team-critical-thinking) | 七层过滤·四低摩擦质疑方式·与交易系统的精确映射 |
 | [📚 完善操作系统的推荐书单](docs/reading-list-recommendations) | 14本书按缺口填入：先治后建 |
+| [✍️ 人生散文阅读指南 · 为人之道](docs/essay-reading-guide) | 四大类散文推荐 + 3篇深度拆解 + 为人之道核心书单 + 60天读写计划 |
 | [AI工具全景分析](docs/ai-tools-analysis) | Cursor、Claude、v0 等 AI 编程工具对比 |
 | [🚀 前端输出加速](docs/frontend-output-acceleration) | Streamlit/一模版三发/ECharts/多平台发布 |
 | [🤖 AI编程模型收费对比 2026](docs/ai-coding-models-2026) | Top 5 + GLM-5.2 + 豆包2.1 价格与选型 |
