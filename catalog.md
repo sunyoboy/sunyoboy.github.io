@@ -169,6 +169,7 @@
 | [🎯 曹名长·深度价值投资框架](docs/cao-mingchang-value-investing) | 三类资产组合·安全边际·分散是为了不下牌桌 |
 | [A股行情分析](docs/a-share-2026-05-26) | 指数表现、板块轮动与原因分析 |
 | [🛡️ 防御型ETF买入优先级](docs/defensive-etf-buy-guide) | 七只防御ETF·估值分位+技术面+主力资金+买点四维排序 |
+| [🔄 「反者道之动」跨文化思想谱系](docs/reversal-is-the-movement-of-dao) | 老子→易经→赫拉克利特→黑格尔→马克思→斯多葛→Howard Marks·周期与反转的2500年对话 |
 | [🔄 美股-A股 AI全产业链对标](docs/us-china-ai-hardware-mapping) | 18大环节：芯片→服务器→光通信→云→模型→数据→安全→金融→自动驾驶→机器人→医疗→教育→AIGC |
 | [盈利分红型行业](docs/profitable-industries) | 白酒/银行/煤炭/水电/家电/通信——不靠投资拉动的现金奶牛 |
 | [十五五投资方向](docs/fifteen-five-investment) | 政策导向与产业投资机会 |

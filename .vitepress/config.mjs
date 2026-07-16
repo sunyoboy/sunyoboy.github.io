@@ -241,6 +241,7 @@ export default defineConfig({
                 { text: '🏦 基金公司与基金经理观察清单', link: '/docs/fund-managers-watchlist' },
                 { text: '🎯 曹名长·深度价值投资框架', link: '/docs/cao-mingchang-value-investing' },
                 { text: '🛡️ 防御型ETF买入优先级', link: '/docs/defensive-etf-buy-guide' },
+                { text: '🔄 反者道之动·跨文化谱系', link: '/docs/reversal-is-the-movement-of-dao' },
                 { text: '盈利分红型行业', link: '/docs/profitable-industries' },
                 { text: '十五五投资方向', link: '/docs/fifteen-five-investment' },
                 { text: '🇺🇸对标美股·十五五ETF', link: '/docs/fifteen-five-us-benchmark' },
