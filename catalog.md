@@ -186,6 +186,7 @@
 | [📦 开源量化项目调研](docs/opensource-quant-projects) | 7个项目+12个A股数据源+7券商API+选型推荐(Quool) |
 | [🤖 华泰AI涨乐Skills安装指南](docs/htsc-skills-setup) | 5个Skill一键安装+量化接入方案(选股/行情/模拟交易) |
 | [🔧 AI金融工具·分工指南](docs/ai-tools-selection-guide) | 选股→问财·报价→华泰·交易→paper·分析→妙想 |
+| [🏪 问财SkillHub技能库](docs/iwencai-skills) | 50+官方+80+社区技能·六核心替代每日脚本·全球市场·量化进阶 |
 | [🚀 AI工具飞轮加速](docs/ai-tools-flywheel) | 扣子/小浣熊/蛙蛙×四飞轮·自动化Pipeline |
 | [💰 AI工具·副业变现筛选](docs/ai-tools-sidehustle) | 4条变现路径×工具·稿定/Napkin·短视频复用策略+合规红线 |
 | [🔧 AI金融投资工具调研](docs/ai-finance-tools) | 19款工具×体系互补·同花顺问财/BigQuant/东方财富妙想 |
