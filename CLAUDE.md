@@ -466,9 +466,65 @@ ThinkingDoing/
 
 ---
 
+## 开发环境
+
+### Python 环境（pyenv）
+
+```bash
+# 项目要求 Python ≥ 3.11（SSL 兼容性）
+pyenv local 3.11.11    # 写入 .python-version，自动切换
+python3 --version      # 验证：Python 3.11.11
+
+# 安装依赖
+pip3 install pywencai pandas
+
+# 如果 pywencai 报 SSL 错误 → 检查 Python 版本 ≥ 3.11
+```
+
+| 工具 | 用途 |
+|------|------|
+| `pyenv` | Python 版本管理。`pyenv versions` 查看已安装版本，`pyenv install 3.11.11` 安装 |
+| `.python-version` | 项目根目录下的版本锁定文件，`pyenv local 3.11.11` 生成 |
+
+### Node.js 环境（nvm）
+
+```bash
+# 项目要求 Node ≥ 18（VitePress 构建）
+nvm use 18             # 切换到 Node 18
+node --version         # 验证
+
+# 安装依赖
+npm install
+```
+
+| 工具 | 用途 |
+|------|------|
+| `nvm` | Node 版本管理。`nvm ls` 查看已安装，`nvm install 18` 安装 |
+| `.nvmrc` | 可选：项目根目录下创建 `echo "18" > .nvmrc`，然后 `nvm use` |
+
+### 环境变量
+
+| 变量 | 用途 | 配置文件 |
+|------|------|------|
+| `HT_APIKEY` | 华泰涨乐 API 认证 | `~/.zshrc` |
+| `IWENCAI_API_KEY` | 问财 SkillHub API | `~/.zshrc` |
+| `IWENCAI_BASE_URL` | 问财 API 地址 `https://openapi.iwencai.com` | `~/.zshrc` |
+
+### 初始化检查清单
+
+```bash
+# 首次使用或环境异常时执行
+pyenv local 3.11.11 && python3 --version   # Python 3.11.11 ✓
+nvm use 18 && node --version               # Node 18.x ✓
+npm install && npm run build               # VitePress 构建通过 ✓
+source ~/.zshrc && echo $HT_APIKEY         # 华泰 API Key ✓
+```
+
+---
+
 ## 脚本速查
 
-| 脚本 | 用途 | 频率 |
+| 脚本/Skill | 用途 | 频率 |
 |------|------|:--:|
 | `/knowingdoing-review` | 🆕 **每日复盘 Skill** · 自动拉数据+查纪律+给建议 | 每日收盘后 |
 | `python3 scripts/fetch-market-data.py` | 抓取 7 大指数 + 6 个标的行情，生成当日复盘 Markdown 模板 | 每日收盘后 |
@@ -482,6 +538,19 @@ ThinkingDoing/
 | `bash scripts/gitee-deploy.sh` | Gitee Pages 手动部署 | 按需 |
 | `python3 scripts/wechat-publish.py` | 微信公众号发布 | 按需 |
 
+### 问财 SkillHub 六核心 Skill 🆕
+
+> 替代每日脚本抓取。详见 `docs/iwencai-skills.md`
+
+| Skill | 用途 | 替代 |
+|------|------|------|
+| `/knowingdoing-quotes` | 个股/ETF实时行情·涨跌幅·成交量·资金流向 | `fetch-market-data.py` 标的抓取 |
+| `/knowingdoing-index` | 7大A股指数+恒生+纳斯达克+标普+道琼斯 | `fetch-market-data.py` 指数抓取 |
+| `/knowingdoing-sector` | 申万31行业全景·估值·资金·排名 | `shenwan-monitor.py` |
+| `/knowingdoing-macro` | GDP/CPI/PMI/M2/社融/LPR/利率/汇率 | 月度市场概况数据 |
+| `/knowingdoing-financials` | 营收/净利润/ROE/负债率/现金流/PE/PB | 中报暴雷·候选池跟踪 |
+| `/knowingdoing-stock-screener` | 行情/技术/财务/行业多条件组合选股 | 38候选池动态筛选 |
+
 ### 华泰 API Skill（需 HT_APIKEY）
 
 | Skill | 用途 |
@@ -491,6 +560,12 @@ ThinkingDoing/
 | `/a-share-paper-trading` | A 股模拟交易（报价/下单/持仓） |
 | `/financial-analysis` | 金融分析与资讯 |
 | `/watchlist-management` | 自选股管理 |
+
+### 第三方 Skill
+
+| Skill | 用途 |
+|------|------|
+| `/pywencaistock` | 同花顺问财 pywencai 库·DataFrame 输出 |
 
 ---
 
