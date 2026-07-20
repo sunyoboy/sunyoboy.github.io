@@ -150,6 +150,7 @@
 | [实践论](docs/practice-theory) | 认识论基础，知行合一的哲学依据 |
 | [《掌控习惯》精炼](docs/atomic-habits) | 四大定律+身份认同+与交易系统精确映射 |
 | [🏛️ 斯多葛主义](docs/stoicism) | 控制二分法 · 四大美德 · 三位哲人 · 交易/孕期/成长精确映射 |
+| [🪣 第欧根尼·犬儒学派](docs/diogenes-cynicism) | 极简主义先行者·欲望减法=自由·反现代犬儒·投资四层映射 |
 | [三大法宝](docs/three-weapons) | 统一战线/武装斗争/党的建设 · 个人成长三维映射 |
 | [🧬 仿生学习系统](docs/digestion-learning-system) | 五仿生模型+三层古典智慧：消化·免疫·肌肉·进化·菌根+卖油翁·庖丁·第一性 |
 | [🔡 维特根斯坦·语言澄清](docs/wittgenstein-language-clarity) | 哲学问题不存在=语言用错了地方；框架=可说的说清楚，不可说的沉默 |
