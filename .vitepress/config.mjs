@@ -276,6 +276,7 @@ export default defineConfig({
                 { text: '🏛️ 斯多葛主义', link: '/docs/stoicism' },
                 { text: '🪣 第欧根尼·犬儒学派', link: '/docs/diogenes-cynicism' },
                 { text: '🔫 枪炮病菌与钢铁', link: '/docs/guns-germs-steel' },
+                { text: '🎯 加文·贝克投资大师课', link: '/docs/gavin-baker-investment' },
                 { text: '保持好心态', link: '/docs/peace-of-mind' },
                 { text: '预期与现实的差距', link: '/docs/expectation-gap' },
                 { text: '🤖 AI编程模型收费对比 2026', link: '/docs/ai-coding-models-2026' },
