@@ -181,6 +181,8 @@
 | [海鸥期权策略](docs/seagull-strategy) | 三腿期权组合，零成本震荡市套保 |
 | [交易纪律](docs/position-discipline) | 建仓/持仓/止损/止盈/做T/心态/复盘 全纪律体系 |
 | [📋 交易执行SOP](docs/trading-sop-pdca) | 条件单+网格交易+每日速查卡·纪律靠系统不靠意志力 |
+| [📐 交易决策矩阵·速查卡](docs/trading-decision-matrix) | 一张表做所有买卖·卖出6信号+买入3信号+三问+不做+仓位 |
+| [🔄 每日复盘SOP](docs/daily-review-sop) | 7步流水线·60分钟·每步检查点·异常处理·防串价 |
 | [🤖 每日复盘Skill](docs/knowingdoing-review-skill) | 一键复盘·自动拉数据+查纪律+给建议 |
 | [📱 手机端速查清单](docs/mobile-checklist) | 盘前4条·盘中1条·买入3问·卖出1条·每月1次 |
 | [📖 外部交易规则参考](docs/trading-rules-external) | 直播纪要·与自有纪律对照·止损止盈资金管理 |

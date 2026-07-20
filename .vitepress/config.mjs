@@ -227,6 +227,8 @@ export default defineConfig({
                 { text: '📖 范·撒普 核心提炼', link: '/docs/van-tharp-trade-your-way' },
                 { text: '交易纪律', link: '/docs/position-discipline' },
                 { text: '📋 交易执行SOP', link: '/docs/trading-sop-pdca' },
+                { text: '📐 交易决策矩阵·速查卡', link: '/docs/trading-decision-matrix' },
+                { text: '🔄 每日复盘SOP', link: '/docs/daily-review-sop' },
                 { text: '🤖 每日复盘Skill', link: '/docs/knowingdoing-review-skill' },
                 { text: '📱 手机端速查清单', link: '/docs/mobile-checklist' },
                 { text: '📖 外部交易规则参考', link: '/docs/trading-rules-external' },
