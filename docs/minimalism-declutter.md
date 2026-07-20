@@ -57,7 +57,27 @@
 
 ---
 
-## 五、交易映射
+---
+
+## 六、一个工具就够了：VitePress
+
+整个个人系统只用一个工具：
+
+```
+KnowingDoing/
+├── .vitepress/config.mjs   ← 侧边栏/导航/搜索
+├── review/                 ← 每日复盘
+├── docs/                   ← 知识库（哲学/投资/思维）
+├── growth/                 ← OKR/周报/财务
+├── questions/              ← 问题清单/孕期日历
+└── package.json            ← npm run build
+```
+
+没有 Notion。没有 Obsidian。没有 Logseq。VitePress + Git = 够了。**每多加一个工具，不是在增加效率，是在给焦虑交税。**
+
+---
+
+## 七、交易映射
 
 | 断舍离 | 交易等价 |
 |------|------|
