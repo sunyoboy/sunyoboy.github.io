@@ -277,6 +277,7 @@ export default defineConfig({
                 { text: '三大法宝', link: '/docs/three-weapons' },
                 { text: '🏛️ 斯多葛主义', link: '/docs/stoicism' },
                 { text: '🪣 第欧根尼·犬儒学派', link: '/docs/diogenes-cynicism' },
+                { text: '🧹 断舍离·极简生活', link: '/docs/minimalism-declutter' },
                 { text: '🔫 枪炮病菌与钢铁', link: '/docs/guns-germs-steel' },
                 { text: '🎯 加文·贝克投资大师课', link: '/docs/gavin-baker-investment' },
                 { text: '保持好心态', link: '/docs/peace-of-mind' },
