@@ -279,6 +279,8 @@ export default defineConfig({
                 { text: '🪣 第欧根尼·犬儒学派', link: '/docs/diogenes-cynicism' },
                 { text: '🧹 断舍离·极简生活', link: '/docs/minimalism-declutter' },
                 { text: '☯️ 易传名句全集', link: '/docs/yijing-famous-quotes' },
+                { text: '📚 古文经典排名', link: '/docs/classics-ranking' },
+                { text: '🗺️ 人生维度框架', link: '/docs/life-framework' },
                 { text: '🔫 枪炮病菌与钢铁', link: '/docs/guns-germs-steel' },
                 { text: '🎯 加文·贝克投资大师课', link: '/docs/gavin-baker-investment' },
                 { text: '保持好心态', link: '/docs/peace-of-mind' },
