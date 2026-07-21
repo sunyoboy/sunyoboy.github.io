@@ -204,6 +204,7 @@
 | [🌍 资产定价权全景图](docs/asset-pricing-power) | AI/周期/股票/债券/期权/外汇——买之前先问价格由谁决定 |
 | [📖 范·撒普 核心提炼](docs/van-tharp-trade-your-way) | 头寸规模确定是灵魂·R乘数·与你的七层框架映射 |
 | [🔴 FOMC决策全景](docs/fomc-schedule) | 决策逻辑/H2数据日历/6月结论/A股策略/盯盘优先级 |
+| [🔻 Capitulation 信号·底部识别](docs/market-bottom-signals) | 三信号体系(银行补跌+黄金止跌+V反)·回踩MA5买入·7/21实战验证 |
 | [股票工具与渠道](docs/stock-tools) | A股交易工具、资讯渠道、数据平台 |
 
 ### 🧠 思维认知
@@ -221,6 +222,7 @@
 | [📚 古文经典排名·做人做事三层](docs/classics-ranking) | 应用层(论语/菜根谭/围炉)·操作系统层(易经/道德经)·投资映射 |
 | [🗺️ 人生完整维度框架](docs/life-framework) | 三核心·八板块·四象限·七维框架·经典覆盖·配套短句 |
 | [📜 做人做事原则建议](docs/life-principles) | 24条·做人12+做事12·七部经典筛选·日常速查卡 |
+| [📺 《天道》《大染坊》做人做事之道](docs/tv-wisdom-tiandao-daranfang) | 丁元英(规律思维/强势文化) + 陈寿亭(人格力量/化敌为友) · 八原则互补框架 |
 | [🧠 NLP 逻辑层次 · 迪尔茨](docs/nlp-dilts-logical-levels) | 六层模型/信念搭桥/重塑印记/与知行合一的映射 |
 | [🧠 卡尼曼 思考快与慢](docs/kahneman-thinking-fast-slow) | 系统1与系统2·损失厌恶·可用性启发式·为什么盯盘是老虎机 |
 | [🫱 团队质疑七层过滤](docs/team-critical-thinking) | 七层过滤·四低摩擦质疑方式·与交易系统的精确映射 |
@@ -243,6 +245,7 @@
 | [决策记录](docs/decision-log) | 建站选型、目录结构、主题风格等关键决策 |
 | [部署说明](docs/deploy) | GitHub Pages + Gitee Pages 部署指南 |
 | [📜 古文诸子百家引用分析](docs/古文诸子百家引用分析) | 《剑来》259处 vs 《凡人修仙传》21处 · 14学派逐条匹配 |
+| [☯️ 周易四大核心语录](docs/yijing-four-quotes) | 泰卦→丰卦→乾卦递进链·易学×斯多葛融合·八字心法·做人做事映射 |
 | [☯️ 易传名句全集](docs/yijing-famous-quotes) | 古文岛验证·82条·象传/彖传/系辞/文言/说卦·投资十维映射 |
 
 ---
