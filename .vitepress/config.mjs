@@ -282,6 +282,7 @@ export default defineConfig({
                 { text: '📚 古文经典排名', link: '/docs/classics-ranking' },
                 { text: '🗺️ 人生维度框架', link: '/docs/life-framework' },
                 { text: '📜 做人做事原则', link: '/docs/life-principles' },
+                { text: '🎨 审美·纯粹地活着', link: '/docs/aesthetics' },
                 { text: '🔫 枪炮病菌与钢铁', link: '/docs/guns-germs-steel' },
                 { text: '🎯 加文·贝克投资大师课', link: '/docs/gavin-baker-investment' },
                 { text: '保持好心态', link: '/docs/peace-of-mind' },
