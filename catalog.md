@@ -218,7 +218,8 @@
 | [投资心智](docs/mindset) | 改变自己，投资认知与思维模型 |
 | [🧠 自我认知框架](docs/self-awareness) | 优势/劣势审计、财务增长点评判、A/B分类法 |
 | [📚 古文经典排名·做人做事三层](docs/classics-ranking) | 应用层(论语/菜根谭/围炉)·操作系统层(易经/道德经)·投资映射 |
-| [🗺️ 人生完整维度框架](docs/life-framework) | 三核心·八板块·四象限·经典覆盖·配套短句 |
+| [🗺️ 人生完整维度框架](docs/life-framework) | 三核心·八板块·四象限·七维框架·经典覆盖·配套短句 |
+| [📜 做人做事原则建议](docs/life-principles) | 24条·做人12+做事12·七部经典筛选·日常速查卡 |
 | [🧠 NLP 逻辑层次 · 迪尔茨](docs/nlp-dilts-logical-levels) | 六层模型/信念搭桥/重塑印记/与知行合一的映射 |
 | [🧠 卡尼曼 思考快与慢](docs/kahneman-thinking-fast-slow) | 系统1与系统2·损失厌恶·可用性启发式·为什么盯盘是老虎机 |
 | [🫱 团队质疑七层过滤](docs/team-critical-thinking) | 七层过滤·四低摩擦质疑方式·与交易系统的精确映射 |
