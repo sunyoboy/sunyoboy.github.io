@@ -1635,7 +1635,7 @@
   },
   "2026-07-22": {
     "农林牧渔": {
-      "pct_chg": -0.57,
+      "pct_chg": 0.38,
       "signal": "🟢 均衡"
     },
     "基础化工": {
@@ -1643,39 +1643,39 @@
       "signal": "🟢 均衡"
     },
     "钢铁": {
-      "pct_chg": 0.18,
+      "pct_chg": 0.62,
       "signal": "🟢 均衡"
     },
     "有色金属": {
-      "pct_chg": 4.85,
+      "pct_chg": 3.39,
       "signal": "🟡 偏热"
     },
     "电子": {
-      "pct_chg": 2.72,
-      "signal": "🟡 偏热"
+      "pct_chg": -1.89,
+      "signal": "🟢 均衡"
     },
     "汽车": {
-      "pct_chg": -1.61,
+      "pct_chg": -1.16,
       "signal": "🟢 均衡"
     },
     "家用电器": {
-      "pct_chg": -0.48,
+      "pct_chg": -0.72,
       "signal": "🟢 均衡"
     },
     "食品饮料": {
-      "pct_chg": -1.07,
+      "pct_chg": 0.43,
       "signal": "🟢 均衡"
     },
     "纺织服饰": {
-      "pct_chg": -1.23,
+      "pct_chg": -1.47,
       "signal": "🟢 均衡"
     },
     "轻工制造": {
-      "pct_chg": 1.26,
-      "signal": "🟢 均衡"
+      "pct_chg": -3.19,
+      "signal": "🟡 偏冷"
     },
     "医药生物": {
-      "pct_chg": 0.53,
+      "pct_chg": 0.27,
       "signal": "🟢 均衡"
     },
     "公用事业": {
@@ -1683,79 +1683,79 @@
       "signal": "🟢 均衡"
     },
     "交通运输": {
-      "pct_chg": -0.21,
+      "pct_chg": 0.84,
       "signal": "🟢 均衡"
     },
     "房地产": {
-      "pct_chg": 0.61,
+      "pct_chg": 1.22,
       "signal": "🟢 均衡"
     },
     "商贸零售": {
-      "pct_chg": -1.05,
+      "pct_chg": -0.74,
       "signal": "🟢 均衡"
     },
     "社会服务": {
-      "pct_chg": -0.18,
+      "pct_chg": 0.91,
       "signal": "🟢 均衡"
     },
     "银行": {
-      "pct_chg": -0.13,
+      "pct_chg": 1.14,
       "signal": "🟢 均衡"
     },
     "非银金融": {
-      "pct_chg": -0.12,
+      "pct_chg": 0.37,
       "signal": "🟢 均衡"
     },
     "综合": {
-      "pct_chg": 0.41,
+      "pct_chg": -0.2,
       "signal": "🟢 均衡"
     },
     "建筑材料": {
-      "pct_chg": -0.89,
+      "pct_chg": -0.53,
       "signal": "🟢 均衡"
     },
     "建筑装饰": {
-      "pct_chg": 0.0,
+      "pct_chg": 0.37,
       "signal": "🟢 均衡"
     },
     "电力设备": {
-      "pct_chg": 0.25,
+      "pct_chg": -0.62,
       "signal": "🟢 均衡"
     },
     "国防军工": {
-      "pct_chg": 0.83,
+      "pct_chg": -0.64,
       "signal": "🟢 均衡"
     },
     "计算机": {
-      "pct_chg": 2.49,
-      "signal": "🟡 偏热"
+      "pct_chg": 0.9,
+      "signal": "🟢 均衡"
     },
     "传媒": {
-      "pct_chg": -2.0,
-      "signal": "🟢 均衡"
+      "pct_chg": -2.62,
+      "signal": "🟡 偏冷"
     },
     "通信": {
-      "pct_chg": 0.43,
-      "signal": "🟢 均衡"
+      "pct_chg": -4.28,
+      "signal": "🟡 偏冷"
     },
     "煤炭": {
-      "pct_chg": -0.5,
-      "signal": "🟢 均衡"
+      "pct_chg": 2.77,
+      "signal": "🟡 偏热"
     },
     "石油石化": {
-      "pct_chg": -1.05,
+      "pct_chg": -1.53,
       "signal": "🟢 均衡"
     },
     "环保": {
-      "pct_chg": 0.26,
+      "pct_chg": -0.77,
       "signal": "🟢 均衡"
     },
     "美容护理": {
-      "pct_chg": -0.73,
+      "pct_chg": 0.59,
       "signal": "🟢 均衡"
     },
     "机械设备": {
-      "pct_chg": 0.55,
+      "pct_chg": -0.33,
       "signal": "🟢 均衡"
     }
   }
