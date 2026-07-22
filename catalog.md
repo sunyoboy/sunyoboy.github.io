@@ -202,6 +202,7 @@
 | [📐 投资纪律指标化](docs/investment-discipline-indicators) | 管住手/控仓位/别加杠杆/黄金=配置，四项检验+自动化脚本 |
 | [📐 决策方法论与策略体系](docs/decision-methodology) | 六层过滤→决策矩阵→为什么不加的数学依据 |
 | [🌍 资产定价权全景图](docs/asset-pricing-power) | AI/周期/股票/债券/期权/外汇——买之前先问价格由谁决定 |
+| [📖 格伦姆·聪明的投资者](docs/graham-intelligent-investor) | 市场先生·安全边际·25-75%配置铁律·不浪费现金·511090唯一债券标的 |
 | [📖 范·撒普 核心提炼](docs/van-tharp-trade-your-way) | 头寸规模确定是灵魂·R乘数·与你的七层框架映射 |
 | [🔴 FOMC决策全景](docs/fomc-schedule) | 决策逻辑/H2数据日历/6月结论/A股策略/盯盘优先级 |
 | [🔻 Capitulation 信号·底部识别](docs/market-bottom-signals) | 三信号体系(银行补跌+黄金止跌+V反)·回踩MA5买入·7/21实战验证 |
