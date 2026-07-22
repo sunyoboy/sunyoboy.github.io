@@ -173,6 +173,7 @@
 | [A股做T操作指南](docs/t-trading) | T+0 变相做T的方法、纪律与常见错误 |
 | [宽基ETF做T策略](docs/index-etf-trading) | 指数ETF日内波段操作，信号体系与仓位管理 |
 | [📋 三账户ETF观察清单 07-06](docs/etf-watchlist-2026-07-06) | 华泰/广发/东北各4只观察ETF，含入场价/止损价/仓位三要素 |
+| [🔭 自选股观察清单 07-22](docs/etf-watchlist-2026-07-22) | 四张截图全量 ~110 标的整理 · 分类+持仓交叉+入场参考 |
 | [🎯 HALO观察池·对标美股](docs/watchlist-halo) | 12只ETF·战略/战术分账本·电力/卡脖子命中·缺算力军工航天创新药 |
 | [📜 债券ETF投资入门](docs/bond-investment-basics) | 如何购买30年国债+收益机制+久期概念+与股票仓位配比 |
 | [🏛️ 中国首席经济学家论坛](docs/chief-economist-forum) | 97+首席智库 · 宏观判断交叉验证 · 年度年会路演浓缩 |
