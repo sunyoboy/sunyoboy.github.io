@@ -143,5 +143,9 @@ capitulation 三信号确认（7/21） → 股票相对便宜
 - 本杰明·格伦姆《聪明的投资者》（1949）
 - 本杰明·格伦姆《证券分析》（1934）
 - 巴菲特 1984 年哥伦比亚大学演讲《格伦姆-多德村的超级投资者》
+- [🗺️ 投资理论全景图](investment-theories-map.md) — 九家速查·格伦姆是根
+- [🌐 博格·指数基金之父](bogle-index-investing.md) — 格伦姆的省心版
+- [🌦️ 达利欧·全天候组合](dalio-all-weather.md) — 格伦姆的扩展版
+- [🔄 马克斯·周期与第二层思维](marks-market-cycles.md) — 格伦姆的情绪锚
 - `docs/position-discipline.md` — 交易纪律
 - `docs/ma5-deviation-discipline.md` — MA5 偏离度纪律
