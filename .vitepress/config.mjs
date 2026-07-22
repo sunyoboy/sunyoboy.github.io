@@ -281,6 +281,7 @@ export default defineConfig({
                 { text: '🧹 断舍离·极简生活', link: '/docs/minimalism-declutter' },
                 { text: '☯️ 周易四大核心语录', link: '/docs/yijing-four-quotes' },
                 { text: '🦁 荀子·天人相分化性起伪', link: '/docs/xunzi-philosophy' },
+                { text: '⚖️ 韩非·李斯·法家双峰', link: '/docs/hanfei-lisi-legalism' },
                 { text: '☯️ 易传名句全集', link: '/docs/yijing-famous-quotes' },
                 { text: '📚 古文经典排名', link: '/docs/classics-ranking' },
                 { text: '🗺️ 人生维度框架', link: '/docs/life-framework' },
