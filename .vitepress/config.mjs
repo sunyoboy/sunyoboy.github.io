@@ -218,6 +218,7 @@ export default defineConfig({
               collapsed: false,
               items: [
                 { text: '🔴 FOMC决策全景', link: '/docs/fomc-schedule' },
+                { text: '🔪 做减法·交易极简', link: '/docs/minimalism-trading' },
                 { text: '🔻 Capitulation信号·底部识别', link: '/docs/market-bottom-signals' },
                 { text: '📦 开源量化项目调研', link: '/docs/opensource-quant-projects' },
                 { text: '🤖 华泰AI涨乐Skills安装指南', link: '/docs/htsc-skills-setup' },
