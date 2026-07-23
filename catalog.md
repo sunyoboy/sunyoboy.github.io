@@ -216,6 +216,7 @@
 | [📖 范·撒普 核心提炼](docs/van-tharp-trade-your-way) | 头寸规模确定是灵魂·R乘数·与你的七层框架映射 |
 | [🔴 FOMC决策全景](docs/fomc-schedule) | 决策逻辑/H2数据日历/6月结论/A股策略/盯盘优先级 |
 | [🔪 做减法·交易极简原则](docs/minimalism-trading) | 梁文锋克制战略·持仓13→9·纪律18→3·核心5+信号灯3 |
+| [🎙️ 梁文锋·投资人交流会全文分析](docs/liang-wenfeng-transcript-analysis) | 3h44m完整录音·拿得少打败拿得多·你不克制就不起·十句映射 |
 | [🔻 Capitulation 信号·底部识别](docs/market-bottom-signals) | 三信号体系(银行补跌+黄金止跌+V反)·回踩MA5买入·7/21实战验证 |
 | [股票工具与渠道](docs/stock-tools) | A股交易工具、资讯渠道、数据平台 |
 

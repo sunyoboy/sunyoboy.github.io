@@ -98,6 +98,7 @@ CLAUDE.md 十八条规则 → 只留三条铁律。
 ## 参考
 
 - 梁文锋四小时投资人会议实录（2026.5 / 7.23 报道）
+- [🎙️ 梁文锋·投资人交流会全文分析](liang-wenfeng-transcript-analysis.md) — 3h44m 完整录音深度分析
 - `docs/xunzi-philosophy.md` — 化性起伪
 - `docs/graham-intelligent-investor.md` — 格伦姆配置纪律
 - `docs/office-worker-trading.md` — 上班族不盯盘
