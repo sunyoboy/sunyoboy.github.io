@@ -296,6 +296,7 @@ export default defineConfig({
                 { text: '🏛️ 先秦诸子百家·思想全景', link: '/docs/hundred-schools-of-thought' },
                 { text: '☯️ 易传名句全集', link: '/docs/yijing-famous-quotes' },
                 { text: '📜 古文诸子百家引用分析', link: '/docs/古文诸子百家引用分析' },
+                { text: '📜 《资治通鉴》·人生主线', link: '/docs/zizhi-tongjian-life-mainline' },
                 { text: '📚 古文经典排名', link: '/docs/classics-ranking' },
                 { text: '🗺️ 人生维度框架', link: '/docs/life-framework' },
                 { text: '📜 做人做事原则', link: '/docs/life-principles' },

@@ -260,6 +260,7 @@
 | [决策记录](docs/decision-log) | 建站选型、目录结构、主题风格等关键决策 |
 | [部署说明](docs/deploy) | GitHub Pages + Gitee Pages 部署指南 |
 | [📜 古文诸子百家引用分析](docs/古文诸子百家引用分析) | 《剑来》259处 vs 《凡人修仙传》21处 · 14学派逐条匹配 |
+| [📜 《资治通鉴》·人生主线](docs/zizhi-tongjian-life-mainline) | 人间热闹不经用·辨认主轴·算了>不服·从戏里请出来·越做越像自己 |
 | [☯️ 周易四大核心语录](docs/yijing-four-quotes) | 泰卦→丰卦→乾卦递进链·易学×斯多葛融合·八字心法·做人做事映射 |
 | [🦁 荀子·天人相分化性起伪](docs/xunzi-philosophy) | 性恶论·礼定伦法至霸·礼法双轨·孟子对照·交易体系映射 |
 | [⚖️ 韩非·李斯·法家双峰](docs/hanfei-lisi-legalism) | 法术势三角·循名责实·环境决定论·标准化·有术无道的教训 |
