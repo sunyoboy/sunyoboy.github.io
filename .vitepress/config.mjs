@@ -251,6 +251,7 @@ export default defineConfig({
                 { text: 'A股做T操作指南', link: '/docs/t-trading' },
                 { text: '宽基ETF做T策略', link: '/docs/index-etf-trading' },
                 { text: '📋 三账户ETF观察清单 07-06', link: '/docs/etf-watchlist-2026-07-06' },
+                { text: '🔭 自选股观察清单 07-22', link: '/docs/etf-watchlist-2026-07-22' },
                 { text: '🎯 HALO观察池·对标美股', link: '/docs/watchlist-halo' },
                 { text: '📜 债券ETF投资入门', link: '/docs/bond-investment-basics' },
                 { text: '🏛️ 中国首席经济学家论坛', link: '/docs/chief-economist-forum' },
