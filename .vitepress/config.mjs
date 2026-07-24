@@ -300,7 +300,7 @@ export default defineConfig({
                 { text: '☯️ 易传名句全集', link: '/docs/yijing-famous-quotes' },
                 { text: '📜 古文诸子百家引用分析', link: '/docs/古文诸子百家引用分析' },
                 { text: '📖 史铁生·轮椅上的人生哲学', link: '/docs/shi-tiesheng-philosophy' },
-                { text: '🌅 濒死体验·五福善终', link: '/docs/near-death-experience-wufu' },
+                { text: '🌅 濒死体验·五福·赵越善终', link: '/docs/near-death-experience-wufu' },
                 { text: '📜 《资治通鉴》·人生主线', link: '/docs/zizhi-tongjian-life-mainline' },
                 { text: '📚 古文经典排名', link: '/docs/classics-ranking' },
                 { text: '🗺️ 人生维度框架', link: '/docs/life-framework' },
