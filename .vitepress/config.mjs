@@ -38,6 +38,7 @@ export default defineConfig({
                   text: '📂 日复盘',
                   collapsed: false,
                   items: [
+                    { text: '07-24 · 全面回调·有色回落·极简实践', link: '/review/2026/07/2026-07-24' },
                     { text: '07-23 · 科创加速下跌·有色连热三天', link: '/review/2026/07/2026-07-23' },
                     { text: '07-22 · 下午跳水·科技领跌·国债卖飞', link: '/review/2026/07/2026-07-22' },
                     { text: '07-21 · 暴力反弹·结构反转·银行补跌', link: '/review/2026/07/2026-07-21' },
