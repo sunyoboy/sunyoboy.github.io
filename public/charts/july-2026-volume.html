@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026年7月 上证成交额</title>
+<style>
+:root {
+  --surface-1: #fcfcfb;
+  --text-primary: #0b0b0b;
+  --text-secondary: #52514e;
+  --text-muted: #8b8a84;
+  --seq-100: #d9e8f7;
+  --seq-300: #8bbae8;
+  --seq-500: #4a90d9;
+  --seq-700: #1a5ba8;
+  --seq-line: #2a78d6;
+  --grid: #e8e7e3;
+  --marker-bg: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface-1: #1a1a19;
+    --text-primary: #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted: #6e6d68;
+    --seq-100: #1e3050;
+    --seq-300: #2a5590;
+    --seq-500: #3987e5;
+    --seq-700: #6aaef5;
+    --seq-line: #3987e5;
+    --grid: #2a2926;
+    --marker-bg: #1a1a19;
+  }
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: var(--surface-1);
+  color: var(--text-primary);
+  display: flex; justify-content: center; align-items: center;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.chart-wrapper {
+  width: 100%; max-width: 900px;
+  background: var(--surface-1);
+  border-radius: 12px;
+  padding: 32px 28px 20px;
+}
+
+.chart-header {
+  display: flex; justify-content: space-between; align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.chart-header h2 {
+  font-size: 20px; font-weight: 600;
+  color: var(--text-primary);
+}
+
+.chart-header .subtitle {
+  font-size: 13px; color: var(--text-secondary);
+}
+
+.stat-row {
+  display: flex; gap: 28px; margin-bottom: 20px;
+}
+
+.stat-item {
+  display: flex; flex-direction: column;
+}
+
+.stat-label {
+  font-size: 11px; color: var(--text-muted);
+  text-transform: uppercase; letter-spacing: 0.5px;
+}
+
+.stat-value {
+  font-size: 18px; font-weight: 600; color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-change {
+  font-size: 12px; color: var(--text-secondary);
+}
+
+canvas { display: block; width: 100%; height: auto; }
+
+.tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: var(--marker-bg);
+  border: 1px solid var(--grid);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 12px;
+  line-height: 1.5;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  opacity: 0;
+  transition: opacity 0.15s;
+  z-index: 10;
+}
+
+.tooltip .date { color: var(--text-secondary); font-size: 11px; }
+.tooltip .value { color: var(--text-primary); font-weight: 600; font-size: 15px; }
+
+.note {
+  margin-top: 12px; font-size: 11px; color: var(--text-muted);
+  border-top: 1px solid var(--grid); padding-top: 10px;
+}
+
+.fomc-badge {
+  display: inline-block;
+  background: var(--seq-100);
+  color: var(--seq-700);
+  font-size: 11px; padding: 2px 8px; border-radius: 4px;
+  margin-left: 8px;
+  font-weight: 500;
+}
+</style>
+</head>
+<body>
+<div class="chart-wrapper" style="position:relative;">
+  <div class="chart-header">
+    <h2>上证指数日成交额 <span class="fomc-badge">7/28-29 FOMC</span></h2>
+    <span class="subtitle">2026年7月 · 19个交易日</span>
+  </div>
+
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-label">月累计</span>
+      <span class="stat-value" id="stat-total">—</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-label">日均</span>
+      <span class="stat-value" id="stat-avg">—</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-label">最高单日</span>
+      <span class="stat-value" id="stat-max">—</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-label">最低单日</span>
+      <span class="stat-value" id="stat-min">—</span>
+    </div>
+  </div>
+
+  <canvas id="chart" width="844" height="340"></canvas>
+
+  <div class="tooltip" id="tooltip">
+    <div class="date"></div>
+    <div class="value"></div>
+  </div>
+
+  <div class="note">
+    数据来源：东方财富 · 上证指数 (000001) · 成交额单位为亿元人民币 ·
+    7/28-29 FOMC 议息会议，7/30 北京时间凌晨公布决议
+  </div>
+</div>
+
+<script>
+const raw = [
+  ["07-01",6.72],["07-02",6.56],["07-03",6.02],["07-06",5.90],
+  ["07-07",5.14],["07-08",4.96],["07-09",5.53],["07-10",6.27],
+  ["07-13",5.91],["07-14",5.80],["07-15",5.76],["07-16",5.35],
+  ["07-17",6.50],["07-20",7.09],["07-21",7.35],["07-22",6.14],
+  ["07-23",5.62],["07-24",5.08],["07-27",5.05]
+];
+
+// Stats
+const vals = raw.map(r => r[1]);
+const total = vals.reduce((a,b) => a+b, 0);
+const avg = total / vals.length;
+const maxVal = Math.max(...vals);
+const minVal = Math.min(...vals);
+const maxIdx = vals.indexOf(maxVal);
+
+document.getElementById('stat-total').textContent = (total * 100).toFixed(0) + '亿';
+document.getElementById('stat-avg').textContent = (avg * 100).toFixed(0) + '亿';
+document.getElementById('stat-max').textContent = (maxVal * 100).toFixed(0) + '亿';
+document.getElementById('stat-min').textContent = (minVal * 100).toFixed(0) + '亿';
+
+// Canvas
+const canvas = document.getElementById('chart');
+const ctx = canvas.getContext('2d');
+const dpr = window.devicePixelRatio || 1;
+const W = canvas.width = canvas.offsetWidth * dpr;
+const H = canvas.height = canvas.offsetHeight * dpr;
+ctx.scale(dpr, dpr);
+const cw = canvas.offsetWidth;
+const ch = canvas.offsetHeight;
+
+const pad = { top: 12, right: 20, bottom: 32, left: 20 };
+const pw = cw - pad.left - pad.right;
+const ph = ch - pad.top - pad.bottom;
+
+const yMin = 4.5;
+const yMax = 7.8;
+
+function xPos(i) { return pad.left + (i / (raw.length - 1)) * pw; }
+function yPos(v) { return pad.top + (1 - (v - yMin) / (yMax - yMin)) * ph; }
+
+// Grid lines
+ctx.strokeStyle = getComputedStyle(document.documentElement).getPropertyValue('--grid').trim();
+ctx.lineWidth = 0.5;
+for (let y = 5.0; y <= 7.5; y += 0.5) {
+  const yy = yPos(y);
+  ctx.beginPath(); ctx.moveTo(pad.left, yy); ctx.lineTo(cw - pad.right, yy); ctx.stroke();
+
+  ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--text-muted').trim();
+  ctx.font = '10px -apple-system, "PingFang SC", sans-serif';
+  ctx.textAlign = 'right';
+  ctx.fillText((y*100).toFixed(0), pad.left - 6, yy + 3);
+}
+
+// Area fill
+const seq100 = getComputedStyle(document.documentElement).getPropertyValue('--seq-100').trim();
+const seq300 = getComputedStyle(document.documentElement).getPropertyValue('--seq-300').trim();
+
+const grad = ctx.createLinearGradient(0, pad.top, 0, pad.top + ph);
+grad.addColorStop(0, seq300);
+grad.addColorStop(1, seq100);
+
+ctx.beginPath();
+ctx.moveTo(xPos(0), pad.top + ph);
+raw.forEach((r, i) => ctx.lineTo(xPos(i), yPos(r[1])));
+ctx.lineTo(xPos(raw.length-1), pad.top + ph);
+ctx.closePath();
+ctx.fillStyle = grad;
+ctx.fill();
+
+// Line
+const lineColor = getComputedStyle(document.documentElement).getPropertyValue('--seq-line').trim();
+ctx.beginPath();
+ctx.strokeStyle = lineColor;
+ctx.lineWidth = 2;
+ctx.lineJoin = 'round';
+raw.forEach((r, i) => {
+  if (i === 0) ctx.moveTo(xPos(i), yPos(r[1]));
+  else ctx.lineTo(xPos(i), yPos(r[1]));
+});
+ctx.stroke();
+
+// Data points - small dots
+raw.forEach((r, i) => {
+  const cx = xPos(i), cy = yPos(r[1]);
+  ctx.beginPath();
+  ctx.arc(cx, cy, 3, 0, Math.PI * 2);
+  ctx.fillStyle = lineColor;
+  ctx.fill();
+  ctx.strokeStyle = getComputedStyle(document.documentElement).getPropertyValue('--marker-bg').trim();
+  ctx.lineWidth = 1.5;
+  ctx.stroke();
+});
+
+// Highlight max point
+const cxMax = xPos(maxIdx), cyMax = yPos(maxVal);
+ctx.beginPath();
+ctx.arc(cxMax, cyMax, 5, 0, Math.PI * 2);
+ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--seq-700').trim();
+ctx.fill();
+ctx.strokeStyle = getComputedStyle(document.documentElement).getPropertyValue('--marker-bg').trim();
+ctx.lineWidth = 2;
+ctx.stroke();
+
+// Direct label for max
+ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--text-primary').trim();
+ctx.font = '11px -apple-system, "PingFang SC", sans-serif';
+ctx.textAlign = 'center';
+const maxLabel = (maxVal * 100).toFixed(0) + '亿';
+ctx.fillText(maxLabel, cxMax, cyMax - 12);
+
+// X-axis labels (every few days)
+const labelDays = ['07-01','07-03','07-07','07-09','07-14','07-17','07-21','07-24','07-27'];
+ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--text-muted').trim();
+ctx.font = '10px -apple-system, "PingFang SC", sans-serif';
+ctx.textAlign = 'center';
+raw.forEach((r, i) => {
+  if (labelDays.includes(r[0])) {
+    ctx.fillText(r[0], xPos(i), pad.top + ph + 16);
+  }
+});
+
+// FOMC annotation
+const fomcIdx = raw.findIndex(r => r[0] === '07-27');
+if (fomcIdx >= 0) {
+  const fx = xPos(fomcIdx);
+  ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--seq-700').trim();
+  ctx.font = '10px -apple-system, "PingFang SC", sans-serif';
+  ctx.textAlign = 'left';
+  ctx.fillText('7/28-29 FOMC →', fx + 8, yPos(raw[fomcIdx][1]) - 4);
+}
+
+// Hover
+const tooltip = document.getElementById('tooltip');
+canvas.addEventListener('mousemove', (e) => {
+  const rect = canvas.getBoundingClientRect();
+  const mx = e.clientX - rect.left;
+  let closest = 0;
+  let minDist = Infinity;
+  raw.forEach((r, i) => {
+    const dist = Math.abs(mx - xPos(i));
+    if (dist < minDist) { minDist = dist; closest = i; }
+  });
+
+  if (minDist < 40) {
+    const r = raw[closest];
+    tooltip.querySelector('.date').textContent = '2026-' + r[0];
+    tooltip.querySelector('.value').textContent = (r[1]*100).toFixed(0) + ' 亿';
+    tooltip.style.opacity = '1';
+    const tx = Math.min(xPos(closest), cw - 160);
+    const ty = Math.max(pad.top, yPos(r[1]) - 50);
+    tooltip.style.left = tx + 'px';
+    tooltip.style.top = ty + 'px';
+  } else {
+    tooltip.style.opacity = '0';
+  }
+});
+
+canvas.addEventListener('mouseleave', () => { tooltip.style.opacity = '0'; });
+</script>
+</body>
+</html>
