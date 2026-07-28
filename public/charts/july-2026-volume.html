@@ -128,7 +128,7 @@ canvas { display: block; width: 100%; height: auto; }
 <div class="chart-wrapper" style="position:relative;">
   <div class="chart-header">
     <h2>上证指数日成交额 <span class="fomc-badge">7/28-29 FOMC</span></h2>
-    <span class="subtitle">2026年7月 · 19个交易日</span>
+    <span class="subtitle">2026年7月 · 20个交易日 · 数据来源：华泰证券</span>
   </div>
 
   <div class="stat-row">
@@ -158,18 +158,18 @@ canvas { display: block; width: 100%; height: auto; }
   </div>
 
   <div class="note">
-    数据来源：东方财富 · 上证指数 (000001) · 成交额单位为亿元人民币 ·
+    数据来源：华泰证券 · 上证指数 (000001) · 成交额单位为亿元人民币 ·
     7/28-29 FOMC 议息会议，7/30 北京时间凌晨公布决议
   </div>
 </div>
 
 <script>
 const raw = [
-  ["07-01",6.72],["07-02",6.56],["07-03",6.02],["07-06",5.90],
-  ["07-07",5.14],["07-08",4.96],["07-09",5.53],["07-10",6.27],
-  ["07-13",5.91],["07-14",5.80],["07-15",5.76],["07-16",5.35],
-  ["07-17",6.50],["07-20",7.09],["07-21",7.35],["07-22",6.14],
-  ["07-23",5.62],["07-24",5.08],["07-27",5.05]
+  ["07-01",16985],["07-02",15772],["07-03",14656],["07-06",14321],
+  ["07-07",11964],["07-08",11924],["07-09",13642],["07-10",15631],
+  ["07-13",13349],["07-14",12718],["07-15",12263],["07-16",11242],
+  ["07-17",12464],["07-20",12947],["07-21",13965],["07-22",12581],
+  ["07-23",10259],["07-24",9154],["07-27",10313]
 ];
 
 // Stats
@@ -180,10 +180,10 @@ const maxVal = Math.max(...vals);
 const minVal = Math.min(...vals);
 const maxIdx = vals.indexOf(maxVal);
 
-document.getElementById('stat-total').textContent = (total * 100).toFixed(0) + '亿';
-document.getElementById('stat-avg').textContent = (avg * 100).toFixed(0) + '亿';
-document.getElementById('stat-max').textContent = (maxVal * 100).toFixed(0) + '亿';
-document.getElementById('stat-min').textContent = (minVal * 100).toFixed(0) + '亿';
+document.getElementById('stat-total').textContent = (total/1e8).toFixed(1) + '万亿';
+document.getElementById('stat-avg').textContent = (avg/1e2).toFixed(0) + '亿';
+document.getElementById('stat-max').textContent = (maxVal/1e2).toFixed(0) + '亿';
+document.getElementById('stat-min').textContent = (minVal/1e2).toFixed(0) + '亿';
 
 // Canvas
 const canvas = document.getElementById('chart');
@@ -199,8 +199,8 @@ const pad = { top: 12, right: 20, bottom: 32, left: 20 };
 const pw = cw - pad.left - pad.right;
 const ph = ch - pad.top - pad.bottom;
 
-const yMin = 4.5;
-const yMax = 7.8;
+const yMin = 8000;
+const yMax = 18000;
 
 function xPos(i) { return pad.left + (i / (raw.length - 1)) * pw; }
 function yPos(v) { return pad.top + (1 - (v - yMin) / (yMax - yMin)) * ph; }
@@ -208,14 +208,14 @@ function yPos(v) { return pad.top + (1 - (v - yMin) / (yMax - yMin)) * ph; }
 // Grid lines
 ctx.strokeStyle = getComputedStyle(document.documentElement).getPropertyValue('--grid').trim();
 ctx.lineWidth = 0.5;
-for (let y = 5.0; y <= 7.5; y += 0.5) {
+for (let y = 8000; y <= 18000; y += 2000) {
   const yy = yPos(y);
   ctx.beginPath(); ctx.moveTo(pad.left, yy); ctx.lineTo(cw - pad.right, yy); ctx.stroke();
 
   ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--text-muted').trim();
   ctx.font = '10px -apple-system, "PingFang SC", sans-serif';
   ctx.textAlign = 'right';
-  ctx.fillText((y*100).toFixed(0), pad.left - 6, yy + 3);
+  ctx.fillText((y/100).toFixed(1) + '万', pad.left - 6, yy + 3);
 }
 
 // Area fill
@@ -272,7 +272,7 @@ ctx.stroke();
 ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--text-primary').trim();
 ctx.font = '11px -apple-system, "PingFang SC", sans-serif';
 ctx.textAlign = 'center';
-const maxLabel = (maxVal * 100).toFixed(0) + '亿';
+const maxLabel = (maxVal / 100).toFixed(2) + '万亿';
 ctx.fillText(maxLabel, cxMax, cyMax - 12);
 
 // X-axis labels (every few days)
@@ -311,7 +311,7 @@ canvas.addEventListener('mousemove', (e) => {
   if (minDist < 40) {
     const r = raw[closest];
     tooltip.querySelector('.date').textContent = '2026-' + r[0];
-    tooltip.querySelector('.value').textContent = (r[1]*100).toFixed(0) + ' 亿';
+    tooltip.querySelector('.value').textContent = (r[1]/1e2).toFixed(0) + ' 亿';
     tooltip.style.opacity = '1';
     const tx = Math.min(xPos(closest), cw - 160);
     const ty = Math.max(pad.top, yPos(r[1]) - 50);
