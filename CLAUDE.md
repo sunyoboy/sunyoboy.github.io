@@ -669,6 +669,16 @@ source ~/.zshrc && echo $HT_APIKEY         # 华泰 API Key ✓
 | `growth/*.md` | `catalog.md`（索引表）+ `.vitepress/config.mjs`（侧边栏） |
 | `questions/2026/0X/*.md` | `catalog.md`（索引表）+ `questions/index.md`（总览） |
 
+### ⚠️ 提交前检查（Commit Checklist）
+
+**每次 `git commit` 前必须确认**：
+
+- [ ] 新增 md 文件是否已加入 `.vitepress/config.mjs` 侧边栏？
+- [ ] 新增 md 文件是否已加入 `catalog.md` 索引表？
+- [ ] `npm run build` 是否通过？（构建失败 = 不能 push）
+
+> 教训：7/28 复盘漏加菜单，提交了 12 个 commit 才发现。此后每次新建 md → 立即更新 config.mjs + catalog.md，不事后补。
+
 ---
 
 ## 文件命名规范
