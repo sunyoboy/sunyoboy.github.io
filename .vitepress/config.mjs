@@ -38,7 +38,7 @@ export default defineConfig({
                   text: '📂 日复盘',
                   collapsed: false,
                   items: [
-                    { text: '07-30 · FOMC落地·9:3分裂·成长再杀', link: '/review/2026/07/2026-07-30' },
+                    { text: '07-30 · 收盘·成长踩踏·防御独撑·科创-5.38%', link: '/review/2026/07/2026-07-30' },
                     { text: '07-29 · FOMC次日·横盘等决议', link: '/review/2026/07/2026-07-29' },
                     { text: '07-28 · FOMC首日·创业板-7.35%', link: '/review/2026/07/2026-07-28' },
                     { text: '07-27 · 九问九答·穷富思维·快与慢', link: '/review/2026/07/2026-07-27' },
