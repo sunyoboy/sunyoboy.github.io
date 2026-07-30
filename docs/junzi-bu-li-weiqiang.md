@@ -123,6 +123,8 @@
 
 ## 关联阅读
 
+- [🧘 遇事不慌](yushi-buhuang.md) — 第二步：墙塌了也别慌·事中守静
+- [🔄 危机·转机](weiji-zhuanji.md) — 第三步：等尘埃落定抓转机·事后转化
 - [交易纪律全体系](position-discipline.md) — 止损/止盈/仓位/时机四大纪律
 - [MA5 偏离度持仓纪律](ma5-deviation-discipline.md) — 三维指标决策框架
 - [信条](../growth/信条.md) — 三个不相信 · 不抛弃不放弃 · 岿然不动
