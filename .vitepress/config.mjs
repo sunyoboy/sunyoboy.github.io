@@ -223,6 +223,7 @@ export default defineConfig({
               collapsed: false,
               items: [
                 { text: '🧱 君子不立危墙之下', link: '/docs/junzi-bu-li-weiqiang' },
+                { text: '🧘 遇事不慌', link: '/docs/yushi-buhuang' },
                 { text: '🔴 FOMC决策全景', link: '/docs/fomc-schedule' },
                 { text: '🔪 做减法·交易极简', link: '/docs/minimalism-trading' },
                 { text: '🎙️ 梁文锋·全文分析', link: '/docs/liang-wenfeng-transcript-analysis' },

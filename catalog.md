@@ -196,6 +196,7 @@
 | [🇺🇸对标美股·十五五ETF](docs/fifteen-five-us-benchmark) | 美股主线→A股ETF·战略/战术分账本·硬目标底仓清单 |
 | [海鸥期权策略](docs/seagull-strategy) | 三腿期权组合，零成本震荡市套保 |
 | [🧱 君子不立危墙之下](docs/junzi-bu-li-weiqiang) | 孟子·离娄上·三层释义·投资场景映射·事前避险的底层哲学 |
+| [🧘 遇事不慌](docs/yushi-buhuang) | 事前远危+事中守静·张良谢安孔明典故·紧急止慌SOP·交易场景映射 |
 | [交易纪律](docs/position-discipline) | 建仓/持仓/止损/止盈/做T/心态/复盘 全纪律体系 |
 | [📋 交易执行SOP](docs/trading-sop-pdca) | 条件单+网格交易+每日速查卡·纪律靠系统不靠意志力 |
 | [📐 交易决策矩阵·速查卡](docs/trading-decision-matrix) | 一张表做所有买卖·卖出6信号+买入3信号+三问+不做+仓位 |
