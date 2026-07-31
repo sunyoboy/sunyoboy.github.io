@@ -4,10 +4,12 @@
 数据源：腾讯财经 API（实时/收盘价均可获取）
 
 用法：
-  python3 scripts/fetch-market-data.py            # 今天
-  python3 scripts/fetch-market-data.py 2026-06-17 # ⚠️ 已废弃：腾讯 API 只返回实时快照，
-                                                  #    传非今天的日期会被拒绝（否则把今天数据写进旧文件）。
-                                                  #    历史回补请用华泰 query-indicator skill。
+  python3 scripts/fetch-market-data.py              # 今天
+  python3 scripts/fetch-market-data.py 2026-08-01   # 指定日期（仅限今天，否则拒绝）
+  python3 scripts/fetch-market-data.py --force 2026-08-01  # ⚠️ 强制运行（非今日日期），
+                                                  #    数据是实时快照≠历史收盘，文件头会标红警告。
+                                                  #    仅用于：①忘了跑需要补模板框架 ②盘中预抓。
+                                                  #    历史准确数据请用华泰 query-indicator skill。
 
 定时运行（macOS）：
   每个交易日 15:35 自动执行（通过 setup-cron.sh 安装的 launchd 任务）
@@ -221,23 +223,47 @@ def generate_template(date_str, index_data, watchlist_data=None, warning=""):
 
 
 if __name__ == "__main__":
-    date_str = sys.argv[1] if len(sys.argv) > 1 else datetime.now().strftime("%Y-%m-%d")
     now = datetime.now()
     today = now.strftime("%Y-%m-%d")
+
+    # 解析参数：--force 可跳过日期校验
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    force_mode = "--force" in sys.argv[1:]
+
+    date_str = args[0] if args else today
 
     # 🛑 防串位：腾讯 API 只返回「实时/最新」快照，无法回补历史日期。
     # 若 date_str 不是今天，会把「今天的实时数据」写进标着旧日期的文件——7/9-7/11 污染的根因。
     if date_str != today:
-        print(f"🛑 拒绝执行：date_str={date_str} 不是今天({today})。")
-        print("   腾讯实时 API 无法回补历史收盘，会写入错误数据。")
-        print("   回补历史请用华泰 query-indicator skill 查询后手工填写。")
-        sys.exit(1)
+        if force_mode:
+            print(f"⚠️⚠️⚠️ 强制模式：date_str={date_str} ≠ 今天({today})")
+            print("   腾讯 API 返回的是实时快照，不是历史收盘价！")
+            print("   文件头部会自动标红警告，请手工订正数据。")
+            print("   历史准确数据：华泰 query-indicator skill 查询后手工填写。")
+        else:
+            print(f"🛑 拒绝执行：date_str={date_str} 不是今天({today})。")
+            print("   腾讯实时 API 无法回补历史收盘，会写入错误数据。")
+            print("   回补历史请用华泰 query-indicator skill 查询后手工填写。")
+            print("   或加 --force 强制生成模板框架（数据需手工订正）。")
+            print(f"   用法：python3 scripts/fetch-market-data.py --force {date_str}")
+            sys.exit(1)
 
     # ⏰ 盘中警告：未到收盘(15:00)抓取的是盘中价，不能当收盘用。
     warning = ""
     if now.hour < 15:
         warning = f"> ⚠️ **盘中数据**：本文件于 {now.strftime('%H:%M')} 抓取，市场未收盘，为盘中快照，收盘后需重抓订正。\n\n"
         print(f"⚠️ 当前 {now.strftime('%H:%M')} 未到收盘，抓取的是盘中数据！")
+
+    # ⚠️ 强制模式追加警告
+    if force_mode and date_str != today:
+        force_warning = (
+            f"> 🚨🚨🚨 **强制模式·数据不可信**\n"
+            f"> 本文件于 {now.strftime('%Y-%m-%d %H:%M')} 通过 --force 生成。\n"
+            f"> 腾讯 API 返回的是**今天({today})的实时快照**，不是 {date_str} 的历史收盘价！\n"
+            f"> **所有价格数据必须用华泰 query-indicator 查历史值手工订正。**\n"
+            f"> 未订正前不得用于复盘分析。\n\n"
+        )
+        warning = force_warning + warning
 
     print(f"📊 KnowingDoing 市场数据抓取 · {date_str}  (腾讯财经)\n")
 
