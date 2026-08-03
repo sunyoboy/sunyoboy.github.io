@@ -23,6 +23,19 @@ export default defineConfig({
           items: [
             { text: '年度复盘', link: '/review/2026/2026' },
             {
+              text: '8月',
+              collapsed: false,
+              items: [
+                {
+                  text: '📂 日复盘',
+                  collapsed: false,
+                  items: [
+                    { text: '08-03 · V反彻底失败·科技独跌·硬目标防御红', link: '/review/2026/08/2026-08-03' },
+                  ]
+                },
+              ]
+            },
+            {
               text: '7月',
               collapsed: false,
               items: [
