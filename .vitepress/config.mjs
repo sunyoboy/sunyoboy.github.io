@@ -30,6 +30,7 @@ export default defineConfig({
                   text: '📂 日复盘',
                   collapsed: false,
                   items: [
+                    { text: '08-04 · 科技强反弹·科创50收复1588·银行独跌', link: '/review/2026/08/2026-08-04' },
                     { text: '08-03 · V反彻底失败·科技独跌·硬目标防御红', link: '/review/2026/08/2026-08-03' },
                   ]
                 },
