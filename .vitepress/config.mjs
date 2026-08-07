@@ -142,6 +142,21 @@ export default defineConfig({
           ]
         }
       ],
+      '/portfolio/': [
+        {
+          text: '持仓存档',
+          collapsed: false,
+          items: [
+            {
+              text: '📂 2026年8月',
+              collapsed: false,
+              items: [
+                { text: '08-07 · 三账户持仓快照', link: '/portfolio/2026/08/2026-08-07' },
+              ]
+            },
+          ]
+        },
+      ],
       '/growth/': [
         {
           text: '个人成长',
