@@ -129,6 +129,7 @@ def generate_template(date_str, index_data, watchlist_data=None, warning=""):
 - [A股复盘](#a股复盘)
   - [指数表现](#指数表现)
   - [重点标的](#重点标的)
+  - [今日金十要点](#今日金十要点)
   - [盘面特征](#盘面特征)
   - [今日驱动](#今日驱动)
   - [热门板块](#热门板块)
@@ -159,6 +160,10 @@ def generate_template(date_str, index_data, watchlist_data=None, warning=""):
 {watchlist_rows}
 > 🤖 数据由 fetch-market-data.py 自动抓取，低吸区间需手动维护。
 > 📊 宏观背景参考：最新[月度市场概况](../05/2026-05-26-月度市场概况.md)
+
+### 今日金十要点
+
+- （盘前/复盘时问 Claude「金十今日要点」：当日数据解读 + 资金面 + 联储讲话）
 
 ### 盘面特征
 
