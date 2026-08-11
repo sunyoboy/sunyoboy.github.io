@@ -154,6 +154,7 @@ export default defineConfig({
               text: '📂 2026年8月',
               collapsed: false,
               items: [
+                { text: '08-11 · 三账户持仓快照（创新药减仓·有色崩跌）', link: '/portfolio/2026/08/2026-08-11' },
                 { text: '08-07 · 三账户持仓快照', link: '/portfolio/2026/08/2026-08-07' },
               ]
             },
