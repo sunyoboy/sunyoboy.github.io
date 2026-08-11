@@ -30,6 +30,7 @@ export default defineConfig({
                   text: '📂 日复盘',
                   collapsed: false,
                   items: [
+                    { text: '08-11 · CPI前变脸·有色崩跌·主力出货信号', link: '/review/2026/08/2026-08-11' },
                     { text: '08-10 · 非农爆冷高低切·算力天量派发·医药防御红', link: '/review/2026/08/2026-08-10' },
                     { text: '08-10 · 专题·公募基金二季报分析', link: '/review/2026/08/2026-08-10-公募基金二季报分析' },
                     { text: '08-06 · 上证站上3900·资源行情启动', link: '/review/2026/08/2026-08-06' },
