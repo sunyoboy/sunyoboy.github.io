@@ -30,6 +30,8 @@ export default defineConfig({
                   text: '📂 日复盘',
                   collapsed: false,
                   items: [
+                    { text: '08-13 · CPI利好兑现·高低切换·天山逼近止盈线', link: '/review/2026/08/2026-08-13' },
+                    { text: '08-12 · CPI前科技连涨·仓位超标纪律线·减仓窗口关闭', link: '/review/2026/08/2026-08-12' },
                     { text: '08-11 · CPI前变脸·有色崩跌·主力出货信号', link: '/review/2026/08/2026-08-11' },
                     { text: '08-10 · 非农爆冷高低切·算力天量派发·医药防御红', link: '/review/2026/08/2026-08-10' },
                     { text: '08-10 · 专题·公募基金二季报分析', link: '/review/2026/08/2026-08-10-公募基金二季报分析' },
@@ -154,6 +156,7 @@ export default defineConfig({
               text: '📂 2026年8月',
               collapsed: false,
               items: [
+                { text: '08-12 · 三账户持仓快照（天山减仓·逆回购回笼·CPI前超标）', link: '/portfolio/2026/08/2026-08-12' },
                 { text: '08-11 · 三账户持仓快照（创新药减仓·有色崩跌）', link: '/portfolio/2026/08/2026-08-11' },
                 { text: '08-07 · 三账户持仓快照', link: '/portfolio/2026/08/2026-08-07' },
               ]

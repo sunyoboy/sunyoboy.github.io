@@ -3749,6 +3749,71 @@
       },
       "turnover_yi": 23209.86,
       "turnover_source": "sina_realtime"
+    },
+    {
+      "date": "2026-08-12",
+      "indices": {
+        "上证指数": {
+          "close": 3946.68,
+          "pct": 0.32
+        },
+        "深证成指": {
+          "close": 14414.43,
+          "pct": 1.09
+        },
+        "创业板指": {
+          "close": 3602.08,
+          "pct": 1.49
+        },
+        "科创50": {
+          "close": 1736.99,
+          "pct": 1.61
+        },
+        "上证50": {
+          "close": 2938.39,
+          "pct": 0.29
+        },
+        "沪深300": {
+          "close": 4690.92,
+          "pct": 0.58
+        },
+        "中证500": {
+          "close": 8045.31,
+          "pct": 0.98
+        }
+      },
+      "stocks": {
+        "中证500ETF": {
+          "close": 8.05,
+          "pct": 0.8
+        },
+        "黄金ETF": {
+          "close": 9.54,
+          "pct": 1.04
+        },
+        "科大讯飞": {
+          "close": 42.59,
+          "pct": -0.68
+        },
+        "天山铝业": {
+          "close": 14.27,
+          "pct": 3.41
+        },
+        "紫金矿业": {
+          "close": 33.58,
+          "pct": 1.21
+        },
+        "有色ETF": {
+          "close": 1.94,
+          "pct": 0.94
+        },
+        "卫星ETF": {
+          "close": 1.15,
+          "pct": 1.87
+        }
+      },
+      "turnover_yi": 21524.23,
+      "turnover_source": "sina_realtime"
     }
   ],
   "source": "sina_kline_api"
