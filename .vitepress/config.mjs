@@ -171,6 +171,7 @@ export default defineConfig({
           text: '个人成长',
           collapsed: false,
           items: [
+            { text: '👤 个人档案', link: '/growth/Profile' },
             { text: '🔥 信条', link: '/growth/信条' },
             { text: '🔄 方法论', link: '/growth/方法论' },
             { text: '🎯 年度 OKR', link: '/growth/2026-年度OKR' },
