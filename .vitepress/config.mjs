@@ -30,6 +30,7 @@ export default defineConfig({
                   text: '📂 日复盘',
                   collapsed: false,
                   items: [
+                    { text: '08-17 · 科技全面爆发·科创50+4.14%·减仓窗口兑现', link: '/review/2026/08/2026-08-17' },
                     { text: '08-14 · 企稳修复·上证翻红·周期反弹·天山转持有等弹', link: '/review/2026/08/2026-08-14' },
                     { text: '08-13 · CPI利好兑现·高低切换·天山逼近止盈线', link: '/review/2026/08/2026-08-13' },
                     { text: '08-12 · CPI前科技连涨·仓位超标纪律线·减仓窗口关闭', link: '/review/2026/08/2026-08-12' },
@@ -157,6 +158,7 @@ export default defineConfig({
               text: '📂 2026年8月',
               collapsed: false,
               items: [
+                { text: '08-17 · 三账户持仓快照（科创50减半·标准券12.2万）', link: '/portfolio/2026/08/2026-08-17' },
                 { text: '08-14 · 三账户持仓快照·估算版（天山逼近止盈线）', link: '/portfolio/2026/08/2026-08-14' },
                 { text: '08-12 · 三账户持仓快照（天山减仓·逆回购回笼·CPI前超标）', link: '/portfolio/2026/08/2026-08-12' },
                 { text: '08-11 · 三账户持仓快照（创新药减仓·有色崩跌）', link: '/portfolio/2026/08/2026-08-11' },
