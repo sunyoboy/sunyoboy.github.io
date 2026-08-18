@@ -30,6 +30,7 @@ export default defineConfig({
                   text: '📂 日复盘',
                   collapsed: false,
                   items: [
+                    { text: '08-18 · 大阳后退潮·防御回摆·天山跌破MA5', link: '/review/2026/08/2026-08-18' },
                     { text: '08-17 · 科技全面爆发·科创50+4.14%·减仓窗口兑现', link: '/review/2026/08/2026-08-17' },
                     { text: '08-14 · 企稳修复·上证翻红·周期反弹·天山转持有等弹', link: '/review/2026/08/2026-08-14' },
                     { text: '08-13 · CPI利好兑现·高低切换·天山逼近止盈线', link: '/review/2026/08/2026-08-13' },
@@ -158,6 +159,7 @@ export default defineConfig({
               text: '📂 2026年8月',
               collapsed: false,
               items: [
+                { text: '08-18 · 三账户持仓快照（华泰正股全清·精简10只）', link: '/portfolio/2026/08/2026-08-18' },
                 { text: '08-17 · 三账户持仓快照（科创50减半·标准券12.2万）', link: '/portfolio/2026/08/2026-08-17' },
                 { text: '08-14 · 三账户持仓快照·估算版（天山逼近止盈线）', link: '/portfolio/2026/08/2026-08-14' },
                 { text: '08-12 · 三账户持仓快照（天山减仓·逆回购回笼·CPI前超标）', link: '/portfolio/2026/08/2026-08-12' },
@@ -218,6 +220,8 @@ export default defineConfig({
                     { text: '📅 全程日历', link: '/questions/孕期全程日历' },
                     { text: '🛒 饮食与零食清单', link: '/questions/孕期饮食与零食清单' },
                     { text: '💝 异地陪伴指南', link: '/questions/孕期异地陪伴指南' },
+                    { text: '08-18 中孕超声', link: '/questions/2026/08/2026-08-18' },
+                    { text: '08-04 NT 检查', link: '/questions/2026/08/2026-08-04' },
                     { text: '07-06 常规血检', link: '/questions/2026/07/2026-07-06' },
                     { text: '07-01 检验汇总', link: '/questions/2026/07/2026-07-01' },
                     { text: '06-27 复查结果', link: '/questions/2026/06/2026-06-27' },
