@@ -161,6 +161,7 @@ export default defineConfig({
               text: '📂 2026年8月',
               collapsed: false,
               items: [
+                { text: '08-20 · 三账户持仓快照（卫星破止损·天山破止盈）', link: '/portfolio/2026/08/2026-08-20' },
                 { text: '08-18 · 三账户持仓快照（华泰正股全清·精简10只）', link: '/portfolio/2026/08/2026-08-18' },
                 { text: '08-17 · 三账户持仓快照（科创50减半·标准券12.2万）', link: '/portfolio/2026/08/2026-08-17' },
                 { text: '08-14 · 三账户持仓快照·估算版（天山逼近止盈线）', link: '/portfolio/2026/08/2026-08-14' },
@@ -276,6 +277,7 @@ export default defineConfig({
                 { text: '🧘 遇事不慌', link: '/docs/yushi-buhuang' },
                 { text: '🔄 危机·转机', link: '/docs/weiji-zhuanji' },
                 { text: '🔴 FOMC决策全景', link: '/docs/fomc-schedule' },
+                { text: '🎯 价值投资的持仓集中度', link: '/docs/value-investing-concentration' },
                 { text: '🔪 做减法·交易极简', link: '/docs/minimalism-trading' },
                 { text: '🎙️ 梁文锋·全文分析', link: '/docs/liang-wenfeng-transcript-analysis' },
                 { text: '🔻 Capitulation信号·底部识别', link: '/docs/market-bottom-signals' },
