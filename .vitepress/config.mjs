@@ -30,6 +30,7 @@ export default defineConfig({
                   text: '📂 日复盘',
                   collapsed: false,
                   items: [
+                    { text: '08-21 · 深强沪弱·资源最强·热点一日游', link: '/review/2026/08/2026-08-21' },
                     { text: '08-20 · 弱反弹日·科创收绿·天山破位第3日', link: '/review/2026/08/2026-08-20' },
                     { text: '08-19 · 恐慌加速·科技崩塌·天山跌破止盈线', link: '/review/2026/08/2026-08-19' },
                     { text: '08-18 · 大阳后退潮·防御回摆·天山跌破MA5', link: '/review/2026/08/2026-08-18' },
@@ -161,6 +162,7 @@ export default defineConfig({
               text: '📂 2026年8月',
               collapsed: false,
               items: [
+                { text: '08-21 · 三账户持仓快照（连续第4天零操作）', link: '/portfolio/2026/08/2026-08-21' },
                 { text: '08-20 · 三账户持仓快照（卫星破止损·天山破止盈）', link: '/portfolio/2026/08/2026-08-20' },
                 { text: '08-18 · 三账户持仓快照（华泰正股全清·精简10只）', link: '/portfolio/2026/08/2026-08-18' },
                 { text: '08-17 · 三账户持仓快照（科创50减半·标准券12.2万）', link: '/portfolio/2026/08/2026-08-17' },
