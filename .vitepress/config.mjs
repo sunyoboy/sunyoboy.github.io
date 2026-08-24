@@ -30,6 +30,7 @@ export default defineConfig({
                   text: '📂 日复盘',
                   collapsed: false,
                   items: [
+                    { text: '08-24 · 科技二次崩盘·防御独撑·上证破3900', link: '/review/2026/08/2026-08-24' },
                     { text: '08-21 · 深强沪弱·资源最强·热点一日游', link: '/review/2026/08/2026-08-21' },
                     { text: '08-20 · 弱反弹日·科创收绿·天山破位第3日', link: '/review/2026/08/2026-08-20' },
                     { text: '08-19 · 恐慌加速·科技崩塌·天山跌破止盈线', link: '/review/2026/08/2026-08-19' },
