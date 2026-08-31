@@ -30,6 +30,7 @@ export default defineConfig({
                   text: '📂 日复盘',
                   collapsed: false,
                   items: [
+                    { text: '08-31 · 科技退潮延续·有色补跌·黄金跌破MA20', link: '/review/2026/08/2026-08-31' },
                     { text: '08-28 · 科技退潮·周期接棒·化工领涨', link: '/review/2026/08/2026-08-28' },
                     { text: '08-27 · 科技主升·通信电子爆发·科创50+3.77%', link: '/review/2026/08/2026-08-27' },
                     { text: '08-26 · 资源V型反转·有色领涨·全面反弹', link: '/review/2026/08/2026-08-26' },
