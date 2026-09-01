@@ -231,6 +231,7 @@ export default defineConfig({
                     { text: '📅 全程日历', link: '/questions/孕期全程日历' },
                     { text: '🛒 饮食与零食清单', link: '/questions/孕期饮食与零食清单' },
                     { text: '💝 异地陪伴指南', link: '/questions/孕期异地陪伴指南' },
+                    { text: '09-01 中孕超声复查', link: '/questions/2026/09/2026-09-01' },
                     { text: '08-18 中孕超声', link: '/questions/2026/08/2026-08-18' },
                     { text: '08-04 NT 检查', link: '/questions/2026/08/2026-08-04' },
                     { text: '07-06 常规血检', link: '/questions/2026/07/2026-07-06' },
