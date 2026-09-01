@@ -23,6 +23,19 @@ export default defineConfig({
           items: [
             { text: '年度复盘', link: '/review/2026/2026' },
             {
+              text: '9月',
+              collapsed: false,
+              items: [
+                {
+                  text: '📂 日复盘',
+                  collapsed: false,
+                  items: [
+                    { text: '09-01 · 大金融独撑·科技加速退潮·黄金跌破MA20', link: '/review/2026/09/2026-09-01' },
+                  ]
+                }
+              ]
+            },
+            {
               text: '8月',
               collapsed: false,
               items: [
