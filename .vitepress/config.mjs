@@ -30,6 +30,7 @@ export default defineConfig({
                   text: '📂 日复盘',
                   collapsed: false,
                   items: [
+                    { text: '09-02 · 缩量普跌·美元强主导·资源科技齐杀', link: '/review/2026/09/2026-09-02' },
                     { text: '09-01 · 大金融独撑·科技加速退潮·黄金跌破MA20', link: '/review/2026/09/2026-09-01' },
                   ]
                 }
