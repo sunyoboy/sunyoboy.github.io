@@ -179,6 +179,13 @@ export default defineConfig({
           collapsed: false,
           items: [
             {
+              text: '📂 2026年9月',
+              collapsed: false,
+              items: [
+                { text: '09-02 · 三账户持仓快照（减仓窗口·压仓至40%）', link: '/portfolio/2026/09/2026-09-02' },
+              ]
+            },
+            {
               text: '📂 2026年8月',
               collapsed: false,
               items: [
