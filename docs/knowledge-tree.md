@@ -31,6 +31,8 @@
 - [巴菲特1998演讲](buffett-1998) — 品格/护城河/杠杆/知足/定价权
 - [想赢怕输的心态](fear-greed) — 贪婪vs恐惧/系统替代情绪
 - [保持好心态](peace-of-mind) — 可控vs不可控/主要矛盾/bug report
+- [🌿 万氏家传养生四要](yangsheng-siyao) — 寡欲/慎动/法时/却疾·能量与交易映射
+- [📜 海瑞《治安疏》全文](hairui-zhi-an-shu) — 直言天下第一事·正君道明臣职·直谏实干映射
 - [预期与现实的差距](expectation-gap) — 四级偏离响应/度的判断
 - [投资心智](mindset) — 尹烨/改变自己
 - [AI工具全景分析](ai-tools-analysis) — Claude/Cursor/v0对比
