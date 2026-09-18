@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026年9月 A股成交额</title>
+<style>
+:root {
+  --surface-1: #fcfcfb;
+  --text-primary: #0b0b0b;
+  --text-secondary: #52514e;
+  --text-muted: #8b8a84;
+  --seq-100: #d9e8f7;
+  --seq-300: #8bbae8;
+  --seq-500: #4a90d9;
+  --seq-700: #1a5ba8;
+  --seq-line: #2a78d6;
+  --grid: #e8e7e3;
+  --marker-bg: #ffffff;
+  --warn: #d94a4a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface-1: #1a1a19;
+    --text-primary: #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted: #6e6d68;
+    --seq-100: #1e3050;
+    --seq-300: #2a5590;
+    --seq-500: #3987e5;
+    --seq-700: #6aaef5;
+    --seq-line: #3987e5;
+    --grid: #2a2926;
+    --marker-bg: #1a1a19;
+    --warn: #e56a6a;
+  }
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: var(--surface-1);
+  color: var(--text-primary);
+  display: flex; justify-content: center; align-items: center;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.chart-wrapper {
+  width: 100%; max-width: 900px;
+  background: var(--surface-1);
+  border-radius: 12px;
+  padding: 32px 28px 20px;
+}
+
+.chart-header {
+  display: flex; justify-content: space-between; align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.chart-header h2 {
+  font-size: 20px; font-weight: 600;
+  color: var(--text-primary);
+}
+
+.chart-header .subtitle {
+  font-size: 13px; color: var(--text-secondary);
+}
+
+.stat-row {
+  display: flex; gap: 28px; margin-bottom: 20px;
+}
+
+.stat-item {
+  display: flex; flex-direction: column;
+}
+
+.stat-label {
+  font-size: 11px; color: var(--text-muted);
+  text-transform: uppercase; letter-spacing: 0.5px;
+}
+
+.stat-value {
+  font-size: 18px; font-weight: 600; color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-change {
+  font-size: 12px; color: var(--text-secondary);
+}
+
+canvas { display: block; width: 100%; height: auto; }
+
+.tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: var(--marker-bg);
+  border: 1px solid var(--grid);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 12px;
+  line-height: 1.5;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  opacity: 0;
+  transition: opacity 0.15s;
+  z-index: 10;
+}
+
+.tooltip .date { color: var(--text-secondary); font-size: 11px; }
+.tooltip .value { color: var(--text-primary); font-weight: 600; font-size: 15px; }
+.tooltip .detail { color: var(--text-muted); font-size: 11px; }
+
+.note {
+  margin-top: 12px; font-size: 11px; color: var(--text-muted);
+  border-top: 1px solid var(--grid); padding-top: 10px;
+}
+
+.fomc-badge {
+  display: inline-block;
+  background: var(--seq-100);
+  color: var(--seq-700);
+  font-size: 11px; padding: 2px 8px; border-radius: 4px;
+  margin-left: 8px;
+  font-weight: 500;
+}
+</style>
+</head>
+<body>
+<div class="chart-wrapper" style="position:relative;">
+  <div class="chart-header">
+    <h2>A股日成交额 <span class="fomc-badge">9/15-16 FOMC</span></h2>
+    <span class="subtitle">2026年9月 · 沪深两市 · 数据来源：华泰证券</span>
+  </div>
+
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-label">区间累计</span>
+      <span class="stat-value" id="stat-total">—</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-label">日均</span>
+      <span class="stat-value" id="stat-avg">—</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-label">最高单日</span>
+      <span class="stat-value" id="stat-max">—</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-label">最低单日</span>
+      <span class="stat-value" id="stat-min">—</span>
+    </div>
+  </div>
+
+  <canvas id="chart" width="844" height="340"></canvas>
+
+  <div class="tooltip" id="tooltip">
+    <div class="date"></div>
+    <div class="value"></div>
+    <div class="detail"></div>
+  </div>
+
+  <div class="note">
+    数据来源：华泰证券 · 沪深两市成交额合计（沪市 + 深市）· 单位为亿元人民币 ·
+    9/11 放量下跌（1.97万亿）→ 9/14-9/15 连续缩量至月内最低（1.61万亿，FOMC 议息首日交投谨慎）→ 9/18 放量至 2.08万亿，为 9 月单日最高
+  </div>
+</div>
+
+<script>
+// [日期, 全市场成交额(亿), 沪市(亿), 深市(亿)]
+const raw = [
+  ["09-01", 20343, 9443, 10900],
+  ["09-02", 17912, 8354, 9558],
+  ["09-03", 17589, 8199, 9390],
+  ["09-04", 20283, 9383, 10900],
+  ["09-07", 19479, 8979, 10500],
+  ["09-08", 19556, 9156, 10400],
+  ["09-09", 18556, 8737, 9819],
+  ["09-10", 16471, 7797, 8675],
+  ["09-11", 19682, 9582, 10100],
+  ["09-14", 16292, 7793, 8499],
+  ["09-15", 16127, 7640, 8487],
+  ["09-16", 18391, 8711, 9680],
+  ["09-17", 18231, 8688, 9543],
+  ["09-18", 20771, 9942, 10829]
+];
+
+// Stats
+const vals = raw.map(r => r[1]);
+const total = vals.reduce((a,b) => a+b, 0);
+const avg = total / vals.length;
+const maxVal = Math.max(...vals);
+const minVal = Math.min(...vals);
+const maxIdx = vals.indexOf(maxVal);
+const minIdx = vals.indexOf(minVal);
+
+document.getElementById('stat-total').textContent = (total/10000).toFixed(2) + '万亿';
+document.getElementById('stat-avg').textContent = (avg).toFixed(0) + '亿';
+document.getElementById('stat-max').textContent = (maxVal).toFixed(0) + '亿';
+document.getElementById('stat-min').textContent = (minVal).toFixed(0) + '亿';
+
+// Canvas
+const canvas = document.getElementById('chart');
+const ctx = canvas.getContext('2d');
+const dpr = window.devicePixelRatio || 1;
+const W = canvas.width = canvas.offsetWidth * dpr;
+const H = canvas.height = canvas.offsetHeight * dpr;
+ctx.scale(dpr, dpr);
+const cw = canvas.offsetWidth;
+const ch = canvas.offsetHeight;
+
+const pad = { top: 12, right: 20, bottom: 32, left: 44 };
+const pw = cw - pad.left - pad.right;
+const ph = ch - pad.top - pad.bottom;
+
+const yMin = 14000;
+const yMax = 22000;
+
+function xPos(i) { return pad.left + (i / (raw.length - 1)) * pw; }
+function yPos(v) { return pad.top + (1 - (v - yMin) / (yMax - yMin)) * ph; }
+
+// Grid lines
+ctx.strokeStyle = getComputedStyle(document.documentElement).getPropertyValue('--grid').trim();
+ctx.lineWidth = 0.5;
+for (let y = 14000; y <= 22000; y += 2000) {
+  const yy = yPos(y);
+  ctx.beginPath(); ctx.moveTo(pad.left, yy); ctx.lineTo(cw - pad.right, yy); ctx.stroke();
+
+  ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--text-muted').trim();
+  ctx.font = '10px -apple-system, "PingFang SC", sans-serif';
+  ctx.textAlign = 'right';
+  ctx.fillText((y/10000).toFixed(1) + '万亿', pad.left - 6, yy + 3);
+}
+
+// Area fill
+const seq100 = getComputedStyle(document.documentElement).getPropertyValue('--seq-100').trim();
+const seq300 = getComputedStyle(document.documentElement).getPropertyValue('--seq-300').trim();
+
+const grad = ctx.createLinearGradient(0, pad.top, 0, pad.top + ph);
+grad.addColorStop(0, seq300);
+grad.addColorStop(1, seq100);
+
+ctx.beginPath();
+ctx.moveTo(xPos(0), pad.top + ph);
+raw.forEach((r, i) => ctx.lineTo(xPos(i), yPos(r[1])));
+ctx.lineTo(xPos(raw.length-1), pad.top + ph);
+ctx.closePath();
+ctx.fillStyle = grad;
+ctx.fill();
+
+// Line
+const lineColor = getComputedStyle(document.documentElement).getPropertyValue('--seq-line').trim();
+ctx.beginPath();
+ctx.strokeStyle = lineColor;
+ctx.lineWidth = 2;
+ctx.lineJoin = 'round';
+raw.forEach((r, i) => {
+  if (i === 0) ctx.moveTo(xPos(i), yPos(r[1]));
+  else ctx.lineTo(xPos(i), yPos(r[1]));
+});
+ctx.stroke();
+
+// Data points - small dots
+raw.forEach((r, i) => {
+  const cx = xPos(i), cy = yPos(r[1]);
+  ctx.beginPath();
+  ctx.arc(cx, cy, 3, 0, Math.PI * 2);
+  ctx.fillStyle = lineColor;
+  ctx.fill();
+  ctx.strokeStyle = getComputedStyle(document.documentElement).getPropertyValue('--marker-bg').trim();
+  ctx.lineWidth = 1.5;
+  ctx.stroke();
+});
+
+// Highlight max point
+const cxMax = xPos(maxIdx), cyMax = yPos(maxVal);
+ctx.beginPath();
+ctx.arc(cxMax, cyMax, 5, 0, Math.PI * 2);
+ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--seq-700').trim();
+ctx.fill();
+ctx.strokeStyle = getComputedStyle(document.documentElement).getPropertyValue('--marker-bg').trim();
+ctx.lineWidth = 2;
+ctx.stroke();
+
+// Direct label for max
+ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--text-primary').trim();
+ctx.font = '11px -apple-system, "PingFang SC", sans-serif';
+ctx.textAlign = 'center';
+ctx.fillText((maxVal/10000).toFixed(2) + '万亿', Math.min(Math.max(cxMax, pad.left + 26), cw - pad.right - 26), cyMax - 12);
+
+// Highlight min point
+const cxMin = xPos(minIdx), cyMin = yPos(minVal);
+ctx.beginPath();
+ctx.arc(cxMin, cyMin, 5, 0, Math.PI * 2);
+ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--warn').trim();
+ctx.fill();
+ctx.strokeStyle = getComputedStyle(document.documentElement).getPropertyValue('--marker-bg').trim();
+ctx.lineWidth = 2;
+ctx.stroke();
+ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--text-primary').trim();
+ctx.font = '11px -apple-system, "PingFang SC", sans-serif';
+ctx.textAlign = 'center';
+ctx.fillText((minVal/10000).toFixed(2) + '万亿', cxMin, cyMin + 20);
+
+// X-axis labels
+ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--text-muted').trim();
+ctx.font = '10px -apple-system, "PingFang SC", sans-serif';
+ctx.textAlign = 'center';
+raw.forEach((r, i) => {
+  ctx.fillText(r[0], xPos(i), pad.top + ph + 16);
+});
+
+// FOMC annotation (anchored at the 9/15 volume trough)
+const idxFomc = raw.findIndex(r => r[0] === '09-15');
+if (idxFomc >= 0) {
+  ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--seq-700').trim();
+  ctx.font = '10px -apple-system, "PingFang SC", sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText('9/15-16 FOMC', xPos(idxFomc), yPos(21200));
+}
+
+// 9/11 volume spike annotation
+const idx911 = raw.findIndex(r => r[0] === '09-11');
+if (idx911 >= 0) {
+  ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--text-secondary').trim();
+  ctx.font = '10px -apple-system, "PingFang SC", sans-serif';
+  ctx.textAlign = 'left';
+  ctx.fillText('9/11 放量下跌', xPos(idx911) + 6, yPos(raw[idx911][1]) + 4);
+}
+
+// Hover
+const tooltip = document.getElementById('tooltip');
+canvas.addEventListener('mousemove', (e) => {
+  const rect = canvas.getBoundingClientRect();
+  const mx = e.clientX - rect.left;
+  let closest = 0;
+  let minDist = Infinity;
+  raw.forEach((r, i) => {
+    const dist = Math.abs(mx - xPos(i));
+    if (dist < minDist) { minDist = dist; closest = i; }
+  });
+
+  if (minDist < 40) {
+    const r = raw[closest];
+    tooltip.querySelector('.date').textContent = '2026-' + r[0];
+    tooltip.querySelector('.value').textContent = (r[1]/10000).toFixed(2) + ' 万亿（' + r[1] + ' 亿）';
+    tooltip.querySelector('.detail').textContent = '沪市 ' + r[2] + ' 亿 · 深市 ' + r[3] + ' 亿';
+    tooltip.style.opacity = '1';
+    const tx = Math.min(xPos(closest), cw - 200);
+    const ty = Math.max(pad.top, yPos(r[1]) - 60);
+    tooltip.style.left = tx + 'px';
+    tooltip.style.top = ty + 'px';
+  } else {
+    tooltip.style.opacity = '0';
+  }
+});
+
+canvas.addEventListener('mouseleave', () => { tooltip.style.opacity = '0'; });
+</script>
+</body>
+</html>
