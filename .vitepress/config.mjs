@@ -23,6 +23,19 @@ export default defineConfig({
           items: [
             { text: '年度复盘', link: '/review/2026/2026' },
             {
+              text: '10月',
+              collapsed: false,
+              items: [
+                {
+                  text: '📂 日复盘',
+                  collapsed: false,
+                  items: [
+                    { text: '10-08 · 节后首日·冲高回落·高低切换·科技杀估值·炸板率43.59%', link: '/review/2026/10/2026-10-08' },
+                  ]
+                }
+              ]
+            },
+            {
               text: '9月',
               collapsed: false,
               items: [
@@ -339,6 +352,7 @@ export default defineConfig({
                 { text: '📱 手机端速查清单', link: '/docs/mobile-checklist' },
                 { text: '📖 外部交易规则参考', link: '/docs/trading-rules-external' },
                 { text: 'MA5 偏离度 · 持仓纪律', link: '/docs/ma5-deviation-discipline' },
+                { text: '📉 均值回归 · 选股纪律', link: '/docs/mean-reversion-discipline' },
                 { text: '股票评估框架', link: '/docs/stock-evaluation' },
                 { text: '🚫 为什么盯盘不可取', link: '/docs/why-not-watch-market' },
                 { text: '💼 上班族交易规划', link: '/docs/office-worker-trading' },
