@@ -271,7 +271,6 @@
 | [📖 外部交易规则参考](docs/trading-rules-external) | 直播纪要·与自有纪律对照·止损止盈资金管理 |
 | [股票评估框架](docs/stock-evaluation) | 基本面/技术面/资金面三维评估 |
 | [MA5 偏离度 · 持仓纪律](docs/ma5-deviation-discipline) | 三维决策框架：偏离方向+持续时间+价格位置，减仓/清仓细则 |
-| [📉 均值回归 · 选股纪律](docs/mean-reversion-discipline) | 四维判据(z60/RSI/距120低/长期结构)·A/B/C/D四类矩阵·当前标的池映射 |
 | [📦 开源量化项目调研](docs/opensource-quant-projects) | 7个项目+12个A股数据源+7券商API+选型推荐(Quool) |
 | [🤖 华泰AI涨乐Skills安装指南](docs/htsc-skills-setup) | 5个Skill一键安装+量化接入方案(选股/行情/模拟交易) |
 | [🔧 AI金融工具·分工指南](docs/ai-tools-selection-guide) | 选股→问财·报价→华泰·交易→paper·分析→妙想 |
