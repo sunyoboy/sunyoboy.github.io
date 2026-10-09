@@ -11,6 +11,12 @@
                                                   #    仅用于：①忘了跑需要补模板框架 ②盘中预抓。
                                                   #    历史准确数据请用华泰 query-indicator skill。
 
+非交易日保护：
+  周末与节假日（国庆/春节等）**不会生成复盘文件**，避免产生无意义的空模板。
+  · 周末：直接跳过（不调用 API）
+  · 节假日：由腾讯 API 时间戳校验识别（非交易日返回上一交易日快照）并跳过
+  · 如确需生成空模板框架，加 --force 覆盖
+
 定时运行（macOS）：
   每个交易日 15:35 自动执行（通过 setup-cron.sh 安装的 launchd 任务）
 """
@@ -273,15 +279,28 @@ if __name__ == "__main__":
 
     print(f"📊 KnowingDoing 市场数据抓取 · {date_str}  (腾讯财经)\n")
 
+    # 🛑 周末提前退出（无需调用 API；节假日由下方 API 时间戳校验兜住）
+    if datetime.strptime(date_str, "%Y-%m-%d").weekday() >= 5 and not force_mode:
+        print(f"🛑 {date_str} 是周末，A 股非交易日，跳过生成。")
+        print(f"   如确需强制生成空模板框架：python3 scripts/fetch-market-data.py --force {date_str}")
+        sys.exit(0)
+
     # 抓取指数
     print("[指数]")
     data = fetch_from_tencent(INDICES, "指数")
 
     # 🔍 校验 API 时间戳日期是否与 date_str 一致（防非交易日返回上一交易日数据）
+    # 非交易日：腾讯 API 返回的是「上一交易日」的快照，此时不应生成复盘文件（否则产出空模板噪音）。
     if data:
         api_dt = next((v.get("api_dt", "") for v in data.values() if v.get("api_dt")), "")
         if api_dt[:8] and api_dt[:8] != date_str.replace("-", ""):
-            print(f"⚠️ API 时间戳 {api_dt[:8]} 与目标日期 {date_str.replace('-', '')} 不符，可能是非交易日！")
+            print(f"\n🛑 非交易日，跳过生成。")
+            print(f"   API 时间戳 {api_dt[:8]} ≠ 目标日期 {date_str.replace('-', '')}")
+            print(f"   腾讯 API 在非交易日返回的是上一交易日快照，生成模板会产生无意义的空文件。")
+            if not force_mode:
+                print(f"   如确需强制生成空模板框架：python3 scripts/fetch-market-data.py --force {date_str}")
+                sys.exit(0)
+            print(f"   ⚠️ --force 已指定，继续生成（数据为上一交易日快照，需人工订正）。")
             if not warning:
                 warning = f"> ⚠️ **数据日期存疑**：API 时间戳 {api_dt} 与文件日期不符，请人工核对。\n\n"
 
