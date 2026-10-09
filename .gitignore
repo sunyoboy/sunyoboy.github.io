@@ -9,3 +9,6 @@ __pycache__
 .idea/*
 .claude/settings.local.json
 data/
+
+# macOS 元数据
+.DS_Store
