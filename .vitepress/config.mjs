@@ -5,6 +5,8 @@ export default defineConfig({
   description: '知行合一',
   lang: 'zh-CN',
   appearance: true,
+  // data/ 为本地私有数据（含个人简历等），永不参与站点构建与发布
+  srcExclude: ['data/**'],
   themeConfig: {
     siteTitle: '网站全景图',
     nav: [
