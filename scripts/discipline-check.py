@@ -220,9 +220,13 @@ def print_report(index_data, stock_data, history, pf, gold_intl, turnover_yi):
         else:
             print(f"  成交额情绪:    {wrn('— (未获取到成交额)')}")
 
-    # 三日振幅
+    # 三日振幅（名单动态取自 portfolio.json 的「试错 / 个股」类持仓，不再硬编码）
     has_amp = False
-    for name in ["天山铝业", "紫金矿业", "有色ETF"]:
+    if pf:
+        amp_names = [h["name"] for h in pf.get("holdings", []) if h.get("type") in ("试错", "个股")][:5]
+    else:
+        amp_names = []
+    for name in amp_names:
         amp = calc_amplitude_3d(history, name)
         if amp is not None:
             has_amp = True
@@ -328,10 +332,48 @@ def print_report(index_data, stock_data, history, pf, gold_intl, turnover_yi):
         if gold_intl:  print(f"  国际金价:      ${gold_intl:,.1f}/oz")
     print()
 
+    # ═══ 5. 止损线 ═══
+    print(f"{B}【五、止损线】{X}")
+    print(f"  原则：短线试错 -5% 或破 MA10；长线宽基 -3% 或破 MA20；不挂止损不建仓\n")
+    sl_triggered = []
+    if pf:
+        for h in pf.get("holdings", []):
+            sl = h.get("stop_loss")
+            cost = h.get("cost")
+            nm = h["name"]
+            stk = stock_data.get(nm, {})
+            price = stk.get("price") if stk else None
+            if sl is None:
+                print(f"  {nm}: {wrn('配置仓 · 无价格止损（按资产占比再平衡）')}")
+                continue
+            if price and cost:
+                stop_price = round(cost * (1 + sl / 100), 3)
+                pnl = round((price / cost - 1) * 100, 1)
+                label = f"{nm}: 现价 {price} | 止损 {stop_price} | 浮亏 {pnl}%"
+                if price <= stop_price:
+                    sl_triggered.append(nm)
+                    print(f"  {bad(label + '  → 🔴 已破线')}")
+                else:
+                    print(f"  {ok(label)}")
+            else:
+                print(f"  {nm}: {wrn('— (取价失败或成本缺失)')}")
+        if sl_triggered:
+            print(f"\n  {bad('⚡ ' + str(len(sl_triggered)) + ' 个持仓已破止损线：' + '、'.join(sl_triggered))}")
+            print(f"  {bad('   纪律：止损线触发 → 必执行，不找理由')}")
+        else:
+            print(f"\n  {ok('无持仓破线')}")
+    else:
+        print(f"  {wrn('(需 --portfolio)')}")
+    print()
+
     # ═══ 汇总 ═══
-    issues = 1 if (emotion and emotion >= 1.5) else 0
+    alerts = []
+    if emotion and emotion >= 1.5: alerts.append("成交额情绪")
+    if sl_triggered: alerts.append(f"止损破线×{len(sl_triggered)}")
+    if pf and pf.get("total_assets") and pf.get("cash", 0) / pf["total_assets"] < 0.40:
+        alerts.append("现金水位")
     print(f"{B}═══════════════════════════════════════════{X}")
-    print(f"{B}  检查完成 · {ok('全部绿灯 ✅') if issues == 0 else bad(f'{issues} 项警报')}{X}")
+    print(f"{B}  检查完成 · {ok('全部绿灯 ✅') if not alerts else bad('警报：' + ' / '.join(alerts))}{X}")
     print(f"{B}═══════════════════════════════════════════{X}\n")
     if n_yi < 5:
         print(f"  ⚠️ 成交额历史仅 {n_yi} 天（需 ≥5 天），每日运行自动积累。\n")
