@@ -382,6 +382,7 @@ export default defineConfig({
                 { text: '📖 《掌控习惯》精炼', link: '/docs/atomic-habits' },
                 { text: '🫱 团队质疑七层过滤', link: '/docs/team-critical-thinking' },
                 { text: '📚 完善操作系统的推荐书单', link: '/docs/reading-list-recommendations' },
+                { text: '📚 阅读书单 v2 · 用「可繁殖性」重筛', link: '/docs/reading-list-v2' },
                 { text: '✍️ 人生散文阅读指南 · 为人之道', link: '/docs/essay-reading-guide' },
                 { text: 'A股行情分析', link: '/docs/a-share-2026-05-26' },
                 { text: '🔄 美股-A股 AI全产业链对标', link: '/docs/us-china-ai-hardware-mapping' },
@@ -393,6 +394,7 @@ export default defineConfig({
               collapsed: true,
               items: [
                 { text: '个人操作系统', link: '/docs/personal-os' },
+                { text: '🧠 40个经典思维模型', link: '/docs/mental-models-40' },
                 { text: '🧬 仿生学习系统', link: '/docs/digestion-learning-system' },
                 { text: '🔡 维特根斯坦·语言澄清', link: '/docs/wittgenstein-language-clarity' },
                 { text: '矛盾论', link: '/docs/contradiction' },
@@ -435,6 +437,14 @@ export default defineConfig({
                 { text: 'AI工具全景分析', link: '/docs/ai-tools-analysis' },
                 { text: '🚀 前端输出加速', link: '/docs/frontend-output-acceleration' },
                 { text: '个人开发者深耕方向', link: '/docs/solo-dev-strategy' }
+              ]
+            },
+            {
+              text: '🤖 AI 工程',
+              collapsed: true,
+              items: [
+                { text: '📊 开源AI项目榜单 2026Q4', link: '/docs/opensource-ai-projects-2026q4' },
+                { text: '🧪 AI作品可行性·上下文与记忆层', link: '/docs/ai-portfolio-feasibility' }
               ]
             },
             {

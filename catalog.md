@@ -307,6 +307,7 @@
 | [预期与现实的差距](docs/expectation-gap) | 偏离预期的四级响应、度的判断 |
 | [🎯 幸存者偏差](docs/survivorship-bias) | 看失败的多数·用数据而非故事判断·个案当参考不当模板·媒体渲染三层治理 |
 | [投资心智](docs/mindset) | 改变自己，投资认知与思维模型 |
+| [🧠 40个经典思维模型](docs/mental-models-40) | 学习力/思考力/创造力/设计力/共情力/故事力/领导力/整合力 八类·40 张卡片图 |
 | [🧠 自我认知框架](docs/self-awareness) | 优势/劣势审计、财务增长点评判、A/B分类法 |
 | [🎨 审美·纯粹地活着](docs/aesthetics) | 七维之审美·第欧根尼时刻·五项纪律·审美≠消费 |
 | [📚 古文经典排名·做人做事三层](docs/classics-ranking) | 应用层(论语/菜根谭/围炉)·操作系统层(易经/道德经)·投资映射 |
@@ -321,6 +322,7 @@
 | [🧠 卡尼曼 思考快与慢](docs/kahneman-thinking-fast-slow) | 系统1与系统2·损失厌恶·可用性启发式·为什么盯盘是老虎机 |
 | [🫱 团队质疑七层过滤](docs/team-critical-thinking) | 七层过滤·四低摩擦质疑方式·与交易系统的精确映射 |
 | [📚 完善操作系统的推荐书单](docs/reading-list-recommendations) | 14本书按缺口填入：先治后建 |
+| [📚 阅读书单 v2 · 可繁殖性重筛](docs/reading-list-v2) | 四条判据回测 v1 的14本 + 补经济学/脑科学/策略学缺口8本 + 与"阅读操作系统"的冲突 |
 | [✍️ 人生散文阅读指南 · 为人之道](docs/essay-reading-guide) | 四大类散文推荐 + 3篇深度拆解 + 为人之道核心书单 + 60天读写计划 |
 | [AI工具全景分析](docs/ai-tools-analysis) | Cursor、Claude、v0 等 AI 编程工具对比 |
 | [🚀 前端输出加速](docs/frontend-output-acceleration) | Streamlit/一模版三发/ECharts/多平台发布 |
@@ -331,6 +333,13 @@
 | [🔒 Claude Fable 5 + 禁令分析](docs/claude-fable-5-analysis) | 5倍代码碾压→3天下架→禁令ROI死亡螺旋 |
 | [🫘 豆包专业版价值评估](docs/doubao-pro-evaluation) | 68/200/500元三档，本地Agent是唯一护城河 |
 | [个人开发者深耕方向](docs/solo-dev-strategy) | 四大必投系统、五年路线图、什么是值得的长期投入 |
+
+### 🤖 AI 工程
+
+| 文档 | 说明 |
+|------|------|
+| [📊 开源AI项目榜单 2026Q4](docs/opensource-ai-projects-2026q4) | GitHub AI 开源项目 star 排行（官方 API 交叉验证）· 9 大能力层重排 · 季度更新 |
+| [🧪 AI作品可行性·上下文与记忆层](docs/ai-portfolio-feasibility) | 从榜单第 ② 层挑项目的可行性评估 · 主推「记忆层 + Java↔Agent 打通」 |
 
 ### 🔧 其他
 
