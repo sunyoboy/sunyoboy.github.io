@@ -357,33 +357,45 @@ export default defineConfig({
               text: '💹 投资体系',
               collapsed: false,
               items: [
-                { text: '🧱 君子不立危墙之下', link: '/docs/junzi-bu-li-weiqiang' },
-                { text: '🧘 遇事不慌', link: '/docs/yushi-buhuang' },
-                { text: '🔄 危机·转机', link: '/docs/weiji-zhuanji' },
-                { text: '🔴 FOMC决策全景', link: '/docs/fomc-schedule' },
-                { text: '🎯 价值投资的持仓集中度', link: '/docs/value-investing-concentration' },
-                { text: '🔪 做减法·交易极简', link: '/docs/minimalism-trading' },
-                { text: '🎙️ 梁文锋·全文分析', link: '/docs/liang-wenfeng-transcript-analysis' },
-                { text: '🔻 Capitulation信号·底部识别', link: '/docs/market-bottom-signals' },
-                { text: '📦 开源量化项目调研', link: '/docs/opensource-quant-projects' },
-                { text: '🤖 华泰AI涨乐Skills安装指南', link: '/docs/htsc-skills-setup' },
-                { text: '🔧 项目技术栈', link: '/docs/tech-stack' },
-                { text: '🔧 AI金融工具·分工指南', link: '/docs/ai-tools-selection-guide' },
-                { text: '🏪 问财SkillHub技能库', link: '/docs/iwencai-skills' },
-                { text: '🚀 AI工具飞轮加速', link: '/docs/ai-tools-flywheel' },
-                { text: '💰 AI工具·副业变现', link: '/docs/ai-tools-sidehustle' },
-                { text: '🔧 AI金融投资工具调研', link: '/docs/ai-finance-tools' },
-                { text: '📊 申万行业分类', link: '/docs/shenwan-industry-classification' },
-                { text: '📐 投资纪律指标化', link: '/docs/investment-discipline-indicators' },
-                { text: '🌍 资产定价权全景图', link: '/docs/asset-pricing-power' },
-                { text: '🗺️ 投资理论全景图', link: '/docs/investment-theories-map' },
-                { text: '📖 格伦姆·聪明的投资者', link: '/docs/graham-intelligent-investor' },
-                { text: '🌐 博格·指数基金之父', link: '/docs/bogle-index-investing' },
-                { text: '🌦️ 达利欧·全天候组合', link: '/docs/dalio-all-weather' },
-                { text: '🔄 马克斯·周期与第二层思维', link: '/docs/marks-market-cycles' },
-                { text: '📖 范·撒普 核心提炼', link: '/docs/van-tharp-trade-your-way' },
-                { text: '交易纪律', link: '/docs/position-discipline' },
-                { text: '📋 交易执行SOP', link: '/docs/trading-sop-pdca' },
+              
+                {
+                  text: '🧭 投资认知与心法',
+                  collapsed: false,
+                  items: [
+                    { text: '🧱 君子不立危墙之下', link: '/docs/junzi-bu-li-weiqiang' },
+                    { text: '🧘 遇事不慌', link: '/docs/yushi-buhuang' },
+                    { text: '🔄 危机·转机', link: '/docs/weiji-zhuanji' },
+                    { text: '🔪 做减法·交易极简', link: '/docs/minimalism-trading' },
+                    { text: '🔻 Capitulation信号·底部识别', link: '/docs/market-bottom-signals' },
+                    { text: '🚫 为什么盯盘不可取', link: '/docs/why-not-watch-market' },
+                    { text: '💼 上班族交易规划', link: '/docs/office-worker-trading' },
+                    { text: '想赢怕输的心态', link: '/docs/fear-greed' },
+                    { text: '投资心智', link: '/docs/mindset' },
+                    { text: '🫱 团队质疑七层过滤', link: '/docs/team-critical-thinking' },
+                    { text: '🔄 反者道之动·跨文化谱系', link: '/docs/reversal-is-the-movement-of-dao' },
+                  ]
+                },
+              
+                {
+                  text: '⚖️ 交易纪律与执行',
+                  collapsed: false,
+                  items: [
+                    { text: '交易纪律', link: '/docs/position-discipline' },
+                    { text: '📋 交易执行SOP', link: '/docs/trading-sop-pdca' },
+                    { text: '📐 投资纪律指标化', link: '/docs/investment-discipline-indicators' },
+                    { text: 'MA5 偏离度 · 持仓纪律', link: '/docs/ma5-deviation-discipline' },
+                    { text: '📉 均值回归 · 选股纪律', link: '/docs/mean-reversion-discipline' },
+                    { text: '股票评估框架', link: '/docs/stock-evaluation' },
+                    { text: '🔄 每日复盘SOP', link: '/docs/daily-review-sop' },
+                    { text: '🤖 每日复盘Skill', link: '/docs/knowingdoing-review-skill' },
+                    { text: '📱 手机端速查清单', link: '/docs/mobile-checklist' },
+                    { text: '📖 外部交易规则参考', link: '/docs/trading-rules-external' },
+                    { text: 'A股做T操作指南', link: '/docs/t-trading' },
+                    { text: '宽基ETF做T策略', link: '/docs/index-etf-trading' },
+                    { text: '海鸥期权策略', link: '/docs/seagull-strategy' },
+                  ]
+                },
+              
                 {
                   text: '🧰 策略与方法',
                   collapsed: false,
@@ -397,95 +409,182 @@ export default defineConfig({
                     { text: '📐 交易决策矩阵·速查卡', link: '/docs/trading-decision-matrix' },
                   ]
                 },
-                { text: '🔄 每日复盘SOP', link: '/docs/daily-review-sop' },
-                { text: '🤖 每日复盘Skill', link: '/docs/knowingdoing-review-skill' },
-                { text: '📱 手机端速查清单', link: '/docs/mobile-checklist' },
-                { text: '📖 外部交易规则参考', link: '/docs/trading-rules-external' },
-                { text: 'MA5 偏离度 · 持仓纪律', link: '/docs/ma5-deviation-discipline' },
-                { text: '📉 均值回归 · 选股纪律', link: '/docs/mean-reversion-discipline' },
-                { text: '股票评估框架', link: '/docs/stock-evaluation' },
-                { text: '🚫 为什么盯盘不可取', link: '/docs/why-not-watch-market' },
-                { text: '💼 上班族交易规划', link: '/docs/office-worker-trading' },
-                { text: 'A股做T操作指南', link: '/docs/t-trading' },
-                { text: '宽基ETF做T策略', link: '/docs/index-etf-trading' },
-                { text: '📋 三账户ETF观察清单 07-06', link: '/docs/etf-watchlist-2026-07-06' },
-                { text: '🔭 自选股观察清单 07-22', link: '/docs/etf-watchlist-2026-07-22' },
-                { text: '🎯 HALO观察池·对标美股', link: '/docs/watchlist-halo' },
-                { text: '📜 债券ETF投资入门', link: '/docs/bond-investment-basics' },
-                { text: '🏛️ 中国首席经济学家论坛', link: '/docs/chief-economist-forum' },
-                { text: '🏦 基金公司与基金经理观察清单', link: '/docs/fund-managers-watchlist' },
-                { text: '🎯 曹名长·深度价值投资框架', link: '/docs/cao-mingchang-value-investing' },
-                { text: '🛡️ 防御型ETF买入优先级', link: '/docs/defensive-etf-buy-guide' },
-                { text: '🔄 反者道之动·跨文化谱系', link: '/docs/reversal-is-the-movement-of-dao' },
-                { text: '盈利分红型行业', link: '/docs/profitable-industries' },
-                { text: '十五五投资方向', link: '/docs/fifteen-five-investment' },
-                { text: '🇺🇸对标美股·十五五ETF', link: '/docs/fifteen-five-us-benchmark' },
-                { text: '海鸥期权策略', link: '/docs/seagull-strategy' },
-                { text: '巴菲特1998演讲', link: '/docs/buffett-1998' },
-                { text: '想赢怕输的心态', link: '/docs/fear-greed' },
-                { text: '投资心智', link: '/docs/mindset' },
-                { text: '🧠 自我认知框架', link: '/docs/self-awareness' },
-                { text: '🧠 NLP 逻辑层次 · 迪尔茨', link: '/docs/nlp-dilts-logical-levels' },
-                { text: '🧠 卡尼曼 思考快与慢', link: '/docs/kahneman-thinking-fast-slow' },
-                { text: '📖 《掌控习惯》精炼', link: '/docs/atomic-habits' },
-                { text: '🫱 团队质疑七层过滤', link: '/docs/team-critical-thinking' },
-                { text: '📚 完善操作系统的推荐书单', link: '/docs/reading-list-recommendations' },
-                { text: '📚 阅读书单 v2 · 用「可繁殖性」重筛', link: '/docs/reading-list-v2' },
-                { text: '✍️ 人生散文阅读指南 · 为人之道', link: '/docs/essay-reading-guide' },
-                { text: 'A股行情分析', link: '/docs/a-share-2026-05-26' },
-                { text: '🔄 美股-A股 AI全产业链对标', link: '/docs/us-china-ai-hardware-mapping' },
-                { text: '股票工具与渠道', link: '/docs/stock-tools' }
-              ]
+              
+                {
+                  text: '📜 投资理论与大师',
+                  collapsed: false,
+                  items: [
+                    { text: '🌍 资产定价权全景图', link: '/docs/asset-pricing-power' },
+                    { text: '🗺️ 投资理论全景图', link: '/docs/investment-theories-map' },
+                    { text: '📖 格伦姆·聪明的投资者', link: '/docs/graham-intelligent-investor' },
+                    { text: '🌐 博格·指数基金之父', link: '/docs/bogle-index-investing' },
+                    { text: '🌦️ 达利欧·全天候组合', link: '/docs/dalio-all-weather' },
+                    { text: '🔄 马克斯·周期与第二层思维', link: '/docs/marks-market-cycles' },
+                    { text: '📖 范·撒普 核心提炼', link: '/docs/van-tharp-trade-your-way' },
+                    { text: '🎯 曹名长·深度价值投资框架', link: '/docs/cao-mingchang-value-investing' },
+                    { text: '🎯 价值投资的持仓集中度', link: '/docs/value-investing-concentration' },
+                    { text: '巴菲特1998演讲', link: '/docs/buffett-1998' },
+                    { text: '🏛️ 中国首席经济学家论坛', link: '/docs/chief-economist-forum' },
+                  ]
+                },
+              
+                {
+                  text: '🔭 观察清单与宏观方向',
+                  collapsed: false,
+                  items: [
+                    { text: '📊 申万行业分类', link: '/docs/shenwan-industry-classification' },
+                    { text: '📋 三账户ETF观察清单 07-06', link: '/docs/etf-watchlist-2026-07-06' },
+                    { text: '🔭 自选股观察清单 07-22', link: '/docs/etf-watchlist-2026-07-22' },
+                    { text: '🎯 HALO观察池·对标美股', link: '/docs/watchlist-halo' },
+                    { text: '🏦 基金公司与基金经理观察清单', link: '/docs/fund-managers-watchlist' },
+                    { text: '🛡️ 防御型ETF买入优先级', link: '/docs/defensive-etf-buy-guide' },
+                    { text: '📜 债券ETF投资入门', link: '/docs/bond-investment-basics' },
+                    { text: '盈利分红型行业', link: '/docs/profitable-industries' },
+                    { text: '十五五投资方向', link: '/docs/fifteen-five-investment' },
+                    { text: '🇺🇸对标美股·十五五ETF', link: '/docs/fifteen-five-us-benchmark' },
+                    { text: 'A股行情分析', link: '/docs/a-share-2026-05-26' },
+                    { text: '🔄 美股-A股 AI全产业链对标', link: '/docs/us-china-ai-hardware-mapping' },
+                    { text: '🔴 FOMC决策全景', link: '/docs/fomc-schedule' },
+                    { text: '股票工具与渠道', link: '/docs/stock-tools' },
+                  ]
+                },
+              
+                {
+                  text: '🤖 AI 工具与量化',
+                  collapsed: false,
+                  items: [
+                    { text: '🤖 华泰AI涨乐Skills安装指南', link: '/docs/htsc-skills-setup' },
+                    { text: '🏪 问财SkillHub技能库', link: '/docs/iwencai-skills' },
+                    { text: '🔧 AI金融工具·分工指南', link: '/docs/ai-tools-selection-guide' },
+                    { text: '🔧 AI金融投资工具调研', link: '/docs/ai-finance-tools' },
+                    { text: '🚀 AI工具飞轮加速', link: '/docs/ai-tools-flywheel' },
+                    { text: '💰 AI工具·副业变现', link: '/docs/ai-tools-sidehustle' },
+                    { text: '📦 开源量化项目调研', link: '/docs/opensource-quant-projects' },
+                    { text: '🔧 项目技术栈', link: '/docs/tech-stack' },
+                    { text: '🎙️ 梁文锋·全文分析', link: '/docs/liang-wenfeng-transcript-analysis' },
+                  ]
+                },
+              
+                {
+                  text: '📚 书单与思维工具',
+                  collapsed: false,
+                  items: [
+                    { text: '📚 完善操作系统的推荐书单', link: '/docs/reading-list-recommendations' },
+                    { text: '📚 阅读书单 v2 · 用「可繁殖性」重筛', link: '/docs/reading-list-v2' },
+                    { text: '✍️ 人生散文阅读指南 · 为人之道', link: '/docs/essay-reading-guide' },
+                    { text: '📖 《掌控习惯》精炼', link: '/docs/atomic-habits' },
+                    { text: '🧠 自我认知框架', link: '/docs/self-awareness' },
+                    { text: '🧠 NLP 逻辑层次 · 迪尔茨', link: '/docs/nlp-dilts-logical-levels' },
+                    { text: '🧠 卡尼曼 思考快与慢', link: '/docs/kahneman-thinking-fast-slow' },
+                  ]
+                },
+            ]
             },
             {
               text: '🧠 认知体系',
               collapsed: true,
               items: [
-                { text: '个人操作系统', link: '/docs/personal-os' },
-                { text: '🧠 40个经典思维模型', link: '/docs/mental-models-40' },
-                { text: '🧬 仿生学习系统', link: '/docs/digestion-learning-system' },
-                { text: '🔡 维特根斯坦·语言澄清', link: '/docs/wittgenstein-language-clarity' },
-                { text: '矛盾论', link: '/docs/contradiction' },
-                { text: '实践论', link: '/docs/practice-theory' },
-                { text: '三大法宝', link: '/docs/three-weapons' },
-                { text: '🏛️ 斯多葛主义', link: '/docs/stoicism' },
-                { text: '🪣 第欧根尼·犬儒学派', link: '/docs/diogenes-cynicism' },
-                { text: '🧹 断舍离·极简生活', link: '/docs/minimalism-declutter' },
-                { text: '🌿 万氏养生四要', link: '/docs/yangsheng-siyao' },
-                { text: '☯️ 周易四大核心语录', link: '/docs/yijing-four-quotes' },
-                { text: '🦁 荀子·天人相分化性起伪', link: '/docs/xunzi-philosophy' },
-                { text: '⚖️ 韩非·李斯·法家双峰', link: '/docs/hanfei-lisi-legalism' },
-                { text: '🏛️ 先秦诸子百家·思想全景', link: '/docs/hundred-schools-of-thought' },
-                { text: '☯️ 易传名句全集', link: '/docs/yijing-famous-quotes' },
-                { text: '📜 古文诸子百家引用分析', link: '/docs/古文诸子百家引用分析' },
-                { text: '📖 史铁生·轮椅上的人生哲学', link: '/docs/shi-tiesheng-philosophy' },
-                { text: '🌅 濒死体验·五福·赵越善终', link: '/docs/near-death-experience-wufu' },
-                { text: '📜 《资治通鉴》·人生主线', link: '/docs/zizhi-tongjian-life-mainline' },
-                { text: '📜 海瑞《治安疏》全文', link: '/docs/hairui-zhi-an-shu' },
-                { text: '📚 古文经典排名', link: '/docs/classics-ranking' },
-                { text: '🗺️ 人生维度框架', link: '/docs/life-framework' },
-                { text: '📜 做人做事原则', link: '/docs/life-principles' },
-                { text: '📺 《天道》《大染坊》之道', link: '/docs/tv-wisdom-tiandao-daranfang' },
-                { text: '📺 《大明王朝》《士兵突击》', link: '/docs/tv-daming-soldiers-sortie' },
-                { text: '📺 《我的团长我的团》', link: '/docs/tv-my-chief-my-regiment' },
-                { text: '🧗 《徒手攀岩》', link: '/docs/free-solo' },
-                { text: '🎬 《人生七年》', link: '/docs/7-up-series' },
-                { text: '🎨 审美·纯粹地活着', link: '/docs/aesthetics' },
-                { text: '🔫 枪炮病菌与钢铁', link: '/docs/guns-germs-steel' },
-                { text: '🎯 加文·贝克投资大师课', link: '/docs/gavin-baker-investment' },
-                { text: '保持好心态', link: '/docs/peace-of-mind' },
-                { text: '预期与现实的差距', link: '/docs/expectation-gap' },
-                { text: '🎯 幸存者偏差', link: '/docs/survivorship-bias' },
-                { text: '🤖 AI编程模型收费对比 2026', link: '/docs/ai-coding-models-2026' },
-                { text: '🔀 AI聚合平台性价比', link: '/docs/ai-model-aggregators-2026' },
-                { text: '🏦 美国AI投入ROI分析', link: '/docs/us-ai-capex-roi-analysis' },
-                { text: '⚔️ 中美AI研发成本对比', link: '/docs/us-ai-monopoly-analysis' },
-                { text: '🔒 Claude Fable 5 + 禁令分析', link: '/docs/claude-fable-5-analysis' },
-                { text: '🫘 豆包专业版价值评估', link: '/docs/doubao-pro-evaluation' },
-                { text: 'AI工具全景分析', link: '/docs/ai-tools-analysis' },
-                { text: '🚀 前端输出加速', link: '/docs/frontend-output-acceleration' },
-                { text: '个人开发者深耕方向', link: '/docs/solo-dev-strategy' }
-              ]
+              
+                {
+                  text: '🧠 思维模型与学习',
+                  collapsed: false,
+                  items: [
+                    { text: '个人操作系统', link: '/docs/personal-os' },
+                    { text: '🧠 40个经典思维模型', link: '/docs/mental-models-40' },
+                    { text: '🧬 仿生学习系统', link: '/docs/digestion-learning-system' },
+                    { text: '🔡 维特根斯坦·语言澄清', link: '/docs/wittgenstein-language-clarity' },
+                  ]
+                },
+              
+                {
+                  text: '🔨 方法论与辩证',
+                  collapsed: false,
+                  items: [
+                    { text: '矛盾论', link: '/docs/contradiction' },
+                    { text: '实践论', link: '/docs/practice-theory' },
+                    { text: '三大法宝', link: '/docs/three-weapons' },
+                  ]
+                },
+              
+                {
+                  text: '📜 中国古典哲学',
+                  collapsed: false,
+                  items: [
+                    { text: '☯️ 周易四大核心语录', link: '/docs/yijing-four-quotes' },
+                    { text: '☯️ 易传名句全集', link: '/docs/yijing-famous-quotes' },
+                    { text: '🦁 荀子·天人相分化性起伪', link: '/docs/xunzi-philosophy' },
+                    { text: '⚖️ 韩非·李斯·法家双峰', link: '/docs/hanfei-lisi-legalism' },
+                    { text: '🏛️ 先秦诸子百家·思想全景', link: '/docs/hundred-schools-of-thought' },
+                    { text: '📜 古文诸子百家引用分析', link: '/docs/古文诸子百家引用分析' },
+                  ]
+                },
+              
+                {
+                  text: '🌿 生活哲学与极简',
+                  collapsed: false,
+                  items: [
+                    { text: '🏛️ 斯多葛主义', link: '/docs/stoicism' },
+                    { text: '🪣 第欧根尼·犬儒学派', link: '/docs/diogenes-cynicism' },
+                    { text: '🧹 断舍离·极简生活', link: '/docs/minimalism-declutter' },
+                    { text: '🌿 万氏养生四要', link: '/docs/yangsheng-siyao' },
+                  ]
+                },
+              
+                {
+                  text: '📖 古文与人生',
+                  collapsed: false,
+                  items: [
+                    { text: '📖 史铁生·轮椅上的人生哲学', link: '/docs/shi-tiesheng-philosophy' },
+                    { text: '🌅 濒死体验·五福·赵越善终', link: '/docs/near-death-experience-wufu' },
+                    { text: '📜 《资治通鉴》·人生主线', link: '/docs/zizhi-tongjian-life-mainline' },
+                    { text: '📜 海瑞《治安疏》全文', link: '/docs/hairui-zhi-an-shu' },
+                    { text: '📚 古文经典排名', link: '/docs/classics-ranking' },
+                    { text: '🗺️ 人生维度框架', link: '/docs/life-framework' },
+                    { text: '📜 做人做事原则', link: '/docs/life-principles' },
+                  ]
+                },
+              
+                {
+                  text: '🎬 影视与人文',
+                  collapsed: false,
+                  items: [
+                    { text: '📺 《天道》《大染坊》之道', link: '/docs/tv-wisdom-tiandao-daranfang' },
+                    { text: '📺 《大明王朝》《士兵突击》', link: '/docs/tv-daming-soldiers-sortie' },
+                    { text: '📺 《我的团长我的团》', link: '/docs/tv-my-chief-my-regiment' },
+                    { text: '🧗 《徒手攀岩》', link: '/docs/free-solo' },
+                    { text: '🎬 《人生七年》', link: '/docs/7-up-series' },
+                    { text: '🎨 审美·纯粹地活着', link: '/docs/aesthetics' },
+                    { text: '🔫 枪炮病菌与钢铁', link: '/docs/guns-germs-steel' },
+                  ]
+                },
+              
+                {
+                  text: '🎯 心态与认知偏差',
+                  collapsed: false,
+                  items: [
+                    { text: '保持好心态', link: '/docs/peace-of-mind' },
+                    { text: '预期与现实的差距', link: '/docs/expectation-gap' },
+                    { text: '🎯 幸存者偏差', link: '/docs/survivorship-bias' },
+                    { text: '🎯 加文·贝克投资大师课', link: '/docs/gavin-baker-investment' },
+                  ]
+                },
+              
+                {
+                  text: '🤖 AI 与个人发展',
+                  collapsed: false,
+                  items: [
+                    { text: '🤖 AI编程模型收费对比 2026', link: '/docs/ai-coding-models-2026' },
+                    { text: '🔀 AI聚合平台性价比', link: '/docs/ai-model-aggregators-2026' },
+                    { text: '🏦 美国AI投入ROI分析', link: '/docs/us-ai-capex-roi-analysis' },
+                    { text: '⚔️ 中美AI研发成本对比', link: '/docs/us-ai-monopoly-analysis' },
+                    { text: '🔒 Claude Fable 5 + 禁令分析', link: '/docs/claude-fable-5-analysis' },
+                    { text: '🫘 豆包专业版价值评估', link: '/docs/doubao-pro-evaluation' },
+                    { text: 'AI工具全景分析', link: '/docs/ai-tools-analysis' },
+                    { text: '🚀 前端输出加速', link: '/docs/frontend-output-acceleration' },
+                    { text: '个人开发者深耕方向', link: '/docs/solo-dev-strategy' },
+                  ]
+                },
+            ]
             },
             {
               text: '🤖 AI 工程',
