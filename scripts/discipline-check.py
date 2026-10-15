@@ -220,19 +220,26 @@ def print_report(index_data, stock_data, history, pf, gold_intl, turnover_yi):
         else:
             print(f"  成交额情绪:    {wrn('— (未获取到成交额)')}")
 
-    # 三日振幅（名单动态取自 portfolio.json 的「试错 / 个股」类持仓，不再硬编码）
+    # 三日振幅（名单动态取自 portfolio.json；覆盖 试错/个股/配置，不设数量上限）
+    # 未打印的会列在「待积累」行，避免"为什么某某没出现"的困惑
     has_amp = False
     if pf:
-        amp_names = [h["name"] for h in pf.get("holdings", []) if h.get("type") in ("试错", "个股")][:5]
+        amp_names = [h["name"] for h in pf.get("holdings", [])
+                     if h.get("type") in ("试错", "个股", "配置")]
     else:
         amp_names = []
+    pending = []
     for name in amp_names:
         amp = calc_amplitude_3d(history, name)
         if amp is not None:
             has_amp = True
             s = bad(f"{amp}% 🔴 禁止") if amp > 15 else (wrn(f"{amp}% 🟡 谨慎") if amp > 8 else ok(f"{amp}% 🟢"))
             print(f"  三日振幅({name}): {s}  (阈值 < 8% / > 15% 红灯)")
-    if not has_amp:
+        else:
+            pending.append(name)
+    if pending:
+        print(f"  三日振幅:      {wrn('待积累 — ' + str(len(pending)) + ' 项不足 3 天历史：' + '、'.join(pending))}")
+    if not has_amp and not pending:
         print(f"  三日振幅:      {wrn('— (历史数据不足 3 天)')}")
 
     print(f"  追涨惩罚率:    {wrn('— (需涨停股列表)')}")

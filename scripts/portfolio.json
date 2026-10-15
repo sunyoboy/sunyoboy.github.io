@@ -11,7 +11,7 @@
     {"name": "北方稀土", "code": "sh600111", "shares": 600, "sector": "有色资源", "type": "个股", "cost": 37.575, "stop_loss": -5},
     {"name": "西部材料", "code": "sz002149", "shares": 300, "sector": "有色资源", "type": "个股", "cost": 30.679, "stop_loss": -5},
     {"name": "中钨高新", "code": "sz000657", "shares": 100, "sector": "有色资源", "type": "个股", "cost": 48.535, "stop_loss": -5},
-    {"name": "有色金属ETF", "code": "sh512400", "shares": 2100, "sector": "有色资源", "type": "试错", "cost": 1.039, "stop_loss": -5},
+    {"name": "有色ETF", "code": "sh512400", "shares": 2100, "sector": "有色资源", "type": "试错", "cost": 1.039, "stop_loss": -5},
     {"name": "三花智控", "code": "sz002050", "shares": 300, "sector": "机器人汽零", "type": "个股", "cost": 33.823, "stop_loss": -5},
     {"name": "立讯精密", "code": "sz002475", "shares": 100, "sector": "消费电子", "type": "个股", "cost": 52.167, "stop_loss": -5},
     {"name": "创新药", "code": "sz159992", "shares": 2000, "sector": "医药", "type": "试错", "cost": 0.833, "stop_loss": -5},
