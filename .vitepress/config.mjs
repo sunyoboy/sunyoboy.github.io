@@ -388,6 +388,8 @@ export default defineConfig({
                 { text: '📊 交易策略全景·场景判断标准', link: '/docs/trading-strategy-playbook' },
                 { text: '🎯 当下操作建议·按优先级', link: '/docs/action-priority' },
                 { text: '🧰 交易策略库·按优先级排序', link: '/docs/strategy-priority' },
+                { text: '🔬 科学策略构建框架（6模块闭环）', link: '/docs/strategy-construction-framework' },
+                { text: '📈 20日均线趋势策略·定稿', link: '/docs/strategy-20ma-trend' },
                 { text: '🔄 每日复盘SOP', link: '/docs/daily-review-sop' },
                 { text: '🤖 每日复盘Skill', link: '/docs/knowingdoing-review-skill' },
                 { text: '📱 手机端速查清单', link: '/docs/mobile-checklist' },
