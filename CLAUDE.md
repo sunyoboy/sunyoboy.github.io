@@ -624,6 +624,7 @@ source ~/.zshrc && echo $HT_APIKEY         # 华泰 API Key ✓
 | 脚本/Skill | 用途 | 频率 |
 |------|------|:--:|
 | `/knowingdoing-review` | 🆕 **每日复盘 Skill** · 自动拉数据+查纪律+给建议 | 每日收盘后 |
+| `python3 scripts/generate-review.py` | 🆕 **一键复盘生成器**：抓数据+纪律诊断+AI 生成复盘 Markdown（无 Key 则出草稿+提示词） | 每日收盘后 |
 | `python3 scripts/fetch-market-data.py` | 抓取 7 大指数 + 6 个标的行情，生成当日复盘 Markdown 模板 | 每日收盘后 |
 | `python3 scripts/fetch-market-data.py 2026-06-17` | 指定日期抓取（补写历史复盘用） | 按需 |
 | `python3 scripts/ma5-deviation.py` | 持仓标的 MA5 偏离度全景诊断（三维指标 + 操作建议） | 每日收盘后 |
