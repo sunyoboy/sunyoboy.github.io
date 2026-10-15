@@ -355,6 +355,14 @@ def composite_action(ind, name):
     if d is not None and d < -5 and below >= 3 and cross == "死叉 ▼":
         return ("🟡 反弹减仓", f"连跌 {below} 日偏离 {d}%，反弹至 MA5 附近减 1/2", False)
 
+    # 条件：负偏离 -2%~-5% + 连跌 1-2 日 + 偏离扩大 + 死叉 + 中期空头
+    #       → 文档矩阵「-2%~-5%」档第 1 行：反弹至 MA5 减 1/4
+    if (d is not None and -5 <= d <= -2 and 1 <= below <= 2
+            and "扩大" in trend and cross == "死叉 ▼" and trend_bg == "中期空头"):
+        return ("🟡 反弹减仓 1/4",
+                f"连跌 {below} 日 · 偏离 {d:+.2f}% 仍在扩大 · 死叉+中期空头，反弹至 MA5 附近减 1/4",
+                False)
+
     # ── 持有观察 ──────────────────────────────────
     # 条件：贴合均线 + 金叉
     if d is not None and abs(d) < 2 and cross == "金叉 ▲":
