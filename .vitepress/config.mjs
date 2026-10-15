@@ -1,14 +1,5 @@
 import { defineConfig } from 'vitepress'
 
-// ── 「产品」模块：仅本地 dev 注册入口 ──────────────────────────────
-// 原因：products/ 4 个页面仍在编写中，且文件尚未纳入版本管理 →
-//   若在生产构建注册菜单，线上点击即 404（2026-10-15 实测 4 个 URL 全 404）。
-// 本地方便验证：
-//   npm run dev  →  http://localhost:5173/products/
-//   （4 页均可直接访问：/products/ · global-markets · review-generator · site-stack）
-// 上线条件：products/*.md 纳入版本管理 + catalog.md 登记后，删除本开关即可。
-const IS_DEV = process.argv.includes('dev')
-
 export default defineConfig({
   title: 'Knowing & Doing',
   description: '知行合一',
@@ -22,7 +13,7 @@ export default defineConfig({
       { text: '首页', link: '/' },
       { text: '复盘', link: '/review/2026/2026' },
       { text: '知识库', link: '/docs/' },
-      ...(IS_DEV ? [{ text: '产品（本地）', link: '/products/' }] : []),
+      { text: '产品', link: '/products/' },
       { text: '个人成长', link: '/growth/2026-年度OKR' },
       { text: '问题清单', link: '/questions/index' },
       { text: 'Index', link: '/catalog' }
@@ -225,21 +216,18 @@ export default defineConfig({
           ]
         }
       ],
-      // 「产品」侧边栏同样仅本地 dev 注册（生产构建隐藏，因页面文件未纳入版本管理）
-      ...(IS_DEV ? {
-        '/products/': [
-          {
-            text: '产品展示（本地开发中）',
-            collapsed: false,
-            items: [
-              { text: '🧰 产品总览', link: '/products/' },
-              { text: '📈 全球股市行情平台', link: '/products/global-markets' },
-              { text: '🤖 一键复盘生成器', link: '/products/review-generator' },
-              { text: '🏗️ 站点技术底座', link: '/products/site-stack' },
-            ]
-          }
-        ],
-      } : {}),
+      '/products/': [
+        {
+          text: '产品展示',
+          collapsed: false,
+          items: [
+            { text: '🧰 产品总览', link: '/products/' },
+            { text: '📈 全球股市行情平台', link: '/products/global-markets' },
+            { text: '🤖 一键复盘生成器', link: '/products/review-generator' },
+            { text: '🏗️ 站点技术底座', link: '/products/site-stack' },
+          ]
+        }
+      ],
       '/portfolio/': [
         {
           text: '持仓存档',
