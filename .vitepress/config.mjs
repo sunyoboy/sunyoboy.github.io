@@ -216,6 +216,18 @@ export default defineConfig({
           ]
         }
       ],
+      '/products/': [
+        {
+          text: '产品展示',
+          collapsed: false,
+          items: [
+            { text: '🧰 产品总览', link: '/products/' },
+            { text: '📈 全球股市行情平台', link: '/products/global-markets' },
+            { text: '🤖 一键复盘生成器', link: '/products/review-generator' },
+            { text: '🏗️ 站点技术底座', link: '/products/site-stack' }
+          ]
+        }
+      ],
       '/portfolio/': [
         {
           text: '持仓存档',
@@ -424,6 +436,7 @@ export default defineConfig({
                     { text: '📖 范·撒普 核心提炼', link: '/docs/van-tharp-trade-your-way' },
                     { text: '🎯 曹名长·深度价值投资框架', link: '/docs/cao-mingchang-value-investing' },
                     { text: '🎯 价值投资的持仓集中度', link: '/docs/value-investing-concentration' },
+                    { text: '🎯 加文·贝克投资大师课', link: '/docs/gavin-baker-investment' },
                     { text: '巴菲特1998演讲', link: '/docs/buffett-1998' },
                     { text: '🏛️ 中国首席经济学家论坛', link: '/docs/chief-economist-forum' },
                   ]
@@ -566,7 +579,6 @@ export default defineConfig({
                     { text: '保持好心态', link: '/docs/peace-of-mind' },
                     { text: '预期与现实的差距', link: '/docs/expectation-gap' },
                     { text: '🎯 幸存者偏差', link: '/docs/survivorship-bias' },
-                    { text: '🎯 加文·贝克投资大师课', link: '/docs/gavin-baker-investment' },
                   ]
                 },
               
