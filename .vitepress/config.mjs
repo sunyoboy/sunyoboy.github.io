@@ -13,6 +13,7 @@ export default defineConfig({
       { text: '首页', link: '/' },
       { text: '复盘', link: '/review/2026/2026' },
       { text: '知识库', link: '/docs/' },
+      { text: '产品', link: '/products/' },
       { text: '个人成长', link: '/growth/2026-年度OKR' },
       { text: '问题清单', link: '/questions/index' },
       { text: 'Index', link: '/catalog' }
@@ -466,16 +467,13 @@ export default defineConfig({
                 },
               
                 {
-                  text: '📚 书单与思维工具',
+                  text: '📚 书单与阅读',
                   collapsed: false,
                   items: [
                     { text: '📚 完善操作系统的推荐书单', link: '/docs/reading-list-recommendations' },
                     { text: '📚 阅读书单 v2 · 用「可繁殖性」重筛', link: '/docs/reading-list-v2' },
                     { text: '✍️ 人生散文阅读指南 · 为人之道', link: '/docs/essay-reading-guide' },
                     { text: '📖 《掌控习惯》精炼', link: '/docs/atomic-habits' },
-                    { text: '🧠 自我认知框架', link: '/docs/self-awareness' },
-                    { text: '🧠 NLP 逻辑层次 · 迪尔茨', link: '/docs/nlp-dilts-logical-levels' },
-                    { text: '🧠 卡尼曼 思考快与慢', link: '/docs/kahneman-thinking-fast-slow' },
                   ]
                 },
             ]
@@ -493,6 +491,9 @@ export default defineConfig({
                     { text: '🧠 40个经典思维模型', link: '/docs/mental-models-40' },
                     { text: '🧬 仿生学习系统', link: '/docs/digestion-learning-system' },
                     { text: '🔡 维特根斯坦·语言澄清', link: '/docs/wittgenstein-language-clarity' },
+                    { text: '🧠 自我认知框架', link: '/docs/self-awareness' },
+                    { text: '🧠 NLP 逻辑层次 · 迪尔茨', link: '/docs/nlp-dilts-logical-levels' },
+                    { text: '🧠 卡尼曼 思考快与慢', link: '/docs/kahneman-thinking-fast-slow' },
                   ]
                 },
               
