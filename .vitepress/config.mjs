@@ -34,6 +34,13 @@ export default defineConfig({
                   items: [
                     { text: '10-08 · 节后首日·冲高回落·高低切换·科技杀估值·炸板率43.59%', link: '/review/2026/10/2026-10-08' },
                   ]
+                },
+                {
+                  text: '📂 专题报告',
+                  collapsed: false,
+                  items: [
+                    { text: '10-14 · 策略与账户诊断（外部报告整理 + 实盘校正）', link: '/review/2026/10/2026-10-14-策略与账户诊断' },
+                  ]
                 }
               ]
             },
@@ -195,6 +202,13 @@ export default defineConfig({
           collapsed: false,
           items: [
             {
+              text: '📂 2026年10月',
+              collapsed: false,
+              items: [
+                { text: '10-14 · 三账户持仓快照（现金 23.3% 红灯·8 项破止损线）', link: '/portfolio/2026/10/2026-10-14' },
+              ]
+            },
+            {
               text: '📂 2026年9月',
               collapsed: false,
               items: [
@@ -349,6 +363,7 @@ export default defineConfig({
                 { text: '交易纪律', link: '/docs/position-discipline' },
                 { text: '📋 交易执行SOP', link: '/docs/trading-sop-pdca' },
                 { text: '📐 交易决策矩阵·速查卡', link: '/docs/trading-decision-matrix' },
+                { text: '📊 交易策略全景·场景判断标准', link: '/docs/trading-strategy-playbook' },
                 { text: '🔄 每日复盘SOP', link: '/docs/daily-review-sop' },
                 { text: '🤖 每日复盘Skill', link: '/docs/knowingdoing-review-skill' },
                 { text: '📱 手机端速查清单', link: '/docs/mobile-checklist' },
