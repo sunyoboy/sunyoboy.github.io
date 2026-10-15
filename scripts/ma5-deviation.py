@@ -16,16 +16,28 @@
 import urllib.request
 import json
 
-# ── 当前持仓标的 ──────────────────────────────────────────
-HOLDINGS = {
+# ── 当前持仓标的（从 scripts/portfolio.json 动态读取，避免与实盘脱节）──
+def load_holdings():
+    """从 portfolio.json 读持仓，返回 {代码: 名称}；读不到则返回空（下方有兜底）"""
+    import os
+    p = os.path.join(os.path.dirname(os.path.abspath(__file__)), "portfolio.json")
+    try:
+        with open(p, encoding="utf-8") as f:
+            return {h["code"]: h["name"] for h in json.load(f).get("holdings", []) if h.get("code")}
+    except Exception as e:
+        print(f"⚠️ 读取 portfolio.json 失败（{e}），回退到内置池")
+        return {}
+
+HOLDINGS = load_holdings() or {
+    # 兜底：portfolio.json 不可用时使用
+    "sh510300": "沪深300ETF",
     "sh510500": "中证500ETF",
-    "sh518800": "黄金基金",
-    "sz002230": "科大讯飞",
-    "sz002532": "天山铝业",
-    "sh601899": "紫金矿业",
+    "sz159915": "创业板ETF",
+    "sh588000": "科创50ETF",
+    "sh600111": "北方稀土",
     "sz002149": "西部材料",
     "sh512400": "有色ETF",
-    "sh563230": "卫星ETF",
+    "sh518800": "黄金ETF",
 }
 
 # ── 关键支撑/阻力位（手动维护，与低吸区间一致）────────────
