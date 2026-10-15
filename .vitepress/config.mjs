@@ -32,6 +32,7 @@ export default defineConfig({
                   text: '📂 日复盘',
                   collapsed: false,
                   items: [
+                    { text: '10-15 · 放量破位（1.65万亿+2193亿）· 地量磨底判断被否', link: '/review/2026/10/2026-10-15' },
                     { text: '10-09 · 上证 +0.05%（模板）', link: '/review/2026/10/2026-10-09' },
                     { text: '10-08 · 节后首日·冲高回落·高低切换·科技杀估值·炸板率43.59%', link: '/review/2026/10/2026-10-08' },
                   ]

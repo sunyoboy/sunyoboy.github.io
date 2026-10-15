@@ -41,16 +41,26 @@ INDICES = {
 }
 
 # 重点跟踪标的（ETF/个股，同一 API 接口）
-WATCHLIST = {
-    "sh588000": "科创50ETF",
-    "sh510500": "中证500ETF",
-    "sh518800": "黄金ETF",
-    "sz002230": "科大讯飞",
-    "sz002532": "天山铝业",
-    "sh601899": "紫金矿业",
-    "sz002149": "西部材料",
-    "sh512400": "有色ETF",
-}
+# ⚠️ 动态取自 portfolio.json 的当前持仓 —— 硬编码的旧名单会继续抓取已清仓标的
+#    （科大讯飞/天山铝业/紫金矿业曾长期占位，并写进自动生成的复盘草稿）。
+#    若需额外盯非持仓标的，在 EXTRA_WATCH 里补 {code: name}。
+EXTRA_WATCH = {}
+
+def build_watchlist():
+    import json as _json, os as _os
+    wl = {}
+    p = _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "portfolio.json")
+    try:
+        with open(p, encoding="utf-8") as f:
+            for h in _json.load(f).get("holdings", []):
+                if h.get("name") and h.get("code"):
+                    wl[h["code"]] = h["name"]
+    except Exception as e:
+        print(f"⚠️ 读取 portfolio.json 失败（{e}），重点标的将为空")
+    wl.update(EXTRA_WATCH)
+    return wl
+
+WATCHLIST = build_watchlist()
 
 DISPLAY_ORDER = ["上证指数", "深证成指", "创业板指", "科创50", "上证50", "沪深300", "中证500"]
 
