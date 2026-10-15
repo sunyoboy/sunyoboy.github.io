@@ -41,6 +41,7 @@ export default defineConfig({
                   collapsed: false,
                   items: [
                     { text: '10-14 · 策略与账户诊断（外部报告整理 + 实盘校正）', link: '/review/2026/10/2026-10-14-策略与账户诊断' },
+                    { text: '10-14 · 三季报预告首批 101 家（四档榜 + 持仓对照）', link: '/review/2026/10/2026-10-14-三季报预告首批' },
                   ]
                 }
               ]
