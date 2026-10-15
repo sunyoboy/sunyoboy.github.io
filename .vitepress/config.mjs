@@ -386,6 +386,8 @@ export default defineConfig({
                 { text: '📋 交易执行SOP', link: '/docs/trading-sop-pdca' },
                 { text: '📐 交易决策矩阵·速查卡', link: '/docs/trading-decision-matrix' },
                 { text: '📊 交易策略全景·场景判断标准', link: '/docs/trading-strategy-playbook' },
+                { text: '🎯 当下操作建议·按优先级', link: '/docs/action-priority' },
+                { text: '🧰 交易策略库·按优先级排序', link: '/docs/strategy-priority' },
                 { text: '🔄 每日复盘SOP', link: '/docs/daily-review-sop' },
                 { text: '🤖 每日复盘Skill', link: '/docs/knowingdoing-review-skill' },
                 { text: '📱 手机端速查清单', link: '/docs/mobile-checklist' },
