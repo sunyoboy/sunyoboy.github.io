@@ -71,12 +71,20 @@ TENCENT_INDICES = {
     "sh000001": "上证指数", "sz399001": "深证成指", "sz399006": "创业板指",
     "sh000688": "科创50", "sh000016": "上证50", "sh000300": "沪深300", "sh000905": "中证500",
 }
-WATCHLIST = {
-    "sh510500": "中证500ETF", "sh518800": "黄金ETF",
-    "sz002230": "科大讯飞", "sz002532": "天山铝业",
-    "sh601899": "紫金矿业", "sh512400": "有色ETF",
-    "sz002149": "西部材料",
-}
+# 关注标的（指数之外）——**动态取自 portfolio.json 的当前持仓**，不再硬编码。
+# 硬编码的旧名单会继续抓取并写入已清仓标的的数据（科大讯飞/天山铝业/紫金矿业曾长期占位）。
+# 若想额外盯某些非持仓标的（例如刚清仓的），在下面 EXTRA_WATCH 里补 {code: name}。
+EXTRA_WATCH = {}
+
+def build_watchlist():
+    wl = {}
+    pf = load_portfolio()
+    if pf:
+        for h in pf.get("holdings", []):
+            if h.get("name") and h.get("code"):
+                wl[h["code"]] = h["name"]
+    wl.update(EXTRA_WATCH)
+    return wl
 
 def fetch_tencent(code):
     try:
@@ -115,15 +123,22 @@ def save_history(h):
     h["records"] = h["records"][-120:]
     with open(HISTORY_FILE, "w") as f: json.dump(h, f, ensure_ascii=False, indent=2)
 
-def record_today(h, index_data, stock_data, turnover_yi):
+def record_today(h, index_data, stock_data, turnover_yi, name2code=None):
+    """写入当日快照。
+
+    ⚠️ stocks 以**代码**为主键（如 sh512400），而不是名称 —— 名称可以被改写
+    （券商 App 显示名、API 全称、人工改名），一旦改名，按名称存的历史就会断链。
+    代码是稳定标识。name2code 由 build_name_code_map() 提供；缺失时回退到名称。
+    """
     today = datetime.now().strftime("%Y-%m-%d")
     rec = {"date": today, "indices": {}, "stocks": {}}
     for name, d in index_data.items():
         if d and d.get("price"):
             rec["indices"][name] = {"close": d["price"], "pct": d["pct_chg"]}
+    n2c = name2code or {}
     for name, d in stock_data.items():
         if d and d.get("price"):
-            rec["stocks"][name] = {"close": d["price"], "pct": d["pct_chg"]}
+            rec["stocks"][n2c.get(name, name)] = {"close": d["price"], "pct": d["pct_chg"]}
     if turnover_yi:
         rec["turnover_yi"] = turnover_yi
         rec["turnover_source"] = "sina_realtime"   # 与 review 同尺度（全市场合计）
@@ -154,18 +169,20 @@ def calc_volume_emotion(history):
     today, avg20 = valid[-1], sum(valid[-20:]) / min(len(valid), 20)
     return round(today / avg20, 2), None
 
-def calc_amplitude_3d(history, name):
+def calc_amplitude_3d(history, code):
+    """输入必须是**代码**（如 sh512400），与 record_today 的写入口径一致。"""
     records = history.get("records", [])
     if len(records) < 3: return None
-    prices = [r.get("stocks", {}).get(name, {}).get("close") for r in records[-3:]]
+    prices = [r.get("stocks", {}).get(code, {}).get("close") for r in records[-3:]]
     prices = [p for p in prices if p]
     if len(prices) < 3: return None
     hi, lo = max(prices), min(prices)
     return round((hi - lo) / lo * 100, 1)
 
-def calc_volatility_20d(history, name):
+def calc_volatility_20d(history, code):
+    """输入必须是**代码**，同上。"""
     records = history.get("records", [])
-    prices = [r.get("stocks", {}).get(name, {}).get("close") for r in records[-20:]]
+    prices = [r.get("stocks", {}).get(code, {}).get("close") for r in records[-20:]]
     prices = [p for p in prices if p]
     if len(prices) < 5: return None
     mean = sum(prices) / len(prices)
@@ -176,6 +193,29 @@ def load_portfolio():
     if os.path.exists(PORTFOLIO_FILE):
         with open(PORTFOLIO_FILE) as f: return json.load(f)
     return None
+
+# 已改过名 / 已清仓的标的：名称 → 代码。
+# 历史数据以代码为准，此表只在写入时把"当前名称"翻译成代码；已清仓标的保留映射，
+# 便于回看旧记录时仍能按名称反查。
+NAME_ALIASES = {
+    "黄金基金": "sh518800",      # 早期用名
+    "有色金属ETF": "sh512400",   # 2026-10-14 的临时改名（曾导致 98 天历史断链）
+    "有色ETF": "sh512400",
+    "科大讯飞": "sz002230",      # 以下为已清仓标的，仅保留映射
+    "天山铝业": "sz002532",
+    "紫金矿业": "sh601899",
+    "卫星ETF": "sh563230",
+}
+
+def build_name_code_map():
+    """返回 {名称: 代码}。以 portfolio.json 为主，NAME_ALIASES 兜底。"""
+    m = dict(NAME_ALIASES)
+    pf = load_portfolio()
+    if pf:
+        for h in pf.get("holdings", []):
+            if h.get("name") and h.get("code"):
+                m[h["name"]] = h["code"]
+    return m
 
 # ═══════════════════════════════════════════════════════════
 # 输出
@@ -221,16 +261,16 @@ def print_report(index_data, stock_data, history, pf, gold_intl, turnover_yi):
             print(f"  成交额情绪:    {wrn('— (未获取到成交额)')}")
 
     # 三日振幅（名单动态取自 portfolio.json；覆盖 试错/个股/配置，不设数量上限）
-    # 未打印的会列在「待积累」行，避免"为什么某某没出现"的困惑
+    # 历史按**代码**存，故这里取 (code, name) 对；未打印的会列在「待积累」行
     has_amp = False
     if pf:
-        amp_names = [h["name"] for h in pf.get("holdings", [])
-                     if h.get("type") in ("试错", "个股", "配置")]
+        amp_items = [(h.get("code"), h["name"]) for h in pf.get("holdings", [])
+                     if h.get("type") in ("试错", "个股", "配置") and h.get("code")]
     else:
-        amp_names = []
+        amp_items = []
     pending = []
-    for name in amp_names:
-        amp = calc_amplitude_3d(history, name)
+    for code, name in amp_items:
+        amp = calc_amplitude_3d(history, code)
         if amp is not None:
             has_amp = True
             s = bad(f"{amp}% 🔴 禁止") if amp > 15 else (wrn(f"{amp}% 🟡 谨慎") if amp > 8 else ok(f"{amp}% 🟢"))
@@ -279,7 +319,9 @@ def print_report(index_data, stock_data, history, pf, gold_intl, turnover_yi):
         print(f"  高风险品种（近20日波动率 > 3%）:")
         found = False
         for h in pf.get("holdings", []):
-            vol = calc_volatility_20d(history, h["name"])
+            if not h.get("code"):
+                continue
+            vol = calc_volatility_20d(history, h["code"])
             if vol is not None and vol > 3:
                 print(f"    {bad(h['name'] + ': ' + str(vol) + '% → 仓位减半')}")
                 found = True
@@ -393,9 +435,9 @@ if __name__ == "__main__":
     use_pf = "--portfolio" in sys.argv or "-p" in sys.argv
     json_out = "--json" in sys.argv
 
-    # 腾讯 — 指数+标的价格
+    # 腾讯 — 指数+标的价格（标的池 = portfolio.json 当前持仓）
     index_data = fetch_all_tencent(TENCENT_INDICES)
-    stock_data = fetch_all_tencent(WATCHLIST)
+    stock_data = fetch_all_tencent(build_watchlist())
 
     # 新浪 — 成交额 + 国际金价
     turnover_yi = fetch_sina_market_turnover()
@@ -411,9 +453,9 @@ if __name__ == "__main__":
         if extra:
             stock_data.update(fetch_all_tencent(extra))
 
-    # 历史
+    # 历史（stocks 以代码为主键，见 record_today 说明）
     history = load_history()
-    record_today(history, index_data, stock_data, turnover_yi)
+    record_today(history, index_data, stock_data, turnover_yi, build_name_code_map())
     save_history(history)
 
     if json_out:
