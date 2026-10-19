@@ -23,6 +23,7 @@
 
 import sys
 import os
+import json
 import urllib.request
 from datetime import datetime
 
@@ -82,6 +83,7 @@ def fetch_from_tencent(symbols=None, label="数据"):
                     pct = float(data[32])
                     prev_close = float(data[4]) if len(data) > 4 else None
                     results[name] = {
+                        "code": code,
                         "close": round(price, 2),
                         "pct_chg": round(pct, 2),
                         "prev_close": round(prev_close, 2) if prev_close else None,
@@ -94,6 +96,55 @@ def fetch_from_tencent(symbols=None, label="数据"):
             print(f"  ❌ {name}: {e}")
 
     return results if results else None
+
+
+# ── 低吸区间的相对系数（2026-10-19 改）────────────────────
+# 旧做法是硬编码绝对价格（BUY_ZONES），会随行情漂移而腐烂——那次上证从 3000
+# 走到 3730 后，整张表都和市价脱离了关系，但不会报错，只会静默误导。
+# 现在按指标算，任何点位都成立：
+#     低吸位 = MA20 × LOW_FACTOR
+#     支撑位 = 20 日最低价 × SUPPORT_FACTOR
+LOW_FACTOR = 0.95
+SUPPORT_FACTOR = 0.98
+
+
+def fetch_kline(code, days=30):
+    """腾讯日 K 线（前复权），升序返回 list[dict]。失败返回 None。"""
+    try:
+        url = (f"http://web.ifzq.gtimg.cn/appstock/app/fqkline/get"
+               f"?param={code},day,,,{days},qfq")
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            raw = json.loads(resp.read().decode("utf-8"))
+        node = raw.get("data", {}).get(code) or {}
+        rows = node.get("qfqday") or node.get("day") or []
+        out = []
+        for k in rows:
+            if len(k) < 5:
+                continue
+            out.append({"close": float(k[2]), "high": float(k[3]), "low": float(k[4])})
+        return out
+    except Exception as e:
+        # 不静默吞异常：低吸区间取不到时，至少让人知道是为什么
+        print(f"  ⚠️ {code} K线取数失败（低吸区间将显示 —）：{e}")
+        return None
+
+
+def buy_zone(code):
+    """返回 "低-高" 形式的低吸区间；数据不足返回 "—"。
+
+    两个端点含义不同（下限=20日低×SUPPORT_FACTOR，上限=MA20×LOW_FACTOR），
+    上升趋势里 MA20 可能低于前低，所以统一按 min/max 排序，避免出现 "7.04-6.60"
+    这种倒序区间。
+    """
+    k = fetch_kline(code)
+    if not k or len(k) < 20:
+        return "—"
+    last20 = k[-20:]
+    ma20 = sum(x["close"] for x in last20) / 20
+    low20 = min(x["low"] for x in last20)
+    a, b = ma20 * LOW_FACTOR, low20 * SUPPORT_FACTOR
+    return f"{min(a, b):.2f}-{max(a, b):.2f}"
 
 
 def generate_template(date_str, index_data, watchlist_data=None, warning=""):
@@ -121,20 +172,10 @@ def generate_template(date_str, index_data, watchlist_data=None, warning=""):
             d = index_data[name]
             rows += f"| {name} | {d['close']} | **{d['pct_chg']:+.2f}%** |\n"
 
-    # 低吸区间参考值（手动维护）
-    BUY_ZONES = {
-        "中证500ETF": "8.75-8.79",
-        "黄金ETF": "9.05-9.09",
-        "科大讯飞": "42.85-43.00",
-        "天山铝业": "11.99-12.05",
-        "紫金矿业": "29.08-29.21",
-        "有色ETF": "2.05-2.06",
-    }
-
     watchlist_rows = ""
     if watchlist_data:
         for name, d in watchlist_data.items():
-            zone = BUY_ZONES.get(name, "—")
+            zone = buy_zone(d["code"]) if d.get("code") else "—"
             watchlist_rows += f"| {name} | {d['close']} | {d['pct_chg']:+.2f}% | {zone} | — |\n"
     if not watchlist_rows:
         watchlist_rows = "| — | — | — | — | — |\n"
@@ -175,7 +216,7 @@ def generate_template(date_str, index_data, watchlist_data=None, warning=""):
 | 标的 | 收盘 | 涨跌幅 | 低吸区间 | 状态 |
 |------|------|:------:|------|------|
 {watchlist_rows}
-> 🤖 数据由 fetch-market-data.py 自动抓取，低吸区间需手动维护。
+> 🤖 数据由 fetch-market-data.py 自动抓取。低吸区间按 MA20×0.95 与 20日低×0.98 自动计算，无需维护。
 > 📊 宏观背景参考：最新[月度市场概况](../05/2026-05-26-月度市场概况.md)
 
 ### 今日金十要点

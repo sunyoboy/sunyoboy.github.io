@@ -40,16 +40,28 @@ HOLDINGS = load_holdings() or {
     "sh518800": "黄金ETF",
 }
 
-# ── 关键支撑/阻力位（手动维护，与低吸区间一致）────────────
-KEY_ZONES = {
-    "中证500ETF":  {"low": 8.75, "support": 8.79},
-    "黄金基金":    {"low": 9.05, "support": 9.09},
-    "科大讯飞":    {"low": 42.85, "support": 43.00},
-    "天山铝业":    {"low": 11.99, "support": 12.05},
-    "紫金矿业":    {"low": 29.08, "support": 29.21},
-    "有色ETF":     {"low": 2.05, "support": 2.06},
-    "卫星ETF":     {"low": 1.35, "support": 1.35},  # 止损线
-}
+# ── 关键支撑位：相对形式（2026-10-19 改）──────────────────
+# 旧做法是硬编码绝对价格，会随行情漂移而腐烂——上证从 3000 走到 3730 后全表失效，
+# 而失效是静默的：它不会报错，只会让「关键支撑」变成一个和市价无关的数字。
+#
+# 现在改为用固定系数从指标算出，任何点位都成立：
+#     低吸位 = MA20 × LOW_FACTOR          （回踩 20 日线并略低于它）
+#     支撑位 = 20 日最低价 × SUPPORT_FACTOR（略破前低，避免假突破被洗出）
+#
+# 想给某个标的单独定价位，写进 OVERRIDE（键名必须与 portfolio.json 的 name 一致）。
+LOW_FACTOR = 0.95
+SUPPORT_FACTOR = 0.98
+OVERRIDE = {}
+
+
+def zone_for(ind):
+    """由指标算出 (低吸位, 支撑位)。返回 None 表示数据不足。"""
+    if not ind:
+        return None, None
+    ma20, low20 = ind.get("ma20"), ind.get("low_20")
+    low = round(ma20 * LOW_FACTOR, 2) if ma20 else None
+    sup = round(low20 * SUPPORT_FACTOR, 2) if low20 else None
+    return low, sup
 
 
 # ═══════════════════════════════════════════════════════════
@@ -444,7 +456,7 @@ def main():
     print(
         "| 标的 | MA5 | MA20 | MA60 | "
         "偏离20 | 偏离60 | "
-        "20日高 | 20日低 | 关键支撑 |"
+        "20日高 | 20日低 | 低吸 / 支撑 |"
     )
     print(
         "|------|:---:|:----:|:----:|"
@@ -457,8 +469,11 @@ def main():
             print(f"| {name} | — | — | — | — | — | — | — | — |")
             continue
 
-        zone = KEY_ZONES.get(name, {})
-        support_str = str(zone.get("support", "—")) if zone else "—"
+        if name in OVERRIDE:
+            support_str = str(OVERRIDE[name].get("support", "—"))
+        else:
+            low, sup = zone_for(ind)
+            support_str = f"{low} / {sup}" if low and sup else "—"
 
         print(
             f"| {name} | {ind['ma5']} | {ind['ma20']} | {ind['ma60']} | "
@@ -503,6 +518,11 @@ def main():
     print("| **中期背景** | MA20 vs MA60 的位置关系，决定大方向是多是空 |")
     print("| **距20低/高** | 当前价距 20 日最低/最高点的百分比，衡量短期位置 |")
     print("| **量能** | 5日均量 ÷ 20日均量：>1.5 放量，<0.6 缩量 |")
+    print(f"| **低吸位** | MA20 × {LOW_FACTOR}：回踩 20 日线并略低于它的位置，只在你想加仓时才参考 |")
+    print(f"| **支撑位** | 20 日最低价 × {SUPPORT_FACTOR}：略破前低，用于判断「假突破」还是「真走弱」 |")
+    print()
+    print("> 💡 上升趋势里「低吸位」可能低于「支撑位」（MA20 比前低还低）——这不是错误，"
+          "而是说明当前趋势较强。两个数各自独立，不要当成一个区间。")
     print()
     print("> 📎 详细纪律：见 [`docs/ma5-deviation-discipline.md`](../docs/ma5-deviation-discipline.md)")
 
