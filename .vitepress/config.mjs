@@ -30,9 +30,19 @@ export default defineConfig({
               collapsed: false,
               items: [
                 {
+                  text: '📂 周复盘',
+                  collapsed: false,
+                  items: [
+                    { text: '📋 W42 周复盘 (10.12-10.16)', link: '/review/2026/10/2026-W42' },
+                  ]
+                },
+                {
                   text: '📂 日复盘',
                   collapsed: false,
                   items: [
+                    { text: '10-19 · 普涨但极致分化（21↑8↓ · 权重稳成长杀 · 速查表过期核对失效）', link: '/review/2026/10/2026-10-19' },
+                    { text: '10-16 · 冲高回落·尾盘巨量护盘（1.57万亿缩量767亿·护盘≠持仓被护）', link: '/review/2026/10/2026-10-16' },
+                    { text: '10-16 上午 · 亚太超跌反弹第一天（韩国+4%/日经独跌/强弱完全对调）', link: '/review/2026/10/2026-10-16-亚太上午行情' },
                     { text: '10-15 · 放量破位（1.65万亿+2193亿）· 地量磨底判断被否', link: '/review/2026/10/2026-10-15' },
                     { text: '10-09 · 上证 +0.05%（模板）', link: '/review/2026/10/2026-10-09' },
                     { text: '10-08 · 节后首日·冲高回落·高低切换·科技杀估值·炸板率43.59%', link: '/review/2026/10/2026-10-08' },
@@ -272,6 +282,7 @@ export default defineConfig({
             { text: '👤 个人档案', link: '/growth/Profile' },
             { text: '🔥 信条', link: '/growth/信条' },
             { text: '🔄 方法论', link: '/growth/方法论' },
+            { text: '🎯 高性价比人生指南·精选50', link: '/growth/高性价比人生指南-精选50' },
             { text: '🎯 年度 OKR', link: '/growth/2026-年度OKR' },
             { text: '📋 个人周报模板', link: '/growth/个人周报模板' },
             { text: '📖 阅读清单(14本)', link: '/growth/阅读清单' },
@@ -280,6 +291,7 @@ export default defineConfig({
             { text: '🛠️ 技能树', link: '/growth/技能树' },
             { text: '📈 第二增长曲线', link: '/growth/第二增长曲线' },
             { text: '💼 软件工程师价值转移', link: '/growth/软件工程师价值转移与行动方向' },
+            { text: '🎯 求职漏斗', link: '/growth/求职漏斗' },
             { text: '💡 投资教训与根因分析', link: '/growth/投资教训与根因分析' },
             {
               text: '2026年',
@@ -400,6 +412,7 @@ export default defineConfig({
                     { text: '📉 均值回归 · 选股纪律', link: '/docs/mean-reversion-discipline' },
                     { text: '股票评估框架', link: '/docs/stock-evaluation' },
                     { text: '🔄 每日复盘SOP', link: '/docs/daily-review-sop' },
+                    { text: '📝 日报·周报·笔记规则总纲', link: '/docs/report-note-sop' },
                     { text: '🤖 每日复盘Skill', link: '/docs/knowingdoing-review-skill' },
                     { text: '📱 手机端速查清单', link: '/docs/mobile-checklist' },
                     { text: '📖 外部交易规则参考', link: '/docs/trading-rules-external' },
@@ -502,6 +515,7 @@ export default defineConfig({
                   items: [
                     { text: '个人操作系统', link: '/docs/personal-os' },
                     { text: '🧠 40个经典思维模型', link: '/docs/mental-models-40' },
+                    { text: '⚙️ 建造并进化你的机器', link: '/docs/dalio-machine' },
                     { text: '🧬 仿生学习系统', link: '/docs/digestion-learning-system' },
                     { text: '🔡 维特根斯坦·语言澄清', link: '/docs/wittgenstein-language-clarity' },
                     { text: '🧠 自我认知框架', link: '/docs/self-awareness' },
