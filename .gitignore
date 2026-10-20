@@ -12,3 +12,9 @@ data/
 
 # macOS 元数据
 .DS_Store
+
+# 运行时状态（每次跑脚本都会变，入库只会制造噪声）
+# 注意：scripts/portfolio.json 是配置（持仓唯一来源），必须保留跟踪
+scripts/price_baseline.json
+scripts/shenwan_history.json
+scripts/discipline_history.json
