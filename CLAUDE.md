@@ -684,16 +684,17 @@ DSH 按以下顺序扫描（Rank 越小越优先）：
 
 - 所有 Skill 放在 **`.agents/skills/<name>/SKILL.md`**（项目根 = 最近的含 `.git` 的祖先目录）
 - `.claude/skills` 是指向 `../.agents/skills` 的**软链**（兼容 Claude Code），不要单独维护
-- ⚠️ 仓库根目录的 `skills/` **不是** DSH 发现路径（历史遗留，仅剩 `knowledge-summary-template` 未迁移）
+- 仓库根目录的 `skills/` **已移除**（该目录不是 DSH 发现路径，曾导致自有技能全部隐形）
+- SkillHub 安装溯源保留在 `.agents/skills/.skills_store_lock.json`（记录 `hithink-market-query` 来自同花顺）
 - `name:` 字段必须**小写 + 连字符**，否则不合规范
 
-**已安装的 Skill（31 个可用 + 1 个禁用）**：
+**已安装的 Skill（30 个可用 + 2 个禁用）**：
 
 | 类别 | Skill |
 |------|------|
 | 自有 | `knowingdoing-review` · `knowledge-summary` · `hithink-market-query` · `code-review` · `anxiety-decomposition` |
 | 李继刚 ljg-skills（MIT） | `ljg-invest` · `ljg-writes` · `ljg-think` · `ljg-qa` · `ljg-mechanism` · `ljg-explain` · 其余 20 个 |
-| ⛔ 已禁用 | `ljg-push`（会推送到第三方仓库 `lijigang/ljg-skills`） |
+| ⛔ 已禁用 | `ljg-push`（推送第三方仓库）· `fix-ljg-org-to-md`（自动 git commit） |
 
 ### 🔧 技能工具链（跑 Tools/*.ts 用）
 
