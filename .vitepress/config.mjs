@@ -516,6 +516,7 @@ export default defineConfig({
                     { text: '个人操作系统', link: '/docs/personal-os' },
                     { text: '🧠 40个经典思维模型', link: '/docs/mental-models-40' },
                     { text: '⚙️ 建造并进化你的机器', link: '/docs/dalio-machine' },
+                    { text: '🧩 本仓库的 Skills', link: '/docs/skills-catalog' },
                     { text: '🧬 仿生学习系统', link: '/docs/digestion-learning-system' },
                     { text: '🔡 维特根斯坦·语言澄清', link: '/docs/wittgenstein-language-clarity' },
                     { text: '🧠 自我认知框架', link: '/docs/self-awareness' },
