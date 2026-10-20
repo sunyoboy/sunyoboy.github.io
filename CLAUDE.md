@@ -687,12 +687,32 @@ DSH 按以下顺序扫描（Rank 越小越优先）：
 - ⚠️ 仓库根目录的 `skills/` **不是** DSH 发现路径（历史遗留，仅剩 `knowledge-summary-template` 未迁移）
 - `name:` 字段必须**小写 + 连字符**，否则不合规范
 
-**已安装的 Skill（11 个）**：
+**已安装的 Skill（31 个可用 + 1 个禁用）**：
 
 | 类别 | Skill |
 |------|------|
 | 自有 | `knowingdoing-review` · `knowledge-summary` · `hithink-market-query` · `code-review` · `anxiety-decomposition` |
-| 李继刚 ljg-skills（MIT） | `ljg-invest` · `ljg-writes` · `ljg-think` · `ljg-qa` · `ljg-mechanism` · `ljg-explain` |
+| 李继刚 ljg-skills（MIT） | `ljg-invest` · `ljg-writes` · `ljg-think` · `ljg-qa` · `ljg-mechanism` · `ljg-explain` · 其余 20 个 |
+| ⛔ 已禁用 | `ljg-push`（会推送到第三方仓库 `lijigang/ljg-skills`） |
+
+### 🔧 技能工具链（跑 Tools/*.ts 用）
+
+> ljg 系列 13 个工具用了 **Bun 专有 API**（`Bun.file`/`Bun.write`/`Bun.CryptoHasher`/`Bun.spawn`），
+> 标准 Node 会直接报 `Bun is not defined`。必须走 Bun。
+
+```bash
+# 统一入口（自动设置 PLAYWRIGHT_BROWSERS_PATH）
+./.agents/skills/.toolchain/run.sh <工具.ts> [参数...]
+```
+
+| 组件 | 位置 | 体积 | 是否入库 |
+|---|---|---:|---|
+| Bun 运行时 | `.agents/skills/.toolchain/bin/bun` | 67 MB | ❌ gitignore |
+| Chromium | `.agents/skills/.toolchain/ms-playwright/` | 522 MB | ❌ gitignore |
+| 运行脚本 | `.agents/skills/.toolchain/run.sh` | 1 KB | ✅ |
+| 重建说明 | `.agents/skills/.toolchain/README.md` | — | ✅ |
+
+⚠️ **换机器后**要按 README 重建（Bun + playwright install），否则带 Tools 的技能只有提示词部分可用。
 
 ---
 
