@@ -223,7 +223,8 @@ ThinkingDoing/
 - [ ] 🔋🔋🔋 查看当日重大事件（FOMC/数据公布/除权除息）→ 参考 `review/2026/2026.md` 经济日历 · **金十日历速查**：直接问 Claude「今天有什么大事」→ 自动拉金十资讯汇总当日数据/联储讲话/债券发行
 - [ ] 🔋🔋🔋 回顾持仓盈亏和昨日操作计划 → 参考最近一期 `review/2026/06/` 日复盘
 - [ ] 🔋🔋🔋 确认各标的止损/止盈/低吸区间 → 运行 `python3 scripts/ma5-deviation.py`
-- [ ] 🔋🔋 **行业消息速查（30秒）** → `python3 ~/.claude/skills/query-indicator/query_indicator.py queryIndicator --query "今天A股重大行业新闻和政策事件"` 或直接问 Claude「今天有什么行业消息？」
+- [ ] 🔋🔋 **行业消息速查（30秒）** → 用 `hithink-market-query` skill 查行业涨跌 / 资金流向；新闻与政策面直接问 Claude（无需 skill）
+  → ⚠️ 原 `~/.claude/skills/query-indicator/...` 路径**本地不存在**（该 SkillHub 技能未安装），已移除，勿再调用
   → 对照 38 候选池·有无相关标的
   → 有 → 考虑试仓（≤1%·避雷三问通过·不追涨停·每周≤1次）
   → 无 → 正常执行
@@ -664,6 +665,34 @@ source ~/.zshrc && echo $HT_APIKEY         # 华泰 API Key ✓
 | Skill | 用途 |
 |------|------|
 | `/pywencaistock` | 同花顺问财 pywencai 库·DataFrame 输出 |
+
+### 📁 Skill 目录约定（DSH 发现规则）
+
+> 2026-10-20 实测确认。**装错目录 = Skill 完全不生效，且没有任何报错。**
+
+DSH 按以下顺序扫描（Rank 越小越优先）：
+
+| Rank | 来源 | 路径 |
+|:--:|---|---|
+| 100 | `project-dsh` | `<项目根>/.dsh/skills` |
+| 200 | `project-agents` | **`<项目根>/.agents/skills`** ← 本项目使用 |
+| 300 | `custom` | 配置项 `customSkillDirs` |
+| 400 | `user-dsh` | `~/.dsh/skills` |
+| 500 | `user-agents` | `~/.agents/skills` |
+
+**本项目约定**：
+
+- 所有 Skill 放在 **`.agents/skills/<name>/SKILL.md`**（项目根 = 最近的含 `.git` 的祖先目录）
+- `.claude/skills` 是指向 `../.agents/skills` 的**软链**（兼容 Claude Code），不要单独维护
+- ⚠️ 仓库根目录的 `skills/` **不是** DSH 发现路径（历史遗留，仅剩 `knowledge-summary-template` 未迁移）
+- `name:` 字段必须**小写 + 连字符**，否则不合规范
+
+**已安装的 Skill（11 个）**：
+
+| 类别 | Skill |
+|------|------|
+| 自有 | `knowingdoing-review` · `knowledge-summary` · `hithink-market-query` · `code-review` · `anxiety-decomposition` |
+| 李继刚 ljg-skills（MIT） | `ljg-invest` · `ljg-writes` · `ljg-think` · `ljg-qa` · `ljg-mechanism` · `ljg-explain` |
 
 ---
 
