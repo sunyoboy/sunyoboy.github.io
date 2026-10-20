@@ -247,6 +247,7 @@ export default defineConfig({
               text: '📂 2026年10月',
               collapsed: false,
               items: [
+                { text: '10-20 · 三账户快照 + 明日下单清单（权益 71.2%·9 处破线·FOMC 前须 ≤40%）', link: '/portfolio/2026/10/2026-10-20' },
                 { text: '10-14 · 三账户持仓快照（现金 23.3% 红灯·8 项破止损线）', link: '/portfolio/2026/10/2026-10-14' },
               ]
             },
