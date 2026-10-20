@@ -634,6 +634,8 @@ source ~/.zshrc && echo $HT_APIKEY         # 华泰 API Key ✓
 | `python3 scripts/market_db.py` | 🆕 SQLite 数据仓库模块（建表·写入·查询·统计） | 按需 |
 | `python3 scripts/migrate_history.py` | 🆕 一次性迁移：将 JSON 历史数据导入 SQLite | 首次使用 |
 | `bash scripts/setup-cron.sh` | 安装/重装 macOS launchd 定时任务（交易日 15:35 自动抓取） | 一次 |
+| `bash scripts/sync-skills.sh [--commit]` | 把 `.agents/skills` 的变更提交到本仓库（默认预览）。替代 `ljg-push`（那是推第三方仓库） | 改完技能后 |
+| `bash scripts/publish-skills.sh [--push]` | 镜像到独立仓库 `sunyoboy-skills`（默认 `~/code/sunyoboy-skills`）。加 `--push` 才推送 | 技能集更新后 |
 | `bash scripts/gitee-deploy.sh` | Gitee Pages 手动部署 | 按需 |
 | `python3 scripts/wechat-publish.py` | 微信公众号发布 | 按需 |
 

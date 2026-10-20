@@ -22,3 +22,6 @@ scripts/discipline_history.json
 # 技能工具链：体积大（Bun 67MB + Chromium 522MB），本地按 README 重建
 .agents/skills/.toolchain/bin/
 .agents/skills/.toolchain/ms-playwright/
+
+# 技能发布镜像（独立仓库 sunyoboy-skills 的工作副本，默认在 ~/code）
+.skills-mirror/
