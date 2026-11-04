@@ -303,6 +303,7 @@
 | [🛡️ 防御型ETF买入优先级](docs/defensive-etf-buy-guide) | 七只防御ETF·估值分位+技术面+主力资金+买点四维排序 |
 | [🔄 「反者道之动」跨文化思想谱系](docs/reversal-is-the-movement-of-dao) | 老子→易经→赫拉克利特→黑格尔→马克思→斯多葛→Howard Marks·周期与反转的2500年对话 |
 | [🔄 美股-A股 AI全产业链对标](docs/us-china-ai-hardware-mapping) | 18大环节：芯片→服务器→光通信→云→模型→数据→安全→金融→自动驾驶→机器人→医疗→教育→AIGC |
+| [📐 帕累托分布与K型分化](docs/k-shaped-divergence) | **结构/周期/制度三类问题的诊断框架** · 幂律三性质（无尺度/尾部主导/矩存在性）+ 与正态的分界 · K型五观察面+量化判据（指数-等权差值/涨跌家数比）· 四步诊断法（时间尺度→政策可逆→供给可恢复→杀PE还是杀EPS）· 三种误判代价 · 映射到止损线与哑铃仓位 |
 | [盈利分红型行业](docs/profitable-industries) | 白酒/银行/煤炭/水电/家电/通信——不靠投资拉动的现金奶牛 |
 | [十五五投资方向](docs/fifteen-five-investment) | 政策导向与产业投资机会 |
 | [🇺🇸对标美股·十五五ETF](docs/fifteen-five-us-benchmark) | 美股主线→A股ETF·战略/战术分账本·硬目标底仓清单 |

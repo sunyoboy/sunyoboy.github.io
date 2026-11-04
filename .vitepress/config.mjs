@@ -470,6 +470,7 @@ export default defineConfig({
                     { text: '盈利分红型行业', link: '/docs/profitable-industries' },
                     { text: '十五五投资方向', link: '/docs/fifteen-five-investment' },
                     { text: '🇺🇸对标美股·十五五ETF', link: '/docs/fifteen-five-us-benchmark' },
+                    { text: '📐 帕累托分布与K型分化（结构/周期/制度诊断）', link: '/docs/k-shaped-divergence' },
                     { text: 'A股行情分析', link: '/docs/a-share-2026-05-26' },
                     { text: '🔄 美股-A股 AI全产业链对标', link: '/docs/us-china-ai-hardware-mapping' },
                     { text: '🔴 FOMC决策全景', link: '/docs/fomc-schedule' },
