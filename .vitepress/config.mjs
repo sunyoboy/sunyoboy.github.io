@@ -626,6 +626,21 @@ export default defineConfig({
               ]
             },
             {
+              text: '🎙️ 姜胡说 · 内容知识库',
+              collapsed: true,
+              items: [
+                { text: '📚 总览与索引', link: '/docs/jianghushuo/' },
+                { text: '🗂️ 主题索引（按内容归类）', link: '/docs/jianghushuo/topics' },
+                { text: '2026 年（271 条）', link: '/docs/jianghushuo/2026' },
+                { text: '2025 年（141 条）', link: '/docs/jianghushuo/2025' },
+                { text: '2024 年（60 条）', link: '/docs/jianghushuo/2024' },
+                { text: '2023 年（25 条）', link: '/docs/jianghushuo/2023' },
+                { text: '2022 年（54 条）', link: '/docs/jianghushuo/2022' },
+                { text: '2021 年（42 条）', link: '/docs/jianghushuo/2021' },
+                { text: '2020 年（36 条）', link: '/docs/jianghushuo/2020' }
+              ]
+            },
+            {
               text: '🔧 站点',
               collapsed: true,
               items: [
