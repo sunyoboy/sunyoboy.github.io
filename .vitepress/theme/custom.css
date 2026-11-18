@@ -95,3 +95,29 @@
   background: var(--vp-c-divider);
   border-radius: 3px;
 }
+
+/* 移动端可读性修复 */
+@media (max-width: 767px) {
+  /* 话题标签整块换行，不再在词中间断开 */
+  .vp-doc p code {
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  /* 表格铺满整栏（窄屏下恢复 table 布局） */
+  .vp-doc table {
+    display: table;
+    width: 100%;
+  }
+
+  /* 行内链接加大纵向可点区域（约 18px → 30px） */
+  .vp-doc a:not(.header-anchor) {
+    padding: 6px 0;
+  }
+
+  /* 「摘要 / 核心观点」这类独占一段的加粗词：独立成行并与上文拉开间距 */
+  .vp-doc p > strong:only-child {
+    display: block;
+    padding-top: 12px;
+  }
+}
